@@ -1,10 +1,10 @@
-import { graphql, StaticQuery } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import Footer from "../Footer"
-import Grid from "../Grid"
-import Header from "../Header"
-import "./style.css"
+import { graphql, StaticQuery } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import Footer from '../Footer';
+import Grid from '../Grid';
+import Header from '../Header';
+import './style.css';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -27,10 +27,10 @@ const Layout = ({ children }) => (
       </>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
