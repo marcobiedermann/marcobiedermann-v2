@@ -1,9 +1,24 @@
-version: 2.0
+version: 2
+
 jobs:
   build:
     docker:
-      — image: circleci/node:12
+      - image: circleci/node:12
     steps:
-      — checkout
-      - run: npm install
-      — run: npm test
+      - checkout
+      - run: npm run build
+
+  test:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - run: npm test
+
+workflows:
+  version: 2
+  test_and_build:
+    jobs:
+      - build
+      - test
+
