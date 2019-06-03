@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Grid = (props) => {
+const Grid = props => {
   const { children } = props;
 
   return (

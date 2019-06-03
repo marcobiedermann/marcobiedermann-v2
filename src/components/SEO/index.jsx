@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 
-function SEO({
-  description, lang, meta, keywords, title,
-}) {
+function SEO({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -66,9 +64,9 @@ function SEO({
         .concat(
           keywords.length > 0
             ? {
-              name: 'keywords',
-              content: keywords.join(', '),
-            }
+                name: 'keywords',
+                content: keywords.join(', '),
+              }
             : [],
         )
         .concat(meta)}
