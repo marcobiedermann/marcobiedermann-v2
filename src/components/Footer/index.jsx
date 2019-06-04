@@ -1,9 +1,18 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
-const Footer = () => (
-  <footer>
-    © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
-  </footer>
-);
+const Footer = props => {
+  const { children } = props;
+
+  return <footer>{children}</footer>;
+};
+
+Footer.propTypes = {
+  children: PropTypes.node,
+};
+
+Footer.defaultProps = {
+  children: null,
+};
 
 export default Footer;

@@ -17,10 +17,14 @@ const Layout = props => {
           <Navigation routes={[routes.INDEX, routes.PAGE_2]} />
         </Grid>
       </Header>
-      <Grid>
-        <main>{children}</main>
-        <Footer />
-      </Grid>
+      <main>
+        <Grid>{children}</Grid>
+      </main>
+      <Footer>
+        <Grid>
+          © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </Grid>
+      </Footer>
     </>
   );
 };
