@@ -4,6 +4,7 @@ module.exports = {
     description:
       'Full-Stack JavaScript Engineer with focus on React, Redux & Node.js and passioned about Open Source working @moovel based in Berlin, Germany',
     author: '@m412c0b',
+    siteUrl: `https://marcobiedermann.com`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -16,6 +17,7 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
