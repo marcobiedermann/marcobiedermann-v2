@@ -7,15 +7,6 @@ module.exports = {
     siteUrl: `https://marcobiedermann.com`,
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/images`,
-      },
-    },
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
@@ -25,8 +16,6 @@ module.exports = {
         trackingId: 'UA-46884111-4',
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -39,6 +28,17 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images`,
+      },
+    },
+    'gatsby-transformer-sharp',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
