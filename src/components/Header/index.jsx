@@ -1,23 +1,18 @@
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <div>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-    </div>
-  </header>
-);
+const Header = props => {
+  const { children } = props;
+
+  return <header>{children}</header>;
+};
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  children: PropTypes.node,
 };
 
 Header.defaultProps = {
-  siteTitle: '',
+  children: null,
 };
 
 export default Header;
