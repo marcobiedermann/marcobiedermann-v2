@@ -16,6 +16,15 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        anonymize: true,
+        head: false,
+        respectDNT: true,
+        trackingId: 'UA-46884111-4',
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     {
