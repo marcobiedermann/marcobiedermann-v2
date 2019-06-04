@@ -4,7 +4,6 @@ import React from 'react';
 import Footer from '../Footer';
 import Grid from '../Grid';
 import Header from '../Header';
-import './style.css';
 
 const Layout = ({ children }) => (
   <StaticQuery
