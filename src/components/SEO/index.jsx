@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 
-function SEO({ description, lang, meta, keywords, title }) {
+const SEO = ({ description, lang, meta, keywords, title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -72,7 +72,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         .concat(meta)}
     />
   );
-}
+};
 
 SEO.defaultProps = {
   lang: 'en',
