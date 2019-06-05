@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout component should render correctly 1`] = `
+Array [
+  <header>
+    <div
+      className="grid"
+    >
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="/page-2"
+            >
+              Page 2
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>,
+  <main>
+    <div
+      className="grid"
+    />
+  </main>,
+  <footer>
+    <div
+      className="grid"
+    >
+      © 
+      2019
+      , Built with 
+      <a
+        href="https://www.gatsbyjs.org"
+      >
+        Gatsby
+      </a>
+    </div>
+  </footer>,
+]
+`;
