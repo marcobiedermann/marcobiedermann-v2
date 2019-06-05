@@ -2,11 +2,15 @@
 
 exports[`Layout component should render correctly 1`] = `
 Array [
-  <header>
+  <header
+    className="header"
+  >
     <div
       className="grid"
     >
-      <nav>
+      <nav
+        className="navigation"
+      >
         <ul>
           <li>
             <a
@@ -31,7 +35,9 @@ Array [
       className="grid"
     />
   </main>,
-  <footer>
+  <footer
+    className="footer"
+  >
     <div
       className="grid"
     >

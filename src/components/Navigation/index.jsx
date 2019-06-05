@@ -1,12 +1,14 @@
+import classNames from 'classnames';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import styles from './style.module.css';
 
 const Navigation = props => {
-  const { routes } = props;
+  const { className, routes } = props;
 
   return (
-    <nav>
+    <nav className={classNames(className, styles.navigation)}>
       <ul>
         {routes.map(route => (
           <li key={route.path}>
@@ -19,6 +21,7 @@ const Navigation = props => {
 };
 
 Navigation.propTypes = {
+  className: PropTypes.string,
   routes: PropTypes.arrayOf(
     PropTypes.shape({
       path: PropTypes.string,
@@ -28,6 +31,7 @@ Navigation.propTypes = {
 };
 
 Navigation.defaultProps = {
+  className: '',
   routes: [],
 };
 
