@@ -23,6 +23,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "babel-jest": "^24.8.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.3.0",
@@ -30,7 +31,10 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
     "prettier": "^1.17.1",
+    "react-test-renderer": "^16.8.6",
     "stylelint": "^10.0.1",
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-config-standard": "^18.3.0",
@@ -52,7 +56,7 @@
     "lint": "npm run lint:css && npm run lint:js",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "npm run lint"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
