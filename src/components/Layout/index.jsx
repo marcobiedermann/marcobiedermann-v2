@@ -1,4 +1,3 @@
-import { graphql, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Footer from '../Footer';
