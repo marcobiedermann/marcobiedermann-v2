@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Project component should render correctly 1`] = `
+<div>
+  <h2>
+    <a
+      href="/projects/project-title"
+    >
+      Project Title
+    </a>
+  </h2>
+</div>
+`;

@@ -1,3 +1,7 @@
+const dotenv = require('dotenv');
+
+dotenv.config();
+
 module.exports = {
   siteMetadata: {
     title: 'Marco Biedermann',
@@ -31,6 +35,13 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: 'xcrbc5t6zr5p',
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
