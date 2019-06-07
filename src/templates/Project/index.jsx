@@ -19,6 +19,7 @@ const ProjectTemplate = props => {
         tablet,
         role,
         title,
+        typography,
       },
     },
   } = props;
@@ -58,6 +59,15 @@ const ProjectTemplate = props => {
         <Section>
           <h2>Colors</h2>
           <Img fluid={colors.fluid} />
+        </Section>
+      )}
+
+      {typography && (
+        <Section>
+          <h2>Typography</h2>
+          {typography.map(font => (
+            <Img fluid={font.fluid} key={font.title} />
+          ))}
         </Section>
       )}
 
@@ -145,6 +155,12 @@ export const pageQuery = graphql`
       }
       tags
       title
+      typography {
+        fluid {
+          ...GatsbyContentfulFluid_withWebp_noBase64
+        }
+        title
+      }
       url
     }
   }
