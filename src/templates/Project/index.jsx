@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Layout from '../../components/Layout';
 import Section from '../../components/Section';
 
 const ProjectTemplate = props => {
@@ -11,7 +12,7 @@ const ProjectTemplate = props => {
   } = props;
 
   return (
-    <div>
+    <Layout>
       <Section>
         <h1>{title}</h1>
         <ul>
@@ -26,7 +27,7 @@ const ProjectTemplate = props => {
           </li>
         </ul>
       </Section>
-    </div>
+    </Layout>
   );
 };
 

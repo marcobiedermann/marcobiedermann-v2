@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import Layout from '../components/Layout';
 import Projects from '../components/Projects';
 
 const ProjectsPage = () => {
@@ -22,9 +23,9 @@ const ProjectsPage = () => {
   const { edges: projects } = allContentfulProject;
 
   return (
-    <div>
+    <Layout>
       <Projects projects={projects.map(project => project.node)} />
-    </div>
+    </Layout>
   );
 };
 
