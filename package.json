@@ -39,7 +39,7 @@
     "eslint-plugin-react": "^7.13.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
-    "prettier": "^1.17.1",
+    "prettier": "^1.18.0",
     "react-test-renderer": "^16.8.6",
     "stylelint": "^10.0.1",
     "stylelint-config-prettier": "^5.2.0",
