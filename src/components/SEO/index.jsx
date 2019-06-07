@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 
-const SEO = ({ description, lang, meta, keywords, title }) => {
+const SEO = props => {
+  const { description, lang, meta, keywords, title, ...otherProps } = props;
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -70,6 +71,7 @@ const SEO = ({ description, lang, meta, keywords, title }) => {
             : [],
         )
         .concat(meta)}
+      {...otherProps}
     />
   );
 };

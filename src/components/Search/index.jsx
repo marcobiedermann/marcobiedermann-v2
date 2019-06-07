@@ -5,9 +5,11 @@ import { ALGOLIA_API_KEY, ALGOLIA_APP_ID } from '../../constants/algolia';
 
 const searchClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_API_KEY);
 
-const Search = () => {
+const Search = props => {
+  const { ...otherProps } = props;
+
   return (
-    <InstantSearch searchClient={searchClient} indexName="Projects">
+    <InstantSearch searchClient={searchClient} indexName="Projects" {...otherProps}>
       <SearchBox />
       <Hits />
     </InstantSearch>

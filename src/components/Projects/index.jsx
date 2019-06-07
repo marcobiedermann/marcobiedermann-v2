@@ -5,10 +5,10 @@ import React from 'react';
 import styles from './style.module.css';
 
 const Projects = props => {
-  const { className, projects } = props;
+  const { className, projects, ...otherProps } = props;
 
   return (
-    <ol className={classNames(className, styles.projects)}>
+    <ol className={classNames(className, styles.projects)} {...otherProps}>
       {projects.map(project => (
         <li key={project.id}>
           <div>

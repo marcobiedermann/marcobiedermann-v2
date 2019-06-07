@@ -4,9 +4,13 @@ import React from 'react';
 import styles from './style.module.css';
 
 const Grid = props => {
-  const { children, className } = props;
+  const { children, className, ...otherProps } = props;
 
-  return <div className={classNames(className, styles.grid)}>{children}</div>;
+  return (
+    <div className={classNames(className, styles.grid)} {...otherProps}>
+      {children}
+    </div>
+  );
 };
 
 Grid.propTypes = {

@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const Project = props => {
-  const { title, slug } = props;
+  const { title, slug, ...otherProps } = props;
 
   return (
-    <div>
+    <div {...otherProps}>
       <h2>
         <Link to={`/projects/${slug}`}>{title}</Link>
       </h2>

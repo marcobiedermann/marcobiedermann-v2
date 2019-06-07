@@ -5,10 +5,10 @@ import React from 'react';
 import styles from './style.module.css';
 
 const Navigation = props => {
-  const { className, routes } = props;
+  const { className, routes, ...otherProps } = props;
 
   return (
-    <nav className={classNames(className, styles.navigation)}>
+    <nav className={classNames(className, styles.navigation)} {...otherProps}>
       <ul>
         {routes.map(route => (
           <li key={route.path}>

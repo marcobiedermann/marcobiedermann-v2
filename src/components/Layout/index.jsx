@@ -7,10 +7,10 @@ import Navigation from '../Navigation';
 import * as routes from '../../constants/routes';
 
 const Layout = props => {
-  const { children } = props;
+  const { children, ...otherProps } = props;
 
   return (
-    <>
+    <div {...otherProps}>
       <Header>
         <Grid>
           <Navigation routes={[routes.INDEX, routes.PAGE_2, routes.PROJECTS, routes.SEARCH]} />
@@ -24,7 +24,7 @@ const Layout = props => {
           © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Grid>
       </Footer>
-    </>
+    </div>
   );
 };
 

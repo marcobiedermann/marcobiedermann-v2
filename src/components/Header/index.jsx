@@ -4,9 +4,13 @@ import React from 'react';
 import styles from './style.module.css';
 
 const Header = props => {
-  const { children, className } = props;
+  const { children, className, ...otherProps } = props;
 
-  return <header className={classNames(className, styles.header)}>{children}</header>;
+  return (
+    <header className={classNames(className, styles.header)} {...otherProps}>
+      {children}
+    </header>
+  );
 };
 
 Header.propTypes = {

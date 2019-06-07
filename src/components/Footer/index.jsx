@@ -4,9 +4,13 @@ import React from 'react';
 import styles from './style.module.css';
 
 const Footer = props => {
-  const { children, className } = props;
+  const { children, className, ...otherProps } = props;
 
-  return <footer className={classNames(className, styles.footer)}>{children}</footer>;
+  return (
+    <footer className={classNames(className, styles.footer)} {...otherProps}>
+      {children}
+    </footer>
+  );
 };
 
 Footer.propTypes = {
