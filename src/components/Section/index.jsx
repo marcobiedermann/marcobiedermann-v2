@@ -4,9 +4,13 @@ import React from 'react';
 import styles from './style.module.css';
 
 const Section = props => {
-  const { children, className } = props;
+  const { children, className, ...otherProps } = props;
 
-  return <section className={classNames(className, styles.section)}>{children}</section>;
+  return (
+    <section className={classNames(className, styles.section)} {...otherProps}>
+      {children}
+    </section>
+  );
 };
 
 Section.propTypes = {

@@ -8,7 +8,18 @@ import Section from '../../components/Section';
 const ProjectTemplate = props => {
   const {
     data: {
-      contentfulProject: { agency, client, colors, desktop, homepage, mobile, tablet, role, title },
+      contentfulProject: {
+        agency,
+        client,
+        colors,
+        desktop,
+        homepage,
+        mobile,
+        primaryColor,
+        tablet,
+        role,
+        title,
+      },
     },
   } = props;
 
@@ -56,6 +67,14 @@ const ProjectTemplate = props => {
           <Img fluid={homepage.fluid} />
         </Section>
       )}
+
+      <Section
+        style={{
+          backgroundColor: primaryColor,
+        }}
+      >
+        Responsive Design
+      </Section>
 
       {tablet && (
         <Section>
@@ -116,6 +135,7 @@ export const pageQuery = graphql`
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
       }
+      primaryColor
       role
       slug
       tablet {
