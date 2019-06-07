@@ -13,7 +13,7 @@ const Layout = props => {
     <>
       <Header>
         <Grid>
-          <Navigation routes={[routes.INDEX, routes.PAGE_2, routes.PROJECTS]} />
+          <Navigation routes={[routes.INDEX, routes.PAGE_2, routes.PROJECTS, routes.SEARCH]} />
         </Grid>
       </Header>
       <main>

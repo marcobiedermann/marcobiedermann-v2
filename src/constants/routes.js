@@ -12,3 +12,8 @@ export const PROJECTS = {
   name: 'Projects',
   path: '/projects',
 };
+
+export const SEARCH = {
+  name: 'Search',
+  path: '/search',
+};
