@@ -1,3 +1,8 @@
+export const IMPRINT = {
+  name: 'Imprint',
+  path: '/imprint',
+};
+
 export const INDEX = {
   name: 'Home',
   path: '/',

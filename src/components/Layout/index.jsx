@@ -13,7 +13,9 @@ const Layout = props => {
     <div {...otherProps}>
       <Header>
         <Grid>
-          <Navigation routes={[routes.INDEX, routes.PAGE_2, routes.PROJECTS, routes.SEARCH]} />
+          <Navigation
+            routes={[routes.INDEX, routes.PAGE_2, routes.PROJECTS, routes.SEARCH, routes.IMPRINT]}
+          />
         </Grid>
       </Header>
       <main>
