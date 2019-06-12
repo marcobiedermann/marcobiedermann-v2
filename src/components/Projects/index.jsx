@@ -24,7 +24,13 @@ const Projects = props => {
 
 Projects.propTypes = {
   className: PropTypes.string,
-  projects: PropTypes.arrayOf(PropTypes.shape()),
+  projects: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      slug: PropTypes.string,
+      title: PropTypes.title,
+    }),
+  ),
 };
 
 Projects.defaultProps = {

@@ -3,5 +3,21 @@
 exports[`Projects component should render correctly 1`] = `
 <ol
   className="projects"
+>
+  <li>
+    <div>
+      <h2>
+        <a
+          href="/projects/undefined"
+        />
+      </h2>
+    </div>
+  </li>
+</ol>
+`;
+
+exports[`Projects component should render empty projects correctly 1`] = `
+<ol
+  className="projects"
 />
 `;
