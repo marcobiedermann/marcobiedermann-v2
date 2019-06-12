@@ -1,6 +1,7 @@
 # marcobiedermann.com
 
 [![CircleCI](https://circleci.com/gh/marcobiedermann/marcobiedermann-v2.svg?style=svg)](https://circleci.com/gh/marcobiedermann/marcobiedermann-v2)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c35056c6037f4463ade5/maintainability)](https://codeclimate.com/github/marcobiedermann/marcobiedermann-v2/maintainability)
 [![codecov](https://codecov.io/gh/marcobiedermann/marcobiedermann-v2/branch/master/graph/badge.svg)](https://codecov.io/gh/marcobiedermann/marcobiedermann-v2)
 ![David](https://img.shields.io/david/marcobiedermann/marcobiedermann-v2.svg)
 ![David](https://img.shields.io/david/dev/marcobiedermann/marcobiedermann-v2.svg)
