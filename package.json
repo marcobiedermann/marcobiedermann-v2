@@ -64,8 +64,7 @@
     "lint:css": "stylelint '**/*.css'",
     "lint:js": "eslint '**/*.{js,jsx}'",
     "lint": "npm run lint:css && npm run lint:js",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
+    "start": "gatsby serve",
     "test": "jest",
     "test:ci": "npm run test && codecov"
   },
