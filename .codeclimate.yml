@@ -1,0 +1,11 @@
+version: '2'
+plugins:
+  editorconfig:
+    enabled: true
+  eslint:
+    enabled: true
+    channel: 'eslint-5'
+    config:
+      extensions:
+        - .js
+        - .jsx
