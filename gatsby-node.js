@@ -5,7 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
   const pageTemplate = path.resolve('./src/templates/Page/index.jsx');
   const projectTemplate = path.resolve('./src/templates/Project/index.jsx');
 
-  const pages = graphql(
+  const pagesQuery = graphql(
     `
       {
         allContentfulPage {
@@ -33,7 +33,7 @@ exports.createPages = ({ graphql, actions }) => {
     });
   });
 
-  const projects = graphql(
+  const projectsQuery = graphql(
     `
       {
         allContentfulProject {
@@ -50,16 +50,23 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors;
     }
 
-    result.data.allContentfulProject.edges.forEach(project => {
+    const projects = result.data.allContentfulProject.edges;
+
+    projects.forEach((project, index) => {
+      const previous = index === projects.length - 1 ? null : projects[index + 1].node;
+      const next = index === 0 ? null : projects[index - 1].node;
+
       createPage({
         path: `/projects/${project.node.slug}`,
         component: projectTemplate,
         context: {
           slug: project.node.slug,
+          previous,
+          next,
         },
       });
     });
   });
 
-  return Promise.all([pages, projects]);
+  return Promise.all([pagesQuery, projectsQuery]);
 };

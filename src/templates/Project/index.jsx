@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -22,6 +22,7 @@ const ProjectTemplate = props => {
         typography,
       },
     },
+    pageContext: { previous, next },
   } = props;
 
   return (
@@ -100,6 +101,12 @@ const ProjectTemplate = props => {
           <Img fluid={mobile.fluid} />
         </Section>
       )}
+
+      <Section>
+        {previous && <Link to={`/projects/${previous.slug}`}>Previous</Link>}
+
+        {next && <Link to={`/projects/${next.slug}`}>Next</Link>}
+      </Section>
     </Layout>
   );
 };
@@ -113,10 +120,19 @@ ProjectTemplate.propTypes = {
       title: PropTypes.string,
     }),
   }),
+  pageContext: PropTypes.shape({
+    previous: PropTypes.shape({
+      slug: PropTypes.string,
+    }),
+    next: PropTypes.shape({
+      slug: PropTypes.string,
+    }),
+  }),
 };
 
 ProjectTemplate.defaultProps = {
   data: null,
+  pageContext: null,
 };
 
 export const pageQuery = graphql`
