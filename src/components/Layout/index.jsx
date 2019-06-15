@@ -3,6 +3,7 @@ import React from 'react';
 import Footer from '../Footer';
 import Grid from '../Grid';
 import Header from '../Header';
+import Main from '../Main';
 import Navigation from '../Navigation';
 import * as routes from '../../constants/routes';
 
@@ -18,9 +19,9 @@ const Layout = props => {
           />
         </Grid>
       </Header>
-      <main>
+      <Main>
         <Grid>{children}</Grid>
-      </main>
+      </Main>
       <Footer>
         <Grid>
           © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>

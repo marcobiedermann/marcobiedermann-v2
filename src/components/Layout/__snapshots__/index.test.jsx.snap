@@ -51,7 +51,9 @@ exports[`Layout component should render correctly 1`] = `
       </nav>
     </div>
   </header>
-  <main>
+  <main
+    className=""
+  >
     <div
       className="grid"
     />
