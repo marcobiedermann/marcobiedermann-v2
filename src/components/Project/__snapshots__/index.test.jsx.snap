@@ -2,12 +2,21 @@
 
 exports[`Project component should render correctly 1`] = `
 <div>
-  <h2>
+  <figure
+    className="project__figure"
+  >
     <a
+      className="project__link"
       href="/projects/project-title"
     >
-      Project Title
+      <figcaption
+        className="project__caption"
+      >
+        <h2>
+          Project Title
+        </h2>
+      </figcaption>
     </a>
-  </h2>
+  </figure>
 </div>
 `;

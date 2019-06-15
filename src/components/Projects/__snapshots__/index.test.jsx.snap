@@ -5,12 +5,23 @@ exports[`Projects component should render correctly 1`] = `
   className="projects"
 >
   <li>
-    <div>
-      <h2>
+    <div
+      id="123"
+    >
+      <figure
+        className="project__figure"
+      >
         <a
+          className="project__link"
           href="/projects/undefined"
-        />
-      </h2>
+        >
+          <figcaption
+            className="project__caption"
+          >
+            <h2 />
+          </figcaption>
+        </a>
+      </figure>
     </div>
   </li>
 </ol>

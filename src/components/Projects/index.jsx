@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Project from '../Project';
 import styles from './style.module.css';
 
 const Projects = props => {
@@ -11,11 +11,7 @@ const Projects = props => {
     <ol className={classNames(className, styles.projects)} {...otherProps}>
       {projects.map(project => (
         <li key={project.id}>
-          <div>
-            <h2>
-              <Link to={`/projects/${project.slug}`}>{project.title}</Link>
-            </h2>
-          </div>
+          <Project {...project} />
         </li>
       ))}
     </ol>
@@ -27,8 +23,6 @@ Projects.propTypes = {
   projects: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
-      slug: PropTypes.string,
-      title: PropTypes.title,
     }),
   ),
 };

@@ -13,6 +13,11 @@ const ProjectsPage = () => {
               id
               slug
               title
+              thumbnail {
+                fluid {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
+                }
+              }
             }
           }
         }
