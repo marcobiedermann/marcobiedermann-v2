@@ -18,7 +18,7 @@
     "gatsby-plugin-sharp": "^2.1.7",
     "gatsby-plugin-sitemap": "^2.1.0",
     "gatsby-source-contentful": "^2.0.73",
-    "gatsby-source-filesystem": "^2.0.41",
+    "gatsby-source-filesystem": "^2.0.43",
     "gatsby-transformer-json": "^2.1.11",
     "gatsby-transformer-remark": "^2.4.0",
     "gatsby-transformer-sharp": "^2.1.21",
