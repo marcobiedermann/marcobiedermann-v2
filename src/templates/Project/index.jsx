@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -10,6 +10,7 @@ import Section from '../../components/Section';
 const ProjectTemplate = props => {
   const {
     data: {
+      allContentfulProject: { edges },
       contentfulProject: {
         agency,
         client,
@@ -139,6 +140,20 @@ const ProjectTemplate = props => {
           <Pagination routes={paginationRoutes} />
         </Grid>
       </Section>
+
+      <Section>
+        <Grid>
+          <ul>
+            {edges.map(edge => (
+              <li key={edge.node.id}>
+                <Link to={`/projects/${edge.node.slug}`}>
+                  <img src={edge.node.logo.file.url} alt={edge.node.logo.title} />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Grid>
+      </Section>
     </Layout>
   );
 };
@@ -169,6 +184,20 @@ ProjectTemplate.defaultProps = {
 
 export const pageQuery = graphql`
   query ProjectBySlug($slug: String!) {
+    allContentfulProject(filter: { logo: { id: { ne: null } } }) {
+      edges {
+        node {
+          id
+          logo {
+            file {
+              url
+            }
+            title
+          }
+          slug
+        }
+      }
+    }
     contentfulProject(slug: { eq: $slug }) {
       agency
       client
