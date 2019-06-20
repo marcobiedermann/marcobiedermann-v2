@@ -6,19 +6,21 @@ exports[`Projects component should render correctly 1`] = `
 >
   <li>
     <div
-      id="123"
+      id="6c5a5baa-8c8b-5580-8061-b1cad23712cc"
     >
       <figure
         className="project__figure"
       >
         <a
           className="project__link"
-          href="/projects/undefined"
+          href="/projects/demo-project"
         >
           <figcaption
             className="project__caption"
           >
-            <h2 />
+            <h2>
+              Demo Project
+            </h2>
           </figcaption>
         </a>
       </figure>
