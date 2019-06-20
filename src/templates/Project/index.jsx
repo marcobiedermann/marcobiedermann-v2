@@ -2,6 +2,7 @@ import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
 import Section from '../../components/Section';
 
@@ -29,53 +30,63 @@ const ProjectTemplate = props => {
     <Layout>
       {desktop && (
         <Section isFull>
-          <Img fluid={desktop.fluid} />
+          <Grid>
+            <Img fluid={desktop.fluid} />
+          </Grid>
         </Section>
       )}
 
       <Section>
-        <h1>{title}</h1>
-        <ul>
-          {client && (
-            <li>
-              <strong>Client:</strong> {client}
-            </li>
-          )}
+        <Grid>
+          <h1>{title}</h1>
+          <ul>
+            {client && (
+              <li>
+                <strong>Client:</strong> {client}
+              </li>
+            )}
 
-          {agency && (
-            <li>
-              <strong>Agency:</strong> {agency}
-            </li>
-          )}
+            {agency && (
+              <li>
+                <strong>Agency:</strong> {agency}
+              </li>
+            )}
 
-          {role && (
-            <li>
-              <strong>Role:</strong> {role}
-            </li>
-          )}
-        </ul>
+            {role && (
+              <li>
+                <strong>Role:</strong> {role}
+              </li>
+            )}
+          </ul>
+        </Grid>
       </Section>
 
       {colors && (
         <Section>
-          <h2>Colors</h2>
-          <Img fluid={colors.fluid} />
+          <Grid>
+            <h2>Colors</h2>
+            <Img fluid={colors.fluid} />
+          </Grid>
         </Section>
       )}
 
       {typography && (
         <Section>
-          <h2>Typography</h2>
-          {typography.map(font => (
-            <Img fluid={font.fluid} key={font.title} />
-          ))}
+          <Grid>
+            <h2>Typography</h2>
+            {typography.map(font => (
+              <Img fluid={font.fluid} key={font.title} />
+            ))}
+          </Grid>
         </Section>
       )}
 
       {homepage && (
         <Section>
-          <h2>Homepage</h2>
-          <Img fluid={homepage.fluid} />
+          <Grid>
+            <h2>Homepage</h2>
+            <Img fluid={homepage.fluid} />
+          </Grid>
         </Section>
       )}
 
@@ -84,28 +95,34 @@ const ProjectTemplate = props => {
           backgroundColor: primaryColor,
         }}
       >
-        Responsive Design
+        <Grid>Responsive Design</Grid>
       </Section>
 
       {tablet && (
         <Section>
-          <h2>Tablet view</h2>
-          <Img fluid={tablet.fluid} />
+          <Grid>
+            <h2>Tablet view</h2>
+            <Img fluid={tablet.fluid} />
+          </Grid>
         </Section>
       )}
 
       {mobile && (
         <Section>
-          <h2>Mobile View</h2>
-          <p>With a small display comes great responsibilities</p>
-          <Img fluid={mobile.fluid} />
+          <Grid>
+            <h2>Mobile View</h2>
+            <p>With a small display comes great responsibilities</p>
+            <Img fluid={mobile.fluid} />
+          </Grid>
         </Section>
       )}
 
       <Section>
-        {previous && <Link to={`/projects/${previous.slug}`}>Previous</Link>}
+        <Grid>
+          {previous && <Link to={`/projects/${previous.slug}`}>Previous</Link>}
 
-        {next && <Link to={`/projects/${next.slug}`}>Next</Link>}
+          {next && <Link to={`/projects/${next.slug}`}>Next</Link>}
+        </Grid>
       </Section>
     </Layout>
   );

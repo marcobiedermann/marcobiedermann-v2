@@ -1,7 +1,9 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import Grid from '../components/Grid';
 import Layout from '../components/Layout';
 import Projects from '../components/Projects';
+import Section from '../components/Section';
 
 const ProjectsPage = () => {
   const { allContentfulProject } = useStaticQuery(
@@ -29,7 +31,11 @@ const ProjectsPage = () => {
 
   return (
     <Layout>
-      <Projects projects={projects.map(project => project.node)} />
+      <Section>
+        <Grid>
+          <Projects projects={projects.map(project => project.node)} />
+        </Grid>
+      </Section>
     </Layout>
   );
 };

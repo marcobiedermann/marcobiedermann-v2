@@ -19,9 +19,7 @@ const Layout = props => {
           />
         </Grid>
       </Header>
-      <Main>
-        <Grid>{children}</Grid>
-      </Main>
+      <Main>{children}</Main>
       <Footer>
         <Grid>
           © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
