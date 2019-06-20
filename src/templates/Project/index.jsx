@@ -1,9 +1,10 @@
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
+import Pagination from '../../components/Pagination';
 import Section from '../../components/Section';
 
 const ProjectTemplate = props => {
@@ -25,6 +26,22 @@ const ProjectTemplate = props => {
     },
     pageContext: { previous, next },
   } = props;
+
+  const paginationRoutes = [];
+
+  if (previous) {
+    paginationRoutes.push({
+      name: 'Previous',
+      path: `/projects/${previous.slug}`,
+    });
+  }
+
+  if (next) {
+    paginationRoutes.push({
+      name: 'Next',
+      path: `/projects/${next.slug}`,
+    });
+  }
 
   return (
     <Layout>
@@ -119,9 +136,7 @@ const ProjectTemplate = props => {
 
       <Section>
         <Grid>
-          {previous && <Link to={`/projects/${previous.slug}`}>Previous</Link>}
-
-          {next && <Link to={`/projects/${next.slug}`}>Next</Link>}
+          <Pagination routes={paginationRoutes} />
         </Grid>
       </Section>
     </Layout>
