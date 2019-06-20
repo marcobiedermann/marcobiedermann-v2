@@ -5,3 +5,21 @@ exports[`Section component should render correctly 1`] = `
   className="section"
 />
 `;
+
+exports[`Section component should render dark appearance correctly 1`] = `
+<section
+  className="section sectionDark"
+/>
+`;
+
+exports[`Section component should render full mode correctly 1`] = `
+<section
+  className="section sectionFull"
+/>
+`;
+
+exports[`Section component should render light appearance correctly 1`] = `
+<section
+  className="section sectionLight"
+/>
+`;

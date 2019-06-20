@@ -28,7 +28,7 @@ const ProjectTemplate = props => {
   return (
     <Layout>
       {desktop && (
-        <Section>
+        <Section isFull>
           <Img fluid={desktop.fluid} />
         </Section>
       )}

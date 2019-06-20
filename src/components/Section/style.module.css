@@ -1,4 +1,17 @@
 .section {
-  padding-bottom: 3em;
-  padding-top: 3em;
+  padding-bottom: 6em;
+  padding-top: 6em;
+}
+
+.section--dark {
+  background-color: #0a0a0a;
+  color: #f8f9fb;
+}
+
+.section--full {
+  min-height: 100vh;
+}
+
+.section--light {
+  background-color: #eee;
 }
