@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import * as routes from '../../constants/routes';
+import { now } from '../../utils/date';
 import Footer from '../Footer';
 import Grid from '../Grid';
 import Header from '../Header';
 import Main from '../Main';
 import Navigation from '../Navigation';
-import * as routes from '../../constants/routes';
 
 const Layout = props => {
   const { children, ...otherProps } = props;
@@ -22,7 +23,7 @@ const Layout = props => {
       <Main>{children}</Main>
       <Footer>
         <Grid>
-          © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+          © {now.getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Grid>
       </Footer>
     </div>
