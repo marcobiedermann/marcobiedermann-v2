@@ -1,0 +1,7 @@
+.column > :first-child {
+  margin-top: 0;
+}
+
+.column > :last-child {
+  margin-bottom: 0;
+}
