@@ -2,9 +2,11 @@ import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Column from '../../components/Column';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
 import Pagination from '../../components/Pagination';
+import Row from '../../components/Row';
 import Section from '../../components/Section';
 
 const ProjectTemplate = props => {
@@ -92,9 +94,13 @@ const ProjectTemplate = props => {
         <Section>
           <Grid>
             <h2>Typography</h2>
-            {typography.map(font => (
-              <Img fluid={font.fluid} key={font.title} />
-            ))}
+            <Row>
+              {typography.map(font => (
+                <Column key={font.title}>
+                  <Img fluid={font.fluid} />
+                </Column>
+              ))}
+            </Row>
           </Grid>
         </Section>
       )}
