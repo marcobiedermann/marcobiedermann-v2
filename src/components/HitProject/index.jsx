@@ -20,10 +20,10 @@ const HitProject = props => {
 
 HitProject.propTypes = {
   slug: PropTypes.shape({
-    'en-Us': PropTypes.string,
+    'en-US': PropTypes.string,
   }).isRequired,
   title: PropTypes.shape({
-    'en-Us': PropTypes.string,
+    'en-US': PropTypes.string,
   }).isRequired,
 };
 

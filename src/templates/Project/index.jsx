@@ -166,11 +166,49 @@ const ProjectTemplate = props => {
 
 ProjectTemplate.propTypes = {
   data: PropTypes.shape({
+    allContentfulProject: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            logo: PropTypes.shape({
+              file: PropTypes.shape({
+                url: PropTypes.string,
+              }),
+              title: PropTypes.string,
+            }),
+            id: PropTypes.string,
+            slug: PropTypes.string,
+          }),
+        }),
+      ),
+    }),
     contentfulProject: PropTypes.shape({
       agency: PropTypes.string,
       client: PropTypes.string,
+      colors: PropTypes.shape({
+        fluid: PropTypes.shape(),
+      }),
+      desktop: PropTypes.shape({
+        fluid: PropTypes.shape(),
+      }),
+      homepage: PropTypes.shape({
+        fluid: PropTypes.shape(),
+      }),
+      mobile: PropTypes.shape({
+        fluid: PropTypes.shape(),
+      }),
+      primaryColor: PropTypes.string,
       role: PropTypes.string,
+      tablet: PropTypes.shape({
+        fluid: PropTypes.shape(),
+      }),
       title: PropTypes.string,
+      typography: PropTypes.arrayOf(
+        PropTypes.shape({
+          fluid: PropTypes.shape(),
+          title: PropTypes.string,
+        }),
+      ),
     }),
   }),
   pageContext: PropTypes.shape({
