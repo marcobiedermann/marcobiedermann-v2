@@ -1,10 +1,11 @@
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Column from '../../components/Column';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
+import Logos from '../../components/Logos';
 import Pagination from '../../components/Pagination';
 import Row from '../../components/Row';
 import Section from '../../components/Section';
@@ -149,15 +150,7 @@ const ProjectTemplate = props => {
 
       <Section>
         <Grid>
-          <ul>
-            {edges.map(edge => (
-              <li key={edge.node.id}>
-                <Link to={`/projects/${edge.node.slug}`}>
-                  <img src={edge.node.logo.file.url} alt={edge.node.logo.title} />
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <Logos logos={edges.map(edge => edge.node)} />
         </Grid>
       </Section>
     </Layout>
@@ -169,16 +162,7 @@ ProjectTemplate.propTypes = {
     allContentfulProject: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({
-          node: PropTypes.shape({
-            logo: PropTypes.shape({
-              file: PropTypes.shape({
-                url: PropTypes.string,
-              }),
-              title: PropTypes.string,
-            }),
-            id: PropTypes.string,
-            slug: PropTypes.string,
-          }),
+          node: PropTypes.shape(),
         }),
       ),
     }),
