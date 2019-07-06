@@ -124,7 +124,7 @@ const ProjectTemplate = props => {
       </Section>
 
       {tablet && (
-        <Section>
+        <Section appearance="light">
           <Grid>
             <h2>Tablet view</h2>
             <Img fixed={tablet.fixed} />
