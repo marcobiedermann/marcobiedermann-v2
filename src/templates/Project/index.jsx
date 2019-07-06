@@ -52,7 +52,7 @@ const ProjectTemplate = props => {
       {desktop && (
         <Section appearance="light" isFull>
           <Grid>
-            <Img fluid={desktop.fluid} />
+            <Img fixed={desktop.fixed} />
           </Grid>
         </Section>
       )}
@@ -86,7 +86,7 @@ const ProjectTemplate = props => {
         <Section appearance="light">
           <Grid>
             <h2>Colors</h2>
-            <Img fluid={colors.fluid} />
+            <Img fixed={colors.fixed} />
           </Grid>
         </Section>
       )}
@@ -98,7 +98,7 @@ const ProjectTemplate = props => {
             <Row>
               {typography.map(font => (
                 <Column key={font.title}>
-                  <Img fluid={font.fluid} />
+                  <Img fixed={font.fixed} />
                 </Column>
               ))}
             </Row>
@@ -110,7 +110,7 @@ const ProjectTemplate = props => {
         <Section appearance="light">
           <Grid>
             <h2>Homepage</h2>
-            <Img fluid={homepage.fluid} />
+            <Img fixed={homepage.fixed} />
           </Grid>
         </Section>
       )}
@@ -127,7 +127,7 @@ const ProjectTemplate = props => {
         <Section>
           <Grid>
             <h2>Tablet view</h2>
-            <Img fluid={tablet.fluid} />
+            <Img fixed={tablet.fixed} />
           </Grid>
         </Section>
       )}
@@ -137,7 +137,7 @@ const ProjectTemplate = props => {
           <Grid>
             <h2>Mobile View</h2>
             <p>With a small display comes great responsibilities</p>
-            <Img fluid={mobile.fluid} />
+            <Img fixed={mobile.fixed} />
           </Grid>
         </Section>
       )}
@@ -170,26 +170,26 @@ ProjectTemplate.propTypes = {
       agency: PropTypes.string,
       client: PropTypes.string,
       colors: PropTypes.shape({
-        fluid: PropTypes.shape(),
+        fixed: PropTypes.shape(),
       }),
       desktop: PropTypes.shape({
-        fluid: PropTypes.shape(),
+        fixed: PropTypes.shape(),
       }),
       homepage: PropTypes.shape({
-        fluid: PropTypes.shape(),
+        fixed: PropTypes.shape(),
       }),
       mobile: PropTypes.shape({
-        fluid: PropTypes.shape(),
+        fixed: PropTypes.shape(),
       }),
       primaryColor: PropTypes.string,
       role: PropTypes.string,
       tablet: PropTypes.shape({
-        fluid: PropTypes.shape(),
+        fixed: PropTypes.shape(),
       }),
       title: PropTypes.string,
       typography: PropTypes.arrayOf(
         PropTypes.shape({
-          fluid: PropTypes.shape(),
+          fixed: PropTypes.shape(),
           title: PropTypes.string,
         }),
       ),
@@ -230,39 +230,39 @@ export const pageQuery = graphql`
       agency
       client
       colors {
-        fluid {
-          ...GatsbyContentfulFluid_withWebp_noBase64
+        fixed(height: 212) {
+          ...GatsbyContentfulFixed_withWebp_noBase64
         }
       }
       desktop {
-        fluid {
-          ...GatsbyContentfulFluid_withWebp_noBase64
+        fixed(width: 832) {
+          ...GatsbyContentfulFixed_withWebp_noBase64
         }
       }
       homepage {
-        fluid {
-          ...GatsbyContentfulFluid_withWebp_noBase64
+        fixed(width: 1120) {
+          ...GatsbyContentfulFixed_withWebp_noBase64
         }
       }
       id
       mobile {
-        fluid {
-          ...GatsbyContentfulFluid_withWebp_noBase64
+        fixed(width: 500) {
+          ...GatsbyContentfulFixed_withWebp_noBase64
         }
       }
       primaryColor
       role
       slug
       tablet {
-        fluid {
-          ...GatsbyContentfulFluid_withWebp_noBase64
+        fixed(width: 800) {
+          ...GatsbyContentfulFixed_withWebp_noBase64
         }
       }
       tags
       title
       typography {
-        fluid {
-          ...GatsbyContentfulFluid_withWebp_noBase64
+        fixed(width: 730) {
+          ...GatsbyContentfulFixed_withWebp_noBase64
         }
         title
       }
