@@ -50,7 +50,7 @@ const ProjectTemplate = props => {
   return (
     <Layout>
       {desktop && (
-        <Section isFull>
+        <Section appearance="light" isFull>
           <Grid>
             <Img fluid={desktop.fluid} />
           </Grid>
@@ -83,7 +83,7 @@ const ProjectTemplate = props => {
       </Section>
 
       {colors && (
-        <Section>
+        <Section appearance="light">
           <Grid>
             <h2>Colors</h2>
             <Img fluid={colors.fluid} />
@@ -107,7 +107,7 @@ const ProjectTemplate = props => {
       )}
 
       {homepage && (
-        <Section>
+        <Section appearance="light">
           <Grid>
             <h2>Homepage</h2>
             <Img fluid={homepage.fluid} />
@@ -148,7 +148,7 @@ const ProjectTemplate = props => {
         </Grid>
       </Section>
 
-      <Section>
+      <Section appearance="light">
         <Grid>
           <Logos logos={edges.map(edge => edge.node)} />
         </Grid>
