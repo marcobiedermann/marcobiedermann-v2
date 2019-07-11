@@ -4,6 +4,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   const pageTemplate = path.resolve('./src/templates/Page/index.jsx');
   const projectTemplate = path.resolve('./src/templates/Project/index.jsx');
+  const projectsTemplate = path.resolve('./src/templates/Projects/index.jsx');
 
   const pagesQuery = graphql(
     `
@@ -51,6 +52,25 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     const projects = result.data.allContentfulProject.edges;
+    const limit = 12;
+    const total = projects.length;
+    const pages = Math.ceil(total / limit);
+
+    Array.from({ length: pages }).forEach((_page, index) => {
+      const page = index + 1;
+      const skip = index * limit;
+
+      createPage({
+        path: index === 0 ? '/projects' : `/projects/${index + 1}`,
+        component: projectsTemplate,
+        context: {
+          limit,
+          page,
+          pages,
+          skip,
+        },
+      });
+    });
 
     projects.forEach((project, index) => {
       const previous = index === projects.length - 1 ? null : projects[index + 1].node;
