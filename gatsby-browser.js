@@ -1,4 +1,5 @@
 import 'typeface-montserrat';
+import './src/styles/all.css';
 import './src/styles/anchor.css';
 import './src/styles/body.css';
 import './src/styles/button.css';
