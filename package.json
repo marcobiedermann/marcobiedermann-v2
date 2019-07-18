@@ -27,7 +27,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-instantsearch-dom": "^5.7.0",
-    "typeface-montserrat": "0.0.54"
+    "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
     "babel-jest": "^24.8.0",
