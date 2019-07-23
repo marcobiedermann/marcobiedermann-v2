@@ -10,7 +10,7 @@ import Pagination from '../../components/Pagination';
 import Row from '../../components/Row';
 import Section from '../../components/Section';
 
-const ProjectTemplate = props => {
+const ProjectWebsiteTemplate = props => {
   const {
     data: {
       allContentfulProject: { edges },
@@ -157,7 +157,7 @@ const ProjectTemplate = props => {
   );
 };
 
-ProjectTemplate.propTypes = {
+ProjectWebsiteTemplate.propTypes = {
   data: PropTypes.shape({
     allContentfulProject: PropTypes.shape({
       edges: PropTypes.arrayOf(
@@ -205,7 +205,7 @@ ProjectTemplate.propTypes = {
   }),
 };
 
-ProjectTemplate.defaultProps = {
+ProjectWebsiteTemplate.defaultProps = {
   data: null,
   pageContext: null,
 };
@@ -271,4 +271,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default ProjectTemplate;
+export default ProjectWebsiteTemplate;

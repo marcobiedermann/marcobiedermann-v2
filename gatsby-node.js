@@ -3,7 +3,8 @@ const path = require('path');
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   const pageTemplate = path.resolve('./src/templates/Page/index.jsx');
-  const projectTemplate = path.resolve('./src/templates/Project/index.jsx');
+  const projectDefaultTemplate = path.resolve('./src/templates/ProjectDefault/index.jsx');
+  const projectWebsiteTemplate = path.resolve('./src/templates/ProjectWebsite/index.jsx');
   const projectsTemplate = path.resolve('./src/templates/Projects/index.jsx');
 
   const pagesQuery = graphql(
@@ -41,6 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
           edges {
             node {
               slug
+              tags
             }
           }
         }
@@ -78,7 +80,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       createPage({
         path: `/projects/${project.node.slug}`,
-        component: projectTemplate,
+        component: project.node.tags.includes('website') ? projectWebsiteTemplate : projectDefaultTemplate,
         context: {
           slug: project.node.slug,
           previous,
