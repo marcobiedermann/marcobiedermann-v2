@@ -6,6 +6,7 @@ exports.createPages = ({ graphql, actions }) => {
   const projectDefaultTemplate = path.resolve('./src/templates/ProjectDefault/index.jsx');
   const projectWebsiteTemplate = path.resolve('./src/templates/ProjectWebsite/index.jsx');
   const projectsTemplate = path.resolve('./src/templates/Projects/index.jsx');
+  const tagTemplate = path.resolve('./src/templates/Tag/index.jsx');
 
   const pagesQuery = graphql(
     `
@@ -57,6 +58,7 @@ exports.createPages = ({ graphql, actions }) => {
     const limit = 12;
     const total = projects.length;
     const pages = Math.ceil(total / limit);
+    const tags = [...new Set(projects.flatMap(project => project.node.tags))];
 
     Array.from({ length: pages }).forEach((_page, index) => {
       const page = index + 1;
@@ -85,6 +87,16 @@ exports.createPages = ({ graphql, actions }) => {
           slug: project.node.slug,
           previous,
           next,
+        },
+      });
+    });
+
+    tags.forEach(tag => {
+      createPage({
+        component: tagTemplate,
+        path: `/tags/${tag}`,
+        context: {
+          tag,
         },
       });
     });
