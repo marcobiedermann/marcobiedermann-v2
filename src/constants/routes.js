@@ -8,6 +8,11 @@ export const INDEX = {
   path: '/',
 };
 
+export const PRIVACY_POLICY = {
+  name: 'Privacy Policy',
+  path: '/privacy-policy',
+};
+
 export const PROJECTS = {
   name: 'Projects',
   path: '/projects',

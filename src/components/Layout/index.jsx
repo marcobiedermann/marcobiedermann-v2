@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import * as routes from '../../constants/routes';
-import { now } from '../../utils/date';
 import Footer from '../Footer';
 import Grid from '../Grid';
 import Header from '../Header';
@@ -15,13 +14,14 @@ const Layout = props => {
     <div {...otherProps}>
       <Header>
         <Grid>
-          <Navigation routes={[routes.INDEX, routes.PROJECTS, routes.SEARCH, routes.IMPRINT]} />
+          <Navigation routes={[routes.INDEX, routes.PROJECTS, routes.SEARCH]} />
         </Grid>
       </Header>
       <Main>{children}</Main>
       <Footer>
         <Grid>
-          © {now.getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <p>Handcrafted with love in Germany</p>
+          <Navigation routes={[routes.IMPRINT, routes.PRIVACY_POLICY]} />
         </Grid>
       </Footer>
     </div>
