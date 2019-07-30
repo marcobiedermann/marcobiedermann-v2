@@ -33,13 +33,6 @@ exports[`Layout component should render correctly 1`] = `
               Search
             </a>
           </li>
-          <li>
-            <a
-              href="/imprint"
-            >
-              Imprint
-            </a>
-          </li>
         </ul>
       </nav>
     </div>
@@ -53,14 +46,29 @@ exports[`Layout component should render correctly 1`] = `
     <div
       className="grid"
     >
-      © 
-      2019
-      , Built with 
-      <a
-        href="https://www.gatsbyjs.org"
+      <p>
+        Handcrafted with love in Germany
+      </p>
+      <nav
+        className="navigation"
       >
-        Gatsby
-      </a>
+        <ul>
+          <li>
+            <a
+              href="/imprint"
+            >
+              Imprint
+            </a>
+          </li>
+          <li>
+            <a
+              href="/privacy-policy"
+            >
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </footer>
 </div>
