@@ -34,6 +34,7 @@ module.exports = {
         icon: 'src/images/favicon.png',
       },
     },
+    'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
