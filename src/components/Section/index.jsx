@@ -1,7 +1,7 @@
 import classNames from 'classnames';
+import capitalize from 'lodash/capitalize';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { capitalize } from '../../utils/string';
 import styles from './style.module.css';
 
 const Section = props => {
