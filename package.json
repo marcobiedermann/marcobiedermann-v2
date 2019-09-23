@@ -78,8 +78,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build-storybook": "NODE_ENV=production build-storybook",
-    "build": "gatsby build",
+    "build:gatsby": "gatsby build",
+    "build:storybook": "NODE_ENV=production build-storybook -o public/storybook",
+    "build": "npm run build:gatsby && npm run build:storybook",
     "check": "tsc",
     "develop": "gatsby develop",
     "fix:css": "npm run lint:css -- --fix",
