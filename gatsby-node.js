@@ -1,12 +1,14 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/no-var-requires */
+
 const path = require('path');
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
-  const pageTemplate = path.resolve('./src/templates/Page/index.jsx');
-  const projectDefaultTemplate = path.resolve('./src/templates/ProjectDefault/index.jsx');
-  const projectWebsiteTemplate = path.resolve('./src/templates/ProjectWebsite/index.jsx');
-  const projectsTemplate = path.resolve('./src/templates/Projects/index.jsx');
-  const tagTemplate = path.resolve('./src/templates/Tag/index.jsx');
+  const pageTemplate = path.resolve('./src/templates/Page/index.tsx');
+  const projectDefaultTemplate = path.resolve('./src/templates/ProjectDefault/index.tsx');
+  const projectWebsiteTemplate = path.resolve('./src/templates/ProjectWebsite/index.tsx');
+  const projectsTemplate = path.resolve('./src/templates/Projects/index.tsx');
+  const tagTemplate = path.resolve('./src/templates/Tag/index.tsx');
 
   const pagesQuery = graphql(
     `

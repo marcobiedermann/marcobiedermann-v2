@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const dotenv = require('dotenv');
 
 dotenv.config({
@@ -22,6 +24,7 @@ module.exports = {
         trackingId: 'UA-46884111-4',
       },
     },
+    /* eslint-disable @typescript-eslint/camelcase */
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -34,6 +37,7 @@ module.exports = {
         icon: 'src/images/favicon.png',
       },
     },
+    /* eslint-enable @typescript-eslint/camelcase */
     'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logos component should render correctly 1`] = `
+<ul
+  className="logos"
+>
+  <li>
+    <a
+      href="/projects/undefined"
+    >
+      <img
+        alt="Logo Title"
+        src="path/to/image"
+      />
+    </a>
+  </li>
+</ul>
+`;
