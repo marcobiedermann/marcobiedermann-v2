@@ -44,7 +44,7 @@
     "@types/jest": "^24.0.18",
     "@types/lodash": "^4.14.139",
     "@types/node": "^12.7.8",
-    "@types/prop-types": "^15.7.2",
+    "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.3",
     "@types/react-dom": "^16.9.1",
     "@types/react-helmet": "^5.0.10",
