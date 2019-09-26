@@ -18,7 +18,7 @@
     "gatsby-plugin-offline": "^3.0.9",
     "gatsby-plugin-react-helmet": "^3.1.10",
     "gatsby-plugin-sharp": "^2.2.25",
-    "gatsby-plugin-sitemap": "^2.2.14",
+    "gatsby-plugin-sitemap": "^2.2.16",
     "gatsby-plugin-typescript": "^2.1.11",
     "gatsby-source-contentful": "^2.1.42",
     "gatsby-source-filesystem": "^2.1.26",
