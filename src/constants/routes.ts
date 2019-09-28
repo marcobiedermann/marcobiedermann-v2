@@ -3,6 +3,11 @@ export interface Route {
   name: string;
 }
 
+export const ABOUT = {
+  name: 'About',
+  path: '/about',
+};
+
 export const IMPRINT = {
   name: 'Imprint',
   path: '/imprint',

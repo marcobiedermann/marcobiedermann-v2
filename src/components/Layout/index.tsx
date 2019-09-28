@@ -13,7 +13,7 @@ const Layout: React.FC = props => {
     <div {...otherProps}>
       <Header>
         <Grid>
-          <Navigation routes={[routes.INDEX, routes.PROJECTS, routes.SEARCH]} />
+          <Navigation routes={[routes.INDEX, routes.ABOUT, routes.PROJECTS, routes.SEARCH]} />
         </Grid>
       </Header>
       <Main>{children}</Main>
