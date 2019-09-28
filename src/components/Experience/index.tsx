@@ -1,13 +1,10 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Document } from '@contentful/rich-text-types';
-import classNames from 'classnames';
 import { format, formatDistanceStrict } from 'date-fns';
 import React from 'react';
 import { DATE_NOW } from '../../constants/date';
-import styles from './style.module.css';
 
 export interface ExperienceProps {
-  className?: string;
   company: string;
   description?: {
     json: Document;
@@ -21,10 +18,10 @@ export interface ExperienceProps {
 }
 
 const Experience: React.FC<ExperienceProps> = props => {
-  const { className, company, description, location, endDate, startDate, title, url } = props;
+  const { company, description, location, endDate, startDate, title, url } = props;
 
   return (
-    <div className={classNames(className, styles.experience)}>
+    <div>
       <h3>{title}</h3>
       <h4>
         @
