@@ -34,5 +34,10 @@ module.exports = ({ config }) => {
     },
   });
 
+  config.resolve.extensions.push('.ts', '.tsx');
+
+  // CSS Modules
+  config.module.rules[2].use[1].options.modules = true;
+
   return config;
 };

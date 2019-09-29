@@ -3,7 +3,7 @@ import { configure } from '@storybook/react';
 import '../gatsby-browser';
 
 // automatically import all files ending in *.stories.js
-const req = require.context('../src', true, /.stories.jsx?$/);
+const req = require.context('../src', true, /.stories.tsx?$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
