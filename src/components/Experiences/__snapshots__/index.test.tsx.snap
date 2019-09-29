@@ -5,9 +5,7 @@ exports[`Experiences component should render correctly 1`] = `
   className="experiences"
 >
   <li>
-    <div
-      className="experience"
-    >
+    <div>
       <h3>
         Job title
       </h3>

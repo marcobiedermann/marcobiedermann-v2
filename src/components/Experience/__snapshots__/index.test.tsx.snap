@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Experience component should render correctly 1`] = `
-<div
-  className="experience"
->
+<div>
   <h3>
     Job title
   </h3>
@@ -32,9 +30,7 @@ exports[`Experience component should render correctly 1`] = `
 `;
 
 exports[`Experience component should render without \`endDate\` correctly 1`] = `
-<div
-  className="experience"
->
+<div>
   <h3>
     Job title
   </h3>
