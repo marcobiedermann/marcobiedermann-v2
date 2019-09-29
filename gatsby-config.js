@@ -38,7 +38,14 @@ module.exports = {
       },
     },
     /* eslint-enable @typescript-eslint/camelcase */
-    'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        headers: {
+          '/*': ['X-Frame-Options: sameorigin'],
+        },
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
