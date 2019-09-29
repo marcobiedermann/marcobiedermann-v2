@@ -1,9 +1,11 @@
 import { action } from '@storybook/addon-actions';
-import { configure } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
+import { addDecorator, configure } from '@storybook/react';
 import '../gatsby-browser';
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.stories.tsx?$/);
+
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
@@ -19,4 +21,6 @@ global.__PATH_PREFIX__ = '';
 window.___navigate = pathname => {
   action('NavigateTo:')(pathname);
 };
+
+addDecorator(withInfo);
 configure(loadStories, module);
