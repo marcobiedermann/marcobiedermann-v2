@@ -18,7 +18,7 @@ const Section: React.FC<SectionProps> = props => {
     <section
       className={classNames(className, styles.section, {
         [styles.sectionFull]: isFull,
-        [styles[`section${capitalize(appearance)}`]]: appearance,
+        [styles[`section${capitalize(appearance)}` as 'sectionLight' | 'sectionDark']]: appearance,
       })}
       {...otherProps}
     >
