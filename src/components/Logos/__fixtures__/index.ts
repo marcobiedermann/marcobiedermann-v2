@@ -1,5 +1,5 @@
-import project from '../../Logo/__fixtures__';
+import logo from '../../Logo/__fixtures__';
 
-const projects = [project];
+const logos = [logo];
 
-export default projects;
+export default logos;
