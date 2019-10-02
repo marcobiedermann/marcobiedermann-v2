@@ -4,10 +4,21 @@ import Layout from '../components/Layout';
 import Section from '../components/Section';
 import Tags from '../components/Tags';
 
+interface TagsPageQuery {
+  allContentfulProject: {
+    tags: [
+      {
+        fieldValue: string;
+        totalCount: number;
+      },
+    ];
+  };
+}
+
 const TagsPage: React.FC = () => {
   const {
     allContentfulProject: { tags },
-  } = useStaticQuery(
+  }: TagsPageQuery = useStaticQuery(
     graphql`
       query {
         allContentfulProject {

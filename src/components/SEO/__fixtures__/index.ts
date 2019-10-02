@@ -1,9 +1,8 @@
-import { Lang } from '../index';
+import { SEOProps } from '../index';
 
-const seo = {
+const seo: SEOProps = {
   description: '',
-  keywords: [],
-  lang: 'en' as Lang,
+  lang: 'en',
   meta: [],
   title: 'Page title',
 };

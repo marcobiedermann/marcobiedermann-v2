@@ -1,4 +1,5 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
+import { FluidObject } from 'gatsby-image';
 import React from 'react';
 import Grid from '../components/Grid';
 import Layout from '../components/Layout';
@@ -7,8 +8,25 @@ import Section from '../components/Section';
 import SEO from '../components/SEO';
 import * as routes from '../constants/routes';
 
+interface IndexPageQuery {
+  allContentfulProject: {
+    edges: [
+      {
+        node: {
+          id: string;
+          slug: string;
+          title: string;
+          thumbnail: {
+            fluid: FluidObject;
+          };
+        };
+      },
+    ];
+  };
+}
+
 const IndexPage: React.FC = () => {
-  const { allContentfulProject } = useStaticQuery(
+  const { allContentfulProject }: IndexPageQuery = useStaticQuery(
     graphql`
       query {
         allContentfulProject(sort: { fields: [createdAt], order: DESC }, limit: 8) {

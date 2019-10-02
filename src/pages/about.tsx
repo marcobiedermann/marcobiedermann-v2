@@ -1,4 +1,5 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { Document } from '@contentful/rich-text-types';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Experiences from '../components/Experiences';
@@ -6,8 +7,37 @@ import Grid from '../components/Grid';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 
+interface AboutPageQuery {
+  allContentfulExperience: {
+    edges: [
+      {
+        node: {
+          description: {
+            json: Document;
+          };
+          company: string;
+          endDate: Date;
+          location: string;
+          id: string;
+          startDate: Date;
+          title: string;
+          url: string;
+        };
+      },
+    ];
+  };
+  contentfulPage: {
+    body: {
+      json: Document;
+    };
+    id: string;
+    slug: string;
+    title: string;
+  };
+}
+
 const AboutPage: React.FC = () => {
-  const { allContentfulExperience, contentfulPage } = useStaticQuery(
+  const { allContentfulExperience, contentfulPage }: AboutPageQuery = useStaticQuery(
     graphql`
       query {
         allContentfulExperience(sort: { fields: endDate, order: DESC }) {
