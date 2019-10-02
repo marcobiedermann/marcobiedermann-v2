@@ -2,7 +2,7 @@ const project = {
   id: '1',
   logo: {
     file: {
-      url: 'path/to/image',
+      url: 'https://via.placeholder.com/150x50',
     },
     title: 'Logo Title',
   },

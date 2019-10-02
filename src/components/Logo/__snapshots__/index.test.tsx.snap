@@ -6,7 +6,7 @@ exports[`Logo component should render correctly 1`] = `
 >
   <img
     alt="Logo Title"
-    src="path/to/image"
+    src="https://via.placeholder.com/150x50"
   />
 </a>
 `;
