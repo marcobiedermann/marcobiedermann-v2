@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Route component should render correctly 1`] = `
+<a
+  href="/path/to/page"
+>
+  Page name
+</a>
+`;

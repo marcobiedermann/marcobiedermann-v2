@@ -14,10 +14,12 @@ describe('Pagination component', () => {
   it('should render routes correctly', () => {
     const routes = [
       {
+        id: '9f16aa77-f47a-431f-a8a2-da6eeb655bae',
         name: 'Previous',
         path: '/previous',
       },
       {
+        id: '58369d13-590c-4c17-bad7-32b8eefe8d3a',
         name: 'Next',
         path: '/next',
       },

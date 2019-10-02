@@ -6,7 +6,6 @@ import Layout from '../components/Layout';
 import Projects from '../components/Projects';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
-import * as routes from '../constants/routes';
 
 interface IndexPageQuery {
   allContentfulProject: {
@@ -63,7 +62,7 @@ const IndexPage: React.FC = () => {
       <Section>
         <Grid>
           <Projects projects={projects.map(project => project.node)} />
-          <Link to={routes.PROJECTS.path}>See more Work</Link>
+          <Link to="/projects">See more Work</Link>
         </Grid>
       </Section>
     </Layout>

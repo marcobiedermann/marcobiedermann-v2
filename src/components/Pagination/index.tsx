@@ -1,12 +1,11 @@
 import classNames from 'classnames';
-import { Link } from 'gatsby';
 import React from 'react';
-import { Route } from '../../constants/routes';
+import Route, { RouteProps } from '../Route';
 import styles from './style.module.css';
 
 export interface PaginationProps {
   className?: string;
-  routes: Route[];
+  routes: RouteProps[];
 }
 
 const Pagination: React.FC<PaginationProps> = props => {
@@ -15,10 +14,8 @@ const Pagination: React.FC<PaginationProps> = props => {
   return (
     <ul className={classNames(className, styles.pagination)} {...otherProps}>
       {routes.map(route => (
-        <li key={route.path}>
-          <Link to={route.path} className={styles.pagination__link}>
-            {route.name}
-          </Link>
+        <li key={route.id}>
+          <Route className={styles.pagination__link} {...route} />
         </li>
       ))}
     </ul>

@@ -14,30 +14,9 @@ exports[`Layout component should render correctly 1`] = `
         <ul>
           <li>
             <a
-              href="/"
+              href="/path/to/page"
             >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="/about"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="/projects"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              href="/search"
-            >
-              Search
+              Page name
             </a>
           </li>
         </ul>
@@ -62,16 +41,9 @@ exports[`Layout component should render correctly 1`] = `
         <ul>
           <li>
             <a
-              href="/imprint"
+              href="/path/to/page"
             >
-              Imprint
-            </a>
-          </li>
-          <li>
-            <a
-              href="/privacy-policy"
-            >
-              Privacy Policy
+              Page name
             </a>
           </li>
         </ul>
