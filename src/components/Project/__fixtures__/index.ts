@@ -5,8 +5,8 @@ const project = {
     fluid: {
       aspectRatio: 1.333333333,
       sizes: '(max-width: 800px) 100vw, 800px',
-      src: 'path/to/img',
-      srcSet: 'path/to/img',
+      src: 'https://via.placeholder.com/800x600',
+      srcSet: 'https://via.placeholder.com/800x600',
     },
   },
   title: 'Demo Project',
