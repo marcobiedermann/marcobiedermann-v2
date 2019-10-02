@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/no-var-requires */
 
 const dotenv = require('dotenv');
 
@@ -54,6 +54,7 @@ module.exports = {
       resolve: 'gatsby-source-contentful',
       options: {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        localeFilter: locale => locale.code === 'en-US',
         spaceId: 'xcrbc5t6zr5p',
       },
     },
