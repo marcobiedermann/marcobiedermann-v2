@@ -11,14 +11,19 @@ const options = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node: Node): React.ReactElement => {
       const { description, file } = node.data.target.fields;
-      const { contentType, url } = file['en-US'];
+      const { contentType, details, url } = file['en-US'];
       const mineGroup = contentType.split('/')[0];
 
       switch (mineGroup) {
         case 'image':
           return (
             <figure>
-              <img alt={description ? description['en-US'] : null} src={url} />
+              <img
+                alt={description ? description['en-US'] : null}
+                src={url}
+                width={details.image.width}
+                height={details.image.height}
+              />
             </figure>
           );
 
