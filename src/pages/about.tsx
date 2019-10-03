@@ -2,6 +2,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Document } from '@contentful/rich-text-types';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Experiences from '../components/Experiences';
 import Grid from '../components/Grid';
 import Layout from '../components/Layout';
@@ -67,6 +68,7 @@ const AboutPage: React.FC = () => {
       }
     `,
   );
+  const { t } = useTranslation();
 
   const { edges: experiences } = allContentfulExperience;
   const { body, title } = contentfulPage;
@@ -81,7 +83,7 @@ const AboutPage: React.FC = () => {
       </Section>
       <Section>
         <Grid>
-          <h2>Experiences</h2>
+          <h2>{t('about:experiences')}</h2>
           <Experiences experiences={experiences.map(experience => experience.node)} />
         </Grid>
       </Section>

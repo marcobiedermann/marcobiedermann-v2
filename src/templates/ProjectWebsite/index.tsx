@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import Img, { FixedObject } from 'gatsby-image';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Column from '../../components/Column';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
@@ -80,19 +81,20 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
     },
     pageContext: { previous, next },
   } = props;
+  const { t } = useTranslation();
 
   const paginationRoutes = [];
 
   if (previous) {
     paginationRoutes.push({
-      name: 'Previous',
+      name: t('pagination.previous'),
       path: `/projects/${previous.slug}`,
     });
   }
 
   if (next) {
     paginationRoutes.push({
-      name: 'Next',
+      name: t('pagination.next'),
       path: `/projects/${next.slug}`,
     });
   }
@@ -113,19 +115,19 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
           <ul>
             {client && (
               <li>
-                <strong>Client:</strong> {client}
+                <strong>{t('project:client')}:</strong> {client}
               </li>
             )}
 
             {agency && (
               <li>
-                <strong>Agency:</strong> {agency}
+                <strong>{t('project:agency')}:</strong> {agency}
               </li>
             )}
 
             {role && (
               <li>
-                <strong>Role:</strong> {role}
+                <strong>{t('project:role')}:</strong> {role}
               </li>
             )}
           </ul>
@@ -135,7 +137,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
       {colors && (
         <Section appearance="light">
           <Grid>
-            <h2>Colors</h2>
+            <h2>{t('project:colors.title')}</h2>
             <Img fixed={colors.fixed} />
           </Grid>
         </Section>
@@ -144,7 +146,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
       {typography && (
         <Section>
           <Grid>
-            <h2>Typography</h2>
+            <h2>{t('project:typography.title')}</h2>
             <Row>
               {typography.map(font => (
                 <Column key={font.title}>
@@ -159,7 +161,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
       {homepage && (
         <Section appearance="light">
           <Grid>
-            <h2>Homepage</h2>
+            <h2>{t('project:homepage.title')}</h2>
             <Img fixed={homepage.fixed} />
           </Grid>
         </Section>
@@ -170,13 +172,13 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
           backgroundColor: primaryColor,
         }}
       >
-        <Grid>Responsive Design</Grid>
+        <Grid>{t('project:responsive')}</Grid>
       </Section>
 
       {tablet && (
         <Section appearance="light">
           <Grid>
-            <h2>Tablet view</h2>
+            <h2>{t('project:tablet.title')}</h2>
             <Img fixed={tablet.fixed} />
           </Grid>
         </Section>
@@ -185,8 +187,8 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
       {mobile && (
         <Section>
           <Grid>
-            <h2>Mobile View</h2>
-            <p>With a small display comes great responsibilities</p>
+            <h2>{t('project:mobile.title')}</h2>
+            <p>{t('project:mobile.description')}</p>
             <Img fixed={mobile.fixed} />
           </Grid>
         </Section>

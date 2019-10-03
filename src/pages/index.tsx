@@ -1,6 +1,7 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Grid from '../components/Grid';
 import Layout from '../components/Layout';
 import Projects from '../components/Projects';
@@ -45,24 +46,17 @@ const IndexPage: React.FC = () => {
       }
     `,
   );
+  const { t } = useTranslation();
   const { edges: projects } = allContentfulProject;
 
   return (
     <Layout>
       <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
-      <Section>
-        <Grid>
-          <h1>Hi people</h1>
-          <p>Welcome to your new Gatsby site.</p>
-          <p>Now go build something great.</p>
-          <Link to="/page-2/">Go to page 2</Link>
-        </Grid>
-      </Section>
 
       <Section>
         <Grid>
           <Projects projects={projects.map(project => project.node)} />
-          <Link to="/projects">See more Work</Link>
+          <Link to="/projects">{t('project:more work')}</Link>
         </Grid>
       </Section>
     </Layout>

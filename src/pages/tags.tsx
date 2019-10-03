@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import Tags from '../components/Tags';
@@ -30,11 +31,12 @@ const TagsPage: React.FC = () => {
       }
     `,
   );
+  const { t } = useTranslation();
 
   return (
     <Layout>
       <Section>
-        <h1>Tags</h1>
+        <h1>{t('tags')}</h1>
         {tags && <Tags tags={tags} />}
       </Section>
     </Layout>
