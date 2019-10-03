@@ -35,6 +35,10 @@ exports[`Layout component should render correctly 1`] = `
       <p>
         Handcrafted with love in Germany
       </p>
+      <p>
+        Happy 
+        Saturday
+      </p>
       <nav
         className="navigation"
       >

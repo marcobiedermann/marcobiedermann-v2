@@ -1,5 +1,7 @@
+import { format } from 'date-fns';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import { DATE_NOW } from '../../constants/date';
 import '../../i18n';
 import Footer from '../Footer';
 import Grid from '../Grid';
@@ -62,6 +64,7 @@ const Layout: React.FC = props => {
       <Footer>
         <Grid>
           <p>Handcrafted with love in Germany</p>
+          <p>Happy {format(DATE_NOW, 'iiii')}</p>
           {footerMenu && <Navigation routes={footerMenu.routes} />}
         </Grid>
       </Footer>
