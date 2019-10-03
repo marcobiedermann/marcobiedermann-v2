@@ -16,7 +16,7 @@ const Navigation: React.FC<NavigationProps> = props => {
       <ul>
         {routes.map(route => (
           <li key={route.id}>
-            <Route {...route} />
+            <Route activeClassName={styles.navigation__linkActive} className={styles.navigation__link} {...route} />
           </li>
         ))}
       </ul>

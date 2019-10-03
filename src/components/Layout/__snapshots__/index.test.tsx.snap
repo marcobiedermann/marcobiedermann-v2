@@ -14,6 +14,7 @@ exports[`Layout component should render correctly 1`] = `
         <ul>
           <li>
             <a
+              className="navigation__link"
               href="/path/to/page"
             >
               Page name
@@ -45,6 +46,7 @@ exports[`Layout component should render correctly 1`] = `
         <ul>
           <li>
             <a
+              className="navigation__link"
               href="/path/to/page"
             >
               Page name

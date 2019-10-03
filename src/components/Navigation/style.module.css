@@ -1,3 +1,11 @@
 .navigation {
   text-transform: uppercase;
 }
+
+.navigation__link {
+  text-decoration: none;
+}
+
+.navigation__link--active {
+  font-weight: bold;
+}
