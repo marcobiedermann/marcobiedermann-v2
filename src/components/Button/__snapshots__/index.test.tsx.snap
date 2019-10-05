@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component should render correctly 1`] = `
+<span
+  className="button"
+/>
+`;
+
+exports[`Button component should render link using \`href\` 1`] = `
+<a
+  className="button"
+  href="#"
+/>
+`;
+
+exports[`Button component should render link using \`to\` 1`] = `
+<a
+  className="button"
+  href="#"
+/>
+`;

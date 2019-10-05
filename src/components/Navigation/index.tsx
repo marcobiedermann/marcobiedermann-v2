@@ -13,7 +13,7 @@ const Navigation: React.FC<NavigationProps> = props => {
 
   return (
     <nav className={classNames(className, styles.navigation)} {...otherProps}>
-      <ul>
+      <ul className={styles.navigation__list}>
         {routes.map(route => (
           <li key={route.id}>
             <Route activeClassName={styles.navigation__linkActive} className={styles.navigation__link} {...route} />

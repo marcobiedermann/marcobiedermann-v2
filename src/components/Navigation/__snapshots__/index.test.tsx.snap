@@ -4,6 +4,8 @@ exports[`Navigation component should render correctly 1`] = `
 <nav
   className="navigation"
 >
-  <ul />
+  <ul
+    className="navigation__list"
+  />
 </nav>
 `;

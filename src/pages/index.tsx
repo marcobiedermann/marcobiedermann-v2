@@ -1,7 +1,8 @@
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import Button from '../components/Button';
 import Grid from '../components/Grid';
 import Layout from '../components/Layout';
 import Projects from '../components/Projects';
@@ -56,7 +57,7 @@ const IndexPage: React.FC = () => {
       <Section>
         <Grid>
           <Projects projects={projects.map(project => project.node)} />
-          <Link to="/projects">{t('project:more work')}</Link>
+          <Button to="/projects">{t('project:more work')}</Button>
         </Grid>
       </Section>
     </Layout>
