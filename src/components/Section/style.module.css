@@ -1,4 +1,6 @@
 .section {
+  align-items: center;
+  display: flex;
   padding-bottom: 6em;
   padding-top: 6em;
 }
