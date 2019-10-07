@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alignment component should render align \`center\` correctly 1`] = `
+<div
+  className="alignment alignmentAlignCenter"
+/>
+`;
+
+exports[`Alignment component should render align \`end\` correctly 1`] = `
+<div
+  className="alignment alignmentAlignEnd"
+/>
+`;
+
+exports[`Alignment component should render align \`start\` correctly 1`] = `
+<div
+  className="alignment alignmentAlignStart"
+/>
+`;
+
+exports[`Alignment component should render content correctly 1`] = `
+<div
+  className=""
+>
+  Content
+</div>
+`;
+
+exports[`Alignment component should render correctly 1`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`Alignment component should render justify \`center\` correctly 1`] = `
+<div
+  className="alignment alignmentJustifyCenter"
+/>
+`;
+
+exports[`Alignment component should render justify \`end\` correctly 1`] = `
+<div
+  className="alignment alignmentJustifyEnd"
+/>
+`;
+
+exports[`Alignment component should render justify \`space-between\` correctly 1`] = `
+<div
+  className="alignment alignmentJustifySpaceBetween"
+/>
+`;
+
+exports[`Alignment component should render justify \`start\` correctly 1`] = `
+<div
+  className="alignment alignmentJustifyStart"
+/>
+`;
