@@ -103,14 +103,14 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
     <Layout>
       {desktop && (
         <Section appearance="light" isFull>
-          <Grid>
+          <Grid justify="center">
             <Img fixed={desktop.fixed} />
           </Grid>
         </Section>
       )}
 
       <Section>
-        <Grid>
+        <Grid justify="center">
           <h1>{title}</h1>
           <ul>
             {client && (
@@ -136,7 +136,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
 
       {colors && (
         <Section appearance="light">
-          <Grid>
+          <Grid justify="center">
             <h2>{t('project:colors.title')}</h2>
             <Img fixed={colors.fixed} />
           </Grid>
@@ -145,7 +145,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
 
       {typography && (
         <Section>
-          <Grid>
+          <Grid justify="center">
             <h2>{t('project:typography.title')}</h2>
             <Row>
               {typography.map(font => (
@@ -160,7 +160,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
 
       {homepage && (
         <Section appearance="light">
-          <Grid>
+          <Grid justify="center">
             <h2>{t('project:homepage.title')}</h2>
             <Img fixed={homepage.fixed} />
           </Grid>
@@ -172,12 +172,12 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
           backgroundColor: primaryColor,
         }}
       >
-        <Grid>{t('project:responsive')}</Grid>
+        <Grid justify="center">{t('project:responsive')}</Grid>
       </Section>
 
       {tablet && (
         <Section appearance="light">
-          <Grid>
+          <Grid justify="center">
             <h2>{t('project:tablet.title')}</h2>
             <Img fixed={tablet.fixed} />
           </Grid>
@@ -186,7 +186,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
 
       {mobile && (
         <Section>
-          <Grid>
+          <Grid justify="center">
             <h2>{t('project:mobile.title')}</h2>
             <p>{t('project:mobile.description')}</p>
             <Img fixed={mobile.fixed} />
@@ -195,7 +195,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
       )}
 
       <Section>
-        <Grid>
+        <Grid justify="center">
           <Pagination routes={paginationRoutes} />
         </Grid>
       </Section>

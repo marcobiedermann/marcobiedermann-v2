@@ -80,14 +80,14 @@ const ProjectDefaultTemplate: React.FC<ProjectDefaultTemplateProps> = props => {
   return (
     <Layout>
       <Section>
-        <Grid>
+        <Grid justify="center">
           <h1>{title}</h1>
           {documentToReactComponents(body.json, options)}
         </Grid>
       </Section>
 
       <Section>
-        <Grid>
+        <Grid justify="center">
           <Pagination routes={paginationRoutes} />
         </Grid>
       </Section>
