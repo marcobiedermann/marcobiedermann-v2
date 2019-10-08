@@ -87,6 +87,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
 
   if (previous) {
     paginationRoutes.push({
+      id: 'previous',
       name: t('pagination.previous'),
       path: `/projects/${previous.slug}`,
     });
@@ -94,6 +95,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
 
   if (next) {
     paginationRoutes.push({
+      id: 'next',
       name: t('pagination.next'),
       path: `/projects/${next.slug}`,
     });
