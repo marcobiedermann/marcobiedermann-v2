@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { format } from 'date-fns';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
@@ -8,6 +9,7 @@ import Grid from '../Grid';
 import Header from '../Header';
 import Main from '../Main';
 import Navigation from '../Navigation';
+import styles from './style.module.css';
 
 interface LayoutQuery {
   allContentfulMenu: {
@@ -28,8 +30,12 @@ interface LayoutQuery {
   };
 }
 
-const Layout: React.FC = props => {
-  const { children, ...otherProps } = props;
+export interface LayoutProps {
+  className?: string;
+}
+
+const Layout: React.FC<LayoutProps> = props => {
+  const { children, className, ...otherProps } = props;
   const { allContentfulMenu }: LayoutQuery = useStaticQuery(
     graphql`
       query {
@@ -56,7 +62,7 @@ const Layout: React.FC = props => {
   const footerMenu = mappedMenues.find(menu => menu.slug === 'footer');
 
   return (
-    <div {...otherProps}>
+    <div className={classNames(className, styles.layout)} {...otherProps}>
       <Header>
         <Grid>{mainMenu && <Navigation routes={mainMenu.routes} />}</Grid>
       </Header>

@@ -2,6 +2,6 @@
 
 exports[`Main component should render correctly 1`] = `
 <main
-  className=""
+  className="main"
 />
 `;

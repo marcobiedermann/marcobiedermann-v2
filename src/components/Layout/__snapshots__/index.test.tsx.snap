@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Layout component should render correctly 1`] = `
-<div>
+<div
+  className="layout"
+>
   <header
     className="header"
   >
@@ -27,7 +29,7 @@ exports[`Layout component should render correctly 1`] = `
     </div>
   </header>
   <main
-    className=""
+    className="main"
   />
   <footer
     className="footer"
