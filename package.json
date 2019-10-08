@@ -7,7 +7,7 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@contentful/rich-text-types": "^13.4.0",
-    "algoliasearch": "^3.35.0",
+    "algoliasearch": "^3.35.1",
     "classnames": "^2.2.6",
     "date-fns": "^2.4.1",
     "dotenv": "^8.1.0",
