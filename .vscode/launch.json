@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "args": ["develop"],
+      "name": "Gatsby develop",
+      "program": "${workspaceRoot}/node_modules/gatsby/dist/bin/gatsby",
+      "request": "launch",
+      "runtimeArgs": ["--nolazy"],
+      "type": "node"
+    },
+    {
+      "args": ["build"],
+      "name": "Gatsby build",
+      "program": "${workspaceRoot}/node_modules/gatsby/dist/bin/gatsby",
+      "request": "launch",
+      "runtimeArgs": ["--nolazy"],
+      "type": "node"
+    },
+    {
+      "name": "Chrome",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:8000",
+      "webRoot": "${workspaceRoot}"
+    }
+  ]
+}
