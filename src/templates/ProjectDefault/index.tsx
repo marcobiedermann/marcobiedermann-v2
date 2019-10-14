@@ -2,10 +2,11 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, Document, Node } from '@contentful/rich-text-types';
 import { graphql } from 'gatsby';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
-import Pagination from '../../components/Pagination';
 import Section from '../../components/Section';
+import Pagination from '../../containers/Pagination';
 
 const options = {
   renderNode: {
@@ -60,22 +61,7 @@ const ProjectDefaultTemplate: React.FC<ProjectDefaultTemplateProps> = props => {
     },
     pageContext: { previous, next },
   } = props;
-
-  const paginationRoutes = [];
-
-  if (previous) {
-    paginationRoutes.push({
-      name: 'Previous',
-      path: `/projects/${previous.slug}`,
-    });
-  }
-
-  if (next) {
-    paginationRoutes.push({
-      name: 'Next',
-      path: `/projects/${next.slug}`,
-    });
-  }
+  const { t } = useTranslation();
 
   return (
     <Layout>
@@ -88,7 +74,15 @@ const ProjectDefaultTemplate: React.FC<ProjectDefaultTemplateProps> = props => {
 
       <Section>
         <Grid justify="center">
-          <Pagination routes={paginationRoutes} />
+          <Pagination
+            {...(next && {
+              next: { id: 'next', name: t('pagination.next'), path: `/projects/${next.slug}` },
+            })}
+            {...(previous && {
+              previous: { id: 'previous', name: t('pagination.previous'), path: `/projects/${previous.slug}` },
+            })}
+            routes={[]}
+          />
         </Grid>
       </Section>
     </Layout>
