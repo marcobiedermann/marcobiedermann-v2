@@ -7,9 +7,9 @@ import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
 import { LogoProps } from '../../components/Logo';
 import Logos from '../../components/Logos';
-import Pagination from '../../components/Pagination';
 import Row from '../../components/Row';
 import Section from '../../components/Section';
+import Pagination from '../../containers/Pagination';
 
 export interface ProjectWebsiteTemplate {
   data: {
@@ -82,24 +82,6 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
     pageContext: { previous, next },
   } = props;
   const { t } = useTranslation();
-
-  const paginationRoutes = [];
-
-  if (previous) {
-    paginationRoutes.push({
-      id: 'previous',
-      name: t('pagination.previous'),
-      path: `/projects/${previous.slug}`,
-    });
-  }
-
-  if (next) {
-    paginationRoutes.push({
-      id: 'next',
-      name: t('pagination.next'),
-      path: `/projects/${next.slug}`,
-    });
-  }
 
   return (
     <Layout>
@@ -198,7 +180,15 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
 
       <Section>
         <Grid justify="center">
-          <Pagination routes={paginationRoutes} />
+          <Pagination
+            {...(next && {
+              next: { id: 'next', name: t('pagination.next'), path: `/projects/${next.slug}` },
+            })}
+            {...(previous && {
+              previous: { id: 'previous', name: t('pagination.previous'), path: `/projects/${previous.slug}` },
+            })}
+            routes={[]}
+          />
         </Grid>
       </Section>
 
