@@ -21,6 +21,14 @@ exports[`Pagination component should render routes correctly 1`] = `
   <li>
     <a
       className="pagination__link"
+      href="/path/to/page"
+    >
+      Page name
+    </a>
+  </li>
+  <li>
+    <a
+      className="pagination__link"
       href="/next"
     >
       Next
