@@ -102,7 +102,7 @@
     "start": "gatsby serve",
     "storybook": "NODE_ENV=production start-storybook -p 6006",
     "test:ci": "npm run test && codecov",
-    "test": "jest"
+    "test": "jest --runInBand"
   },
   "repository": {
     "type": "git",
