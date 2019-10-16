@@ -44,7 +44,7 @@
     "@storybook/addon-actions": "^5.2.3",
     "@storybook/addon-info": "^5.2.3",
     "@storybook/addon-links": "^5.2.4",
-    "@storybook/addons": "^5.2.3",
+    "@storybook/addons": "^5.2.4",
     "@storybook/react": "^5.2.4",
     "@types/classnames": "^2.2.9",
     "@types/dotenv": "^6.1.1",
