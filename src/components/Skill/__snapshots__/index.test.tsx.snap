@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Experience component should render correctly 1`] = `
+<div>
+  <h3>
+    Job title
+  </h3>
+  <h4>
+    @
+    <a
+      href="http://www.example.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Company name
+    </a>
+    , 
+    Berlin, DE
+  </h4>
+  <div>
+    Jan 2000
+     – 
+    Jan 2001
+     (
+    1 year
+    )
+  </div>
+  <div />
+</div>
+`;
+
+exports[`Experience component should render without \`endDate\` correctly 1`] = `
+<div>
+  <h3>
+    Job title
+  </h3>
+  <h4>
+    @
+    <a
+      href="http://www.example.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Company name
+    </a>
+    , 
+    Berlin, DE
+  </h4>
+  <div>
+    Jan 2000
+     – 
+    present
+     (
+    20 years
+    )
+  </div>
+  <div />
+</div>
+`;

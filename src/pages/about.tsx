@@ -7,6 +7,7 @@ import Experiences from '../components/Experiences';
 import Grid from '../components/Grid';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
+import Skills from '../components/Skills';
 
 interface AboutPageQuery {
   allContentfulExperience: {
@@ -27,6 +28,18 @@ interface AboutPageQuery {
       },
     ];
   };
+  contentfulSkills: {
+    skills: [
+      {
+        description: {
+          json: Document;
+        };
+        id: string;
+        slug: string;
+        title: string;
+      },
+    ];
+  };
   contentfulPage: {
     body: {
       json: Document;
@@ -38,7 +51,7 @@ interface AboutPageQuery {
 }
 
 const AboutPage: React.FC = () => {
-  const { allContentfulExperience, contentfulPage }: AboutPageQuery = useStaticQuery(
+  const { allContentfulExperience, contentfulSkills, contentfulPage }: AboutPageQuery = useStaticQuery(
     graphql`
       query {
         allContentfulExperience(sort: { fields: endDate, order: DESC }) {
@@ -57,6 +70,16 @@ const AboutPage: React.FC = () => {
             }
           }
         }
+        contentfulSkills(slug: { eq: "skills" }) {
+          id
+          skills {
+            description {
+              json
+            }
+            id
+            title
+          }
+        }
         contentfulPage(slug: { eq: "about" }) {
           body {
             json
@@ -71,6 +94,7 @@ const AboutPage: React.FC = () => {
   const { t } = useTranslation();
 
   const { edges: experiences } = allContentfulExperience;
+  const { skills } = contentfulSkills;
   const { body, title } = contentfulPage;
 
   return (
@@ -85,6 +109,12 @@ const AboutPage: React.FC = () => {
         <Grid>
           <h2>{t('about:experiences')}</h2>
           <Experiences experiences={experiences.map(experience => experience.node)} />
+        </Grid>
+      </Section>
+      <Section>
+        <Grid>
+          <h2>{t('about:skills')}</h2>
+          <Skills skills={skills} />
         </Grid>
       </Section>
     </Layout>
