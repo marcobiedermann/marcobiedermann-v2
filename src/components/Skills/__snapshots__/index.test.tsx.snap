@@ -1,34 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Experiences component should render correctly 1`] = `
+exports[`Skills component should render correctly 1`] = `
 <ul
-  className="experiences"
+  className="skills"
 >
   <li>
     <div>
       <h3>
-        Job title
+        JavaScript
       </h3>
-      <h4>
-        @
-        <a
-          href="http://www.example.com"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Company name
-        </a>
-        , 
-        Berlin, DE
-      </h4>
-      <div>
-        Jan 2000
-         – 
-        Jan 2001
-         (
-        1 year
-        )
-      </div>
       <div />
     </div>
   </li>

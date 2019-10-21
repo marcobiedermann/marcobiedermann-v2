@@ -103,8 +103,8 @@
     "prebuild": "npm run clean",
     "start": "gatsby serve",
     "storybook": "NODE_ENV=production start-storybook -p 6006",
-    "test:ci": "npm run test && codecov",
-    "test": "jest --maxWorkers=2"
+    "test:ci": "npm run test -- --maxWorkers=2 && codecov",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
