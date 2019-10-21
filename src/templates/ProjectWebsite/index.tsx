@@ -1,4 +1,3 @@
-import { graphql } from 'gatsby';
 import Img, { FixedObject } from 'gatsby-image';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -9,6 +8,7 @@ import { LogoProps } from '../../components/Logo';
 import Logos from '../../components/Logos';
 import Row from '../../components/Row';
 import Section from '../../components/Section';
+import Typography from '../../components/Typography';
 import Pagination from '../../containers/Pagination';
 
 export interface ProjectWebsiteTemplate {
@@ -95,33 +95,37 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
 
       <Section>
         <Grid justify="center">
-          <h1>{title}</h1>
-          <ul>
-            {client && (
-              <li>
-                <strong>{t('project:client')}:</strong> {client}
-              </li>
-            )}
+          <Typography textAlign="center">
+            <h1>{title}</h1>
+            <ul>
+              {client && (
+                <li>
+                  <strong>{t('project:client')}:</strong> {client}
+                </li>
+              )}
 
-            {agency && (
-              <li>
-                <strong>{t('project:agency')}:</strong> {agency}
-              </li>
-            )}
+              {agency && (
+                <li>
+                  <strong>{t('project:agency')}:</strong> {agency}
+                </li>
+              )}
 
-            {role && (
-              <li>
-                <strong>{t('project:role')}:</strong> {role}
-              </li>
-            )}
-          </ul>
+              {role && (
+                <li>
+                  <strong>{t('project:role')}:</strong> {role}
+                </li>
+              )}
+            </ul>
+          </Typography>
         </Grid>
       </Section>
 
       {colors && (
         <Section appearance="light">
           <Grid justify="center">
-            <h2>{t('project:colors.title')}</h2>
+            <Typography textAlign="center">
+              <h2>{t('project:colors.title')}</h2>
+            </Typography>
             <Img fixed={colors.fixed} />
           </Grid>
         </Section>
@@ -130,7 +134,9 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
       {typography && (
         <Section>
           <Grid justify="center">
-            <h2>{t('project:typography.title')}</h2>
+            <Typography textAlign="center">
+              <h2>{t('project:typography.title')}</h2>
+            </Typography>
             <Row>
               {typography.map(font => (
                 <Column key={font.title}>
@@ -145,7 +151,9 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
       {homepage && (
         <Section appearance="light">
           <Grid justify="center">
-            <h2>{t('project:homepage.title')}</h2>
+            <Typography textAlign="center">
+              <h2>{t('project:homepage.title')}</h2>
+            </Typography>
             <Img fixed={homepage.fixed} />
           </Grid>
         </Section>
@@ -162,7 +170,9 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
       {tablet && (
         <Section appearance="light">
           <Grid justify="center">
-            <h2>{t('project:tablet.title')}</h2>
+            <Typography textAlign="center">
+              <h2>{t('project:tablet.title')}</h2>
+            </Typography>
             <Img fixed={tablet.fixed} />
           </Grid>
         </Section>
@@ -171,8 +181,10 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
       {mobile && (
         <Section>
           <Grid justify="center">
-            <h2>{t('project:mobile.title')}</h2>
-            <p>{t('project:mobile.description')}</p>
+            <Typography textAlign="center">
+              <h2>{t('project:mobile.title')}</h2>
+              <p>{t('project:mobile.description')}</p>
+            </Typography>
             <Img fixed={mobile.fixed} />
           </Grid>
         </Section>

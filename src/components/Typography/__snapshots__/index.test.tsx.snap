@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography component should align text to center 1`] = `
+<div
+  className="typographyTextAlignCenter"
+>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita soluta quis, eveniet, fuga iusto similique ut est, molestiae velit illum. Commodi ab obcaecati consectetur eos molestiae assumenda earum magni.
+  </p>
+</div>
+`;
+
+exports[`Typography component should align text to left 1`] = `
+<div
+  className="typographyTextAlignLeft"
+>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita soluta quis, eveniet, fuga iusto similique ut est, molestiae velit illum. Commodi ab obcaecati consectetur eos molestiae assumenda earum magni.
+  </p>
+</div>
+`;
+
+exports[`Typography component should align text to right 1`] = `
+<div
+  className="typographyTextAlignRight"
+>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita soluta quis, eveniet, fuga iusto similique ut est, molestiae velit illum. Commodi ab obcaecati consectetur eos molestiae assumenda earum magni.
+  </p>
+</div>
+`;
+
+exports[`Typography component should render correctly 1`] = `
+<div
+  className=""
+/>
+`;
