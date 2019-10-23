@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby';
 import Img, { FixedObject } from 'gatsby-image';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
