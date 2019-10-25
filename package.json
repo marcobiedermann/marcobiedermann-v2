@@ -35,7 +35,7 @@
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-hotkeys": "^2.0.0",
-    "react-i18next": "^10.13.2",
+    "react-i18next": "^11.0.0",
     "react-instantsearch-dom": "^5.7.0",
     "typeface-montserrat": "0.0.75"
   },
