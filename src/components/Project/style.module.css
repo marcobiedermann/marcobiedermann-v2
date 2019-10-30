@@ -1,12 +1,12 @@
 .project__caption {
-  align-items: center;
   background-color: rgba(0, 0, 0, 0.9);
   bottom: 0;
   color: #fafafa;
-  display: flex;
-  justify-content: center;
+  display: grid;
   left: 0;
   opacity: 0;
+  overflow: hidden;
+  place-items: center;
   position: absolute;
   right: 0;
   text-align: center;
@@ -18,7 +18,17 @@
   position: relative;
 }
 
+.project__title {
+  transform: translateY(20%);
+  transition: transform 0.75s;
+}
+
 .project__link:focus .project__caption,
 .project__link:hover .project__caption {
   opacity: 1;
+}
+
+.project__link:focus .project__title,
+.project__link:hover .project__title {
+  transform: translateY(0);
 }

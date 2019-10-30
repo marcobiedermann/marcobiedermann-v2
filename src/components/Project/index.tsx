@@ -21,7 +21,9 @@ const Project: React.FC<ProjectProps> = props => {
         <Link className={styles.project__link} to={`/projects/${slug}`}>
           {thumbnail && <Img fluid={thumbnail.fluid} />}
           <figcaption className={styles.project__caption}>
-            <h2>{title}</h2>
+            <div className={styles.project__title}>
+              <h3>{title}</h3>
+            </div>
           </figcaption>
         </Link>
       </figure>
