@@ -57,7 +57,7 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     const projects = result.data.allContentfulProject.edges;
-    const limit = 12;
+    const limit = 13;
     const total = projects.length;
     const pages = Math.ceil(total / limit);
     const tags = [...new Set(projects.flatMap(project => project.node.tags))];
