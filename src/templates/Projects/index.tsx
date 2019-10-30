@@ -62,7 +62,7 @@ const ProjectsTemplate: React.FC<ProjectsTemplate> = props => {
                 path: pageInfo.currentPage === 2 ? '/projects' : `/projects/${pageInfo.currentPage - 1}`,
               },
             })}
-            routes={Array.from({ length: pageInfo.pageCount }).map((_, index) => ({
+            routes={Array.from({ length: pageInfo.pageCount }, (_, index) => ({
               id: `${index}`,
               name: `${index + 1}`,
               path: index === 0 ? '/projects' : `/projects/${index + 1}`,
