@@ -17,7 +17,7 @@ const Pagination: React.FC<PaginationProps> = props => {
     <ul className={classNames(className, styles.pagination)} {...otherProps}>
       {previous && (
         <li>
-          <Route className={styles.pagination__link} {...previous} />
+          <Route className={styles.pagination__link} {...previous} rel="previous" />
         </li>
       )}
       {routes.map(route => (
@@ -27,7 +27,7 @@ const Pagination: React.FC<PaginationProps> = props => {
       ))}
       {next && (
         <li>
-          <Route className={styles.pagination__link} {...next} />
+          <Route className={styles.pagination__link} {...next} rel="next" />
         </li>
       )}
     </ul>
