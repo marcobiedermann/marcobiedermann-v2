@@ -14,6 +14,8 @@ exports[`Pagination component should render routes correctly 1`] = `
     <a
       className="pagination__link"
       href="/previous"
+      id="previous"
+      rel="previous"
     >
       Previous
     </a>
@@ -22,6 +24,7 @@ exports[`Pagination component should render routes correctly 1`] = `
     <a
       className="pagination__link"
       href="/path/to/page"
+      id="b6c3ceb6-d89f-4a03-9e96-77768f278909"
     >
       Page name
     </a>
@@ -30,6 +33,8 @@ exports[`Pagination component should render routes correctly 1`] = `
     <a
       className="pagination__link"
       href="/next"
+      id="next"
+      rel="next"
     >
       Next
     </a>

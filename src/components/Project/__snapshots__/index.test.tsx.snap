@@ -66,9 +66,13 @@ exports[`Project component should render correctly 1`] = `
       <figcaption
         className="project__caption"
       >
-        <h2>
-          Demo Project
-        </h2>
+        <div
+          className="project__title"
+        >
+          <h3>
+            Demo Project
+          </h3>
+        </div>
       </figcaption>
     </a>
   </figure>
