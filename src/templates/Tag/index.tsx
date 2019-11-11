@@ -39,7 +39,7 @@ const TagTemplate: React.FC<TagTemplateProps> = props => {
 
 export const pageQuery = graphql`
   query ProjectsByTag($tag: String!) {
-    allContentfulProject(filter: { tags: { in: [$tag] } }, sort: { fields: [createdAt], order: DESC }) {
+    allContentfulProject(filter: { tags: { in: [$tag] } }, sort: { fields: [date], order: DESC }) {
       edges {
         node {
           id

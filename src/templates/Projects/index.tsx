@@ -76,7 +76,7 @@ const ProjectsTemplate: React.FC<ProjectsTemplate> = props => {
 
 export const pageQuery = graphql`
   query Projects($limit: Int!, $skip: Int!) {
-    allContentfulProject(sort: { fields: [createdAt], order: DESC }, limit: $limit, skip: $skip) {
+    allContentfulProject(sort: { fields: [date], order: DESC }, limit: $limit, skip: $skip) {
       edges {
         next {
           id
