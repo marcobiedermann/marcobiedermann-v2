@@ -16,7 +16,10 @@
     "title": "Tablet View"
   },
   "role": "Role",
-  "responsive": "Responsive Design",
+  "responsive": {
+    "description": "A website that displays nicely on desktop and on your phone and tablet",
+    "title": "Responsive Design"
+  },
   "typography": {
     "title": "Typography"
   }

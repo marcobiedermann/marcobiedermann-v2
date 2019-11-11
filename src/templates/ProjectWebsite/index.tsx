@@ -161,11 +161,16 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
       )}
 
       <Section
+        appearance="dark"
         style={{
           backgroundColor: primaryColor,
         }}
       >
-        <Grid justify="center">{t('project:responsive')}</Grid>
+        <Grid justify="center">
+          <h2>{t('project:responsive.title')}</h2>
+          <p>{t('project:responsive.description')}</p>
+          <img src="/images/apple-devices.svg" alt="" />
+        </Grid>
       </Section>
 
       {tablet && (
