@@ -2,6 +2,7 @@
 
 exports[`Logo component should render correctly 1`] = `
 <a
+  className="logo"
   href="/projects/undefined"
 >
   <img

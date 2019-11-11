@@ -6,6 +6,7 @@ exports[`Logos component should render correctly 1`] = `
 >
   <li>
     <a
+      className="logo"
       href="/projects/undefined"
     >
       <img

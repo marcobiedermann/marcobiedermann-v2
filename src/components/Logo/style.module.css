@@ -1,0 +1,9 @@
+.logo {
+  filter: grayscale(1);
+  transition: filter 0.5s;
+}
+
+.logo:focus,
+.logo:hover {
+  filter: grayscale(0);
+}
