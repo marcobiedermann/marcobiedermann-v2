@@ -15,7 +15,7 @@ const Button: React.FC<ButtonProps> = prop => {
 
   if (href) {
     return (
-      <a href={href} className={classes}>
+      <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
         {children}
       </a>
     );

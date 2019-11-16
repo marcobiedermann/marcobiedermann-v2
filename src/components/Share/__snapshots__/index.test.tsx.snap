@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Share component should render correctly 1`] = `
+<ul
+  className="share"
+>
+  <li>
+    <div
+      aria-label="facebook"
+      className="SocialMediaShareButton SocialMediaShareButton--facebook"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      style={Object {}}
+      tabIndex="0"
+    >
+      <img
+        alt="Facebook"
+        height="32"
+        src="test-file-stub"
+        width="32"
+      />
+    </div>
+  </li>
+  <li>
+    <div
+      aria-label="twitter"
+      className="SocialMediaShareButton SocialMediaShareButton--twitter"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      style={Object {}}
+      tabIndex="0"
+    >
+      <img
+        alt="Twitter"
+        height="32"
+        src="test-file-stub"
+        width="32"
+      />
+    </div>
+  </li>
+</ul>
+`;

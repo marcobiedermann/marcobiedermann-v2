@@ -1,7 +1,9 @@
+import { WindowLocation } from '@reach/router';
 import { graphql } from 'gatsby';
 import Img, { FixedObject } from 'gatsby-image';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import Button from '../../components/Button';
 import Column from '../../components/Column';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
@@ -9,6 +11,7 @@ import { LogoProps } from '../../components/Logo';
 import Logos from '../../components/Logos';
 import Row from '../../components/Row';
 import Section from '../../components/Section';
+import Share from '../../components/Share';
 import Typography from '../../components/Typography';
 import Pagination from '../../containers/Pagination';
 
@@ -50,8 +53,15 @@ export interface ProjectWebsiteTemplate {
           fixed: FixedObject;
         },
       ];
+      url: string;
+    };
+    site: {
+      siteMetadata: {
+        author: string;
+      };
     };
   };
+  location: WindowLocation;
   pageContext: {
     previous: {
       slug: string;
@@ -78,8 +88,13 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
         role,
         title,
         typography,
+        url,
+      },
+      site: {
+        siteMetadata: { author },
       },
     },
+    location,
     pageContext: { previous, next },
   } = props;
   const { t } = useTranslation();
@@ -98,6 +113,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
         <Grid justify="center">
           <Typography textAlign="center">
             <h1>{title}</h1>
+
             <ul>
               {client && (
                 <li>
@@ -196,8 +212,10 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
         </Section>
       )}
 
-      <Section>
+      <Section appearance="light">
         <Grid justify="center">
+          <Button href={url}>{t('project:website')}</Button>
+          <Share url={location.href} via={author} />
           <Pagination
             {...(next && {
               next: { id: 'next', name: t('pagination.next'), path: `/projects/${next.slug}` },
@@ -210,7 +228,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
         </Grid>
       </Section>
 
-      <Section appearance="light">
+      <Section>
         <Grid>
           <Logos logos={edges.map(edge => edge.node)} />
         </Grid>
@@ -276,6 +294,11 @@ export const pageQuery = graphql`
         title
       }
       url
+    }
+    site {
+      siteMetadata {
+        author
+      }
     }
   }
 `;

@@ -1,11 +1,13 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, Document, Node } from '@contentful/rich-text-types';
+import { WindowLocation } from '@reach/router';
 import { graphql } from 'gatsby';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
 import Section from '../../components/Section';
+import Share from '../../components/Share';
 import Pagination from '../../containers/Pagination';
 
 const options = {
@@ -43,7 +45,13 @@ export interface ProjectDefaultTemplateProps {
       };
       title: string;
     };
+    site: {
+      siteMetadata: {
+        author: string;
+      };
+    };
   };
+  location: WindowLocation;
   pageContext: {
     previous: {
       slug: string;
@@ -58,7 +66,11 @@ const ProjectDefaultTemplate: React.FC<ProjectDefaultTemplateProps> = props => {
   const {
     data: {
       contentfulProject: { body, title },
+      site: {
+        siteMetadata: { author },
+      },
     },
+    location,
     pageContext: { previous, next },
   } = props;
   const { t } = useTranslation();
@@ -74,6 +86,7 @@ const ProjectDefaultTemplate: React.FC<ProjectDefaultTemplateProps> = props => {
 
       <Section>
         <Grid justify="center">
+          <Share url={location.href} via={author} />
           <Pagination
             {...(next && {
               next: { id: 'next', name: t('pagination.next'), path: `/projects/${next.slug}` },
@@ -98,6 +111,11 @@ export const pageQuery = graphql`
       id
       slug
       title
+    }
+    site {
+      siteMetadata {
+        author
+      }
     }
   }
 `;

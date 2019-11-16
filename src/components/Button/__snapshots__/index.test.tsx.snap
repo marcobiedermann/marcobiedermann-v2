@@ -10,6 +10,8 @@ exports[`Button component should render link using \`href\` 1`] = `
 <a
   className="button"
   href="#"
+  rel="noopener noreferrer"
+  target="_blank"
 />
 `;
 
