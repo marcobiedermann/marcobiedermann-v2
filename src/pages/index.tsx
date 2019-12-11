@@ -11,6 +11,10 @@ import Row from '../components/Row';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import Typography from '../components/Typography';
+import behanceIcon from '../images/icons/behance.svg';
+import dribbbleIcon from '../images/icons/dribbble.svg';
+import githubIcon from '../images/icons/github.svg';
+import twitterIcon from '../images/icons/twitter.svg';
 
 interface IndexPageQuery {
   allContentfulProject: {
@@ -114,6 +118,28 @@ const IndexPage: React.FC = () => {
           <Typography textAlign="center">
             <h2>Contact</h2>
             <p>Interested in working together? Get in touch with me.</p>
+            <ul>
+              <li>
+                <a href="https://twitter.com/m412c0b" target="_blank" rel="noopener noreferrer">
+                  <img src={twitterIcon} alt="Twitter" width="32" height="32" />
+                </a>
+              </li>
+              <li>
+                <a href="https://dribbble.com/marcobiedermann" target="_blank" rel="noopener noreferrer">
+                  <img src={dribbbleIcon} alt="dribbble" width="32" height="32" />
+                </a>
+              </li>
+              <li>
+                <a href="https://behance.net/marcobiedermann" target="_blank" rel="noopener noreferrer">
+                  <img src={behanceIcon} alt="Behance" width="32" height="32" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/marcobiedermann" target="_blank" rel="noopener noreferrer">
+                  <img src={githubIcon} alt="GitHub" width="32" height="32" />
+                </a>
+              </li>
+            </ul>
           </Typography>
         </Grid>
       </Section>
