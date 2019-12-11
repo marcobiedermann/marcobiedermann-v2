@@ -61,6 +61,15 @@ const IndexPage: React.FC = () => {
     <Layout>
       <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
 
+      <Section appearance="dark" isFull>
+        <Grid align="center" justify="center">
+          <Typography textAlign="center">
+            <h1>Marco Biedermann</h1>
+            <h2>Full-Stack JavaScript Engineer</h2>
+          </Typography>
+        </Grid>
+      </Section>
+
       <Section>
         <Grid>
           <Typography textAlign="center">
