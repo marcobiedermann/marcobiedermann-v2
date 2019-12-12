@@ -1,6 +1,13 @@
 version: 2
 
 jobs:
+  analyze:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - sonarcloud/scan
+
   build:
     docker:
       - image: circleci/node:12
@@ -18,9 +25,14 @@ jobs:
       - run: npm run lint
       - run: npm run test:ci
 
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.0.1
+
 workflows:
   version: 2
   test_and_build:
     jobs:
+      - analyze:
+          context: sonarcloud
       - build
       - test
