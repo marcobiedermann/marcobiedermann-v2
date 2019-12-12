@@ -33,6 +33,6 @@ workflows:
   test_and_build:
     jobs:
       - analyze:
-          context: sonarcloud
+          context: SonarCloud
       - build
       - test
