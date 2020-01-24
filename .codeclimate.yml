@@ -1,11 +1,9 @@
 version: '2'
+checks:
+  method-lines:
+    enabled: false
+  similar-code:
+    enabled: false
 plugins:
   editorconfig:
     enabled: true
-  eslint:
-    enabled: true
-    channel: 'eslint-5'
-    config:
-      extensions:
-        - .js
-        - .jsx
