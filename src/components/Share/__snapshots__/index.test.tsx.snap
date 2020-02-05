@@ -5,14 +5,20 @@ exports[`Share component should render correctly 1`] = `
   className="share"
 >
   <li>
-    <div
+    <button
       aria-label="facebook"
-      className="SocialMediaShareButton SocialMediaShareButton--facebook"
+      className="react-share__ShareButton"
       onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      style={Object {}}
-      tabIndex="0"
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "color": "inherit",
+          "cursor": "pointer",
+          "font": "inherit",
+          "padding": 0,
+        }
+      }
     >
       <img
         alt="Facebook"
@@ -20,17 +26,24 @@ exports[`Share component should render correctly 1`] = `
         src="test-file-stub"
         width="32"
       />
-    </div>
+    </button>
   </li>
   <li>
-    <div
+    <button
       aria-label="twitter"
-      className="SocialMediaShareButton SocialMediaShareButton--twitter"
+      className="react-share__ShareButton"
       onClick={[Function]}
-      onKeyPress={[Function]}
-      role="button"
-      style={Object {}}
-      tabIndex="0"
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "border": "none",
+          "color": "inherit",
+          "cursor": "pointer",
+          "font": "inherit",
+          "padding": 0,
+        }
+      }
+      via="twitter"
     >
       <img
         alt="Twitter"
@@ -38,7 +51,7 @@ exports[`Share component should render correctly 1`] = `
         src="test-file-stub"
         width="32"
       />
-    </div>
+    </button>
   </li>
 </ul>
 `;

@@ -21,6 +21,7 @@ exports[`Project component should render correctly 1`] = `
         }
       >
         <div
+          aria-hidden={true}
           style={
             Object {
               "paddingBottom": "75.00000001875%",
