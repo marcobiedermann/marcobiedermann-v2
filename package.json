@@ -23,7 +23,7 @@
     "gatsby-plugin-sitemap": "^2.2.28",
     "gatsby-plugin-typescript": "^2.2.1",
     "gatsby-source-contentful": "^2.1.90",
-    "gatsby-source-filesystem": "^2.1.49",
+    "gatsby-source-filesystem": "^2.1.50",
     "gatsby-transformer-json": "^2.2.27",
     "gatsby-transformer-remark": "^2.6.54",
     "gatsby-transformer-sharp": "^2.3.17",
