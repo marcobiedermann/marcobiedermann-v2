@@ -25,7 +25,7 @@
     "gatsby-source-contentful": "^2.1.90",
     "gatsby-source-filesystem": "^2.1.49",
     "gatsby-transformer-json": "^2.2.27",
-    "gatsby-transformer-remark": "^2.6.54",
+    "gatsby-transformer-remark": "^2.6.55",
     "gatsby-transformer-sharp": "^2.3.17",
     "i18next": "^19.3.2",
     "i18next-browser-languagedetector": "^4.0.2",
