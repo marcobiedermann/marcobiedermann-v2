@@ -37,7 +37,7 @@
     "react-hotkeys": "^2.0.0",
     "react-i18next": "^11.3.3",
     "react-instantsearch-dom": "^6.3.0",
-    "react-share": "^4.0.1",
+    "react-share": "^4.1.0",
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
