@@ -72,7 +72,7 @@ export interface ProjectWebsiteTemplate {
   };
 }
 
-const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
+const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = (props) => {
   const {
     data: {
       allContentfulProject: { edges },
@@ -155,7 +155,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
               <h2>{t('project:typography.title')}</h2>
             </Typography>
             <Row>
-              {typography.map(font => (
+              {typography.map((font) => (
                 <Column key={font.title}>
                   <Img fixed={font.fixed} />
                 </Column>
@@ -230,7 +230,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = props => {
 
       <Section>
         <Grid>
-          <Logos logos={edges.map(edge => edge.node)} />
+          <Logos logos={edges.map((edge) => edge.node)} />
         </Grid>
       </Section>
     </Layout>

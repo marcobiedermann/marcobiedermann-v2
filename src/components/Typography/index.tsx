@@ -13,7 +13,7 @@ export interface TypographyProps {
   textAlign?: TextAlign;
 }
 
-const Typography: React.FC<TypographyProps> = props => {
+const Typography: React.FC<TypographyProps> = (props) => {
   const { className, children, textAlign, ...otherProps } = props;
 
   return (

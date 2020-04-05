@@ -18,7 +18,7 @@ export interface TagTemplateProps {
   };
 }
 
-const TagTemplate: React.FC<TagTemplateProps> = props => {
+const TagTemplate: React.FC<TagTemplateProps> = (props) => {
   const {
     data: { allContentfulProject },
   } = props;
@@ -30,7 +30,7 @@ const TagTemplate: React.FC<TagTemplateProps> = props => {
       <Section>
         <Grid>
           <h1>Tag</h1>
-          <Projects projects={projects.map(project => project.node)} />
+          <Projects projects={projects.map((project) => project.node)} />
         </Grid>
       </Section>
     </Layout>

@@ -34,7 +34,7 @@ export interface ProjectsTemplate {
   };
 }
 
-const ProjectsTemplate: React.FC<ProjectsTemplate> = props => {
+const ProjectsTemplate: React.FC<ProjectsTemplate> = (props) => {
   const {
     data: { allContentfulProject },
   } = props;
@@ -46,7 +46,7 @@ const ProjectsTemplate: React.FC<ProjectsTemplate> = props => {
     <Layout>
       <Section>
         <Grid>
-          <Projects projects={projects.map(project => project.node)} />
+          <Projects projects={projects.map((project) => project.node)} />
           <Pagination
             {...(pageInfo.hasNextPage && {
               next: {

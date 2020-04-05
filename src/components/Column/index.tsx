@@ -7,7 +7,7 @@ export interface ColumnProps extends AlignmentProps {
   className?: string;
 }
 
-const Column: React.FC<ColumnProps> = props => {
+const Column: React.FC<ColumnProps> = (props) => {
   const { children, className, ...otherProps } = props;
 
   return (

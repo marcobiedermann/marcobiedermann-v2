@@ -10,7 +10,7 @@ export interface SkillProps {
   title: string;
 }
 
-const Skill: React.FC<SkillProps> = props => {
+const Skill: React.FC<SkillProps> = (props) => {
   const { description, title } = props;
 
   return (

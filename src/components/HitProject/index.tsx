@@ -10,7 +10,7 @@ export interface HitProjectProps {
   };
 }
 
-const HitProject: React.FC<HitProjectProps> = props => {
+const HitProject: React.FC<HitProjectProps> = (props) => {
   const { slug, title } = props;
 
   return (

@@ -6,7 +6,7 @@ import Hit from '../Hit';
 
 const searchClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_API_KEY);
 
-const Search: React.FC = props => {
+const Search: React.FC = (props) => {
   const { ...otherProps } = props;
 
   return (

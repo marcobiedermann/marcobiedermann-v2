@@ -8,12 +8,12 @@ export interface LogosProps {
   logos: LogoProps[];
 }
 
-const Logos: React.FC<LogosProps> = props => {
+const Logos: React.FC<LogosProps> = (props) => {
   const { className, logos, ...otherProps } = props;
 
   return (
     <ul className={classNames(className, styles.logos)} {...otherProps}>
-      {logos.map(logo => (
+      {logos.map((logo) => (
         <li key={logo.id}>
           <Logo {...logo} />
         </li>

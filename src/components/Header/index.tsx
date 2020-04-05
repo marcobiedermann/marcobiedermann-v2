@@ -6,7 +6,7 @@ export interface HeaderProps {
   className?: string;
 }
 
-const Header: React.FC<HeaderProps> = props => {
+const Header: React.FC<HeaderProps> = (props) => {
   const { children, className, ...otherProps } = props;
 
   return (

@@ -5,12 +5,12 @@ export interface TagsProps {
   tags: TagProps[];
 }
 
-const Tags: React.FC<TagsProps> = props => {
+const Tags: React.FC<TagsProps> = (props) => {
   const { tags } = props;
 
   return (
     <ul>
-      {tags.map(tag => (
+      {tags.map((tag) => (
         <li key={tag.fieldValue}>
           <Tag fieldValue={tag.fieldValue} totalCount={tag.totalCount} />
         </li>

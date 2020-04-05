@@ -18,7 +18,7 @@ export interface ExperienceProps {
   url: string;
 }
 
-const Experience: React.FC<ExperienceProps> = props => {
+const Experience: React.FC<ExperienceProps> = (props) => {
   const { company, description, location, endDate, startDate, title, url } = props;
   const { t } = useTranslation();
 

@@ -7,7 +7,7 @@ export interface GridProps extends AlignmentProps {
   className?: string;
 }
 
-const Grid: React.FC<GridProps> = props => {
+const Grid: React.FC<GridProps> = (props) => {
   const { children, className, ...otherProps } = props;
 
   return (

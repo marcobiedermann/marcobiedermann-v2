@@ -12,7 +12,7 @@ export interface ProjectProps {
   title: string;
 }
 
-const Project: React.FC<ProjectProps> = props => {
+const Project: React.FC<ProjectProps> = (props) => {
   const { slug, thumbnail, title, ...otherProps } = props;
 
   return (

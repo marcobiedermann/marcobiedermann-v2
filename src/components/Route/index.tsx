@@ -10,7 +10,7 @@ export interface RouteProps {
   rel?: string;
 }
 
-const Route: React.FC<RouteProps> = props => {
+const Route: React.FC<RouteProps> = (props) => {
   const { activeClassName, className, name, path, rel, ...otherProps } = props;
 
   return (

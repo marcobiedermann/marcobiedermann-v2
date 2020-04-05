@@ -62,7 +62,7 @@ export interface ProjectDefaultTemplateProps {
   };
 }
 
-const ProjectDefaultTemplate: React.FC<ProjectDefaultTemplateProps> = props => {
+const ProjectDefaultTemplate: React.FC<ProjectDefaultTemplateProps> = (props) => {
   const {
     data: {
       contentfulProject: { body, title },

@@ -7,7 +7,7 @@ export interface RowProps extends AlignmentProps {
   className?: string;
 }
 
-const Row: React.FC<RowProps> = props => {
+const Row: React.FC<RowProps> = (props) => {
   const { children, className, ...otherProps } = props;
 
   return (

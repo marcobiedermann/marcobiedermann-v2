@@ -6,7 +6,7 @@ export interface FooterProps {
   className?: string;
 }
 
-const Footer: React.FC<FooterProps> = props => {
+const Footer: React.FC<FooterProps> = (props) => {
   const { children, className, ...otherProps } = props;
 
   return (

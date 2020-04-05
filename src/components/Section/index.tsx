@@ -11,7 +11,7 @@ export interface SectionProps {
   isFull?: boolean;
 }
 
-const Section: React.FC<SectionProps> = props => {
+const Section: React.FC<SectionProps> = (props) => {
   const { appearance, children, className, isFull, ...otherProps } = props;
 
   return (

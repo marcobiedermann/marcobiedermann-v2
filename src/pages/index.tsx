@@ -114,7 +114,7 @@ const IndexPage: React.FC = () => {
           <Typography textAlign="center">
             <h2>Work</h2>
             <p>Take a look at some of my projects I’ve been working on.</p>
-            <Projects projects={projects.map(project => project.node)} />
+            <Projects projects={projects.map((project) => project.node)} />
             <p>
               <Button to="/projects">{t('project:more work')}</Button>
             </p>

@@ -15,7 +15,7 @@ export interface LogoProps {
   slug?: string;
 }
 
-const Logo: React.FC<LogoProps> = props => {
+const Logo: React.FC<LogoProps> = (props) => {
   const { className, logo, slug } = props;
 
   return (

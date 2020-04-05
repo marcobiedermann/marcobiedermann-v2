@@ -8,12 +8,12 @@ export interface ExperiencesProps {
   experiences: ExperienceProps[];
 }
 
-const Experiences: React.FC<ExperiencesProps> = props => {
+const Experiences: React.FC<ExperiencesProps> = (props) => {
   const { className, experiences } = props;
 
   return (
     <ul className={classNames(className, styles.experiences)}>
-      {experiences.map(experience => (
+      {experiences.map((experience) => (
         <li key={experience.id}>
           <Experience {...experience} />
         </li>

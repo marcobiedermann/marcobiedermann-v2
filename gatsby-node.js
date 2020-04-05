@@ -22,12 +22,12 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `,
-  ).then(result => {
+  ).then((result) => {
     if (result.errors) {
       throw result.errors;
     }
 
-    result.data.allContentfulPage.edges.forEach(page => {
+    result.data.allContentfulPage.edges.forEach((page) => {
       createPage({
         path: page.node.slug,
         component: pageTemplate,
@@ -51,7 +51,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `,
-  ).then(result => {
+  ).then((result) => {
     if (result.errors) {
       throw result.errors;
     }
@@ -60,7 +60,7 @@ exports.createPages = ({ graphql, actions }) => {
     const limit = 13;
     const total = projects.length;
     const pages = Math.ceil(total / limit);
-    const tags = [...new Set(projects.flatMap(project => project.node.tags))];
+    const tags = [...new Set(projects.flatMap((project) => project.node.tags))];
 
     Array.from({ length: pages }).forEach((_page, index) => {
       const page = index + 1;
@@ -93,7 +93,7 @@ exports.createPages = ({ graphql, actions }) => {
       });
     });
 
-    tags.forEach(tag => {
+    tags.forEach((tag) => {
       createPage({
         component: tagTemplate,
         path: `/tags/${tag}`,

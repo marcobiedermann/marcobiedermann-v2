@@ -8,7 +8,7 @@ const keyMap = {
   NAVIGATE_NEXT: 'right',
 };
 
-const PaginationContainer: React.FC<PaginationProps> = props => {
+const PaginationContainer: React.FC<PaginationProps> = (props) => {
   const handlers = {
     NAVIGATE_PREVIOUS: (): void => {
       const { previous } = props;

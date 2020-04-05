@@ -9,7 +9,7 @@ export interface ButtonProps {
   to?: string;
 }
 
-const Button: React.FC<ButtonProps> = prop => {
+const Button: React.FC<ButtonProps> = (prop) => {
   const { children, className, href, to } = prop;
   const classes = classNames(className, styles.button);
 

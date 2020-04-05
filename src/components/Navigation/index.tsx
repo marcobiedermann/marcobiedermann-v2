@@ -8,13 +8,13 @@ export interface NavigationProps {
   routes: RouteProps[];
 }
 
-const Navigation: React.FC<NavigationProps> = props => {
+const Navigation: React.FC<NavigationProps> = (props) => {
   const { className, routes, ...otherProps } = props;
 
   return (
     <nav className={classNames(className, styles.navigation)} {...otherProps}>
       <ul className={styles.navigation__list}>
-        {routes.map(route => (
+        {routes.map((route) => (
           <li key={route.id}>
             <Route activeClassName={styles.navigation__linkActive} className={styles.navigation__link} {...route} />
           </li>

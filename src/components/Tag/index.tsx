@@ -6,7 +6,7 @@ export interface TagProps {
   totalCount: number;
 }
 
-const Tag: React.FC<TagProps> = props => {
+const Tag: React.FC<TagProps> = (props) => {
   const { fieldValue, totalCount } = props;
 
   return (

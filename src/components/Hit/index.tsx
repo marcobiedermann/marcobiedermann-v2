@@ -7,7 +7,7 @@ export interface HitProps {
   };
 }
 
-const Hit: React.FC<HitProps> = props => {
+const Hit: React.FC<HitProps> = (props) => {
   const { hit, ...otherProps } = props;
 
   return (

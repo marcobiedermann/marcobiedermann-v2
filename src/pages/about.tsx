@@ -108,7 +108,7 @@ const AboutPage: React.FC = () => {
       <Section>
         <Grid>
           <h2>{t('about:experiences')}</h2>
-          <Experiences experiences={experiences.map(experience => experience.node)} />
+          <Experiences experiences={experiences.map((experience) => experience.node)} />
         </Grid>
       </Section>
       <Section>

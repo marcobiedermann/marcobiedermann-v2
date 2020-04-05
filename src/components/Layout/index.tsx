@@ -34,7 +34,7 @@ export interface LayoutProps {
   className?: string;
 }
 
-const Layout: React.FC<LayoutProps> = props => {
+const Layout: React.FC<LayoutProps> = (props) => {
   const { children, className, ...otherProps } = props;
   const { allContentfulMenu }: LayoutQuery = useStaticQuery(
     graphql`
@@ -57,9 +57,9 @@ const Layout: React.FC<LayoutProps> = props => {
 
   const { edges: menues } = allContentfulMenu;
 
-  const mappedMenues = menues.map(menu => menu.node);
-  const mainMenu = mappedMenues.find(menu => menu.slug === 'main');
-  const footerMenu = mappedMenues.find(menu => menu.slug === 'footer');
+  const mappedMenues = menues.map((menu) => menu.node);
+  const mainMenu = mappedMenues.find((menu) => menu.slug === 'main');
+  const footerMenu = mappedMenues.find((menu) => menu.slug === 'footer');
 
   return (
     <div className={classNames(className, styles.layout)} {...otherProps}>

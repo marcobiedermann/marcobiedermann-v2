@@ -8,12 +8,12 @@ export interface ProjectsProps {
   projects: ProjectProps[];
 }
 
-const Projects: React.FC<ProjectsProps> = props => {
+const Projects: React.FC<ProjectsProps> = (props) => {
   const { className, projects, ...otherProps } = props;
 
   return (
     <ol className={classNames(className, styles.projects)} {...otherProps}>
-      {projects.map(project => (
+      {projects.map((project) => (
         <li key={project.id}>
           <Project {...project} />
         </li>

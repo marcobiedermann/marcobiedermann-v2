@@ -11,7 +11,7 @@ export interface ShareProps {
   via: string;
 }
 
-const Share: React.FC<ShareProps> = props => {
+const Share: React.FC<ShareProps> = (props) => {
   const { className, url, via, ...otherProps } = props;
 
   return (

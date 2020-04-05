@@ -19,7 +19,7 @@ export interface AlignmentProps {
   justify?: Justify;
 }
 
-const Alignment: React.FC<AlignmentProps> = props => {
+const Alignment: React.FC<AlignmentProps> = (props) => {
   const { align, className, children, justify } = props;
 
   return (
