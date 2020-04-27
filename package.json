@@ -24,7 +24,7 @@
     "gatsby-plugin-typescript": "^2.3.1",
     "gatsby-source-contentful": "^2.2.9",
     "gatsby-source-filesystem": "^2.2.5",
-    "gatsby-transformer-json": "^2.3.3",
+    "gatsby-transformer-json": "^2.3.4",
     "gatsby-transformer-remark": "^2.7.5",
     "gatsby-transformer-sharp": "^2.4.6",
     "i18next": "^19.4.1",
