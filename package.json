@@ -27,8 +27,6 @@
     "gatsby-transformer-remark": "^2.8.7",
     "gatsby-transformer-sharp": "^2.5.2",
     "i18next": "^19.4.4",
-    "i18next-browser-languagedetector": "^4.1.1",
-    "i18next-xhr-backend": "^3.2.2",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
