@@ -8,7 +8,6 @@ import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
 import Pagination from '../../components/Pagination';
 import Section from '../../components/Section';
-import Share from '../../components/Share';
 
 const options = {
   renderNode: {
@@ -86,7 +85,6 @@ const ProjectDefaultTemplate: React.FC<ProjectDefaultTemplateProps> = (props) =>
 
       <Section>
         <Grid justify="center">
-          <Share url={location.href} via={author} />
           <Pagination
             {...(next && {
               next: { id: 'next', name: t('pagination.next'), path: `/projects/${next.slug}` },

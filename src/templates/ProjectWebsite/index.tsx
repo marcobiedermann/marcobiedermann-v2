@@ -12,7 +12,6 @@ import Logos from '../../components/Logos';
 import Pagination from '../../components/Pagination';
 import Row from '../../components/Row';
 import Section from '../../components/Section';
-import Share from '../../components/Share';
 import Typography from '../../components/Typography';
 
 export interface ProjectWebsiteTemplate {
@@ -215,7 +214,6 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = (props) => {
       <Section appearance="light">
         <Grid justify="center">
           <Button href={url}>{t('project:website')}</Button>
-          <Share url={location.href} via={author} />
           <Pagination
             {...(next && {
               next: { id: 'next', name: t('pagination.next'), path: `/projects/${next.slug}` },
