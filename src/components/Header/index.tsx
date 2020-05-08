@@ -7,13 +7,9 @@ export interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
-  const { children, className, ...otherProps } = props;
+  const { className, ...otherProps } = props;
 
-  return (
-    <header className={classNames(className, styles.header)} {...otherProps}>
-      {children}
-    </header>
-  );
+  return <header className={classNames(className, styles.header)} {...otherProps} />;
 };
 
 export default Header;

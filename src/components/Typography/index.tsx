@@ -14,7 +14,7 @@ export interface TypographyProps {
 }
 
 const Typography: React.FC<TypographyProps> = (props) => {
-  const { className, children, textAlign, ...otherProps } = props;
+  const { className, textAlign, ...otherProps } = props;
 
   return (
     <div
@@ -22,9 +22,7 @@ const Typography: React.FC<TypographyProps> = (props) => {
         [styles[camelCase(`typographyTextAlign${capitalize(textAlign)}`) as TextAlignClass]]: textAlign,
       })}
       {...otherProps}
-    >
-      {children}
-    </div>
+    />
   );
 };
 

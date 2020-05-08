@@ -12,7 +12,7 @@ export interface SectionProps {
 }
 
 const Section: React.FC<SectionProps> = (props) => {
-  const { appearance, children, className, isFull, ...otherProps } = props;
+  const { appearance, className, isFull, ...otherProps } = props;
 
   return (
     <section
@@ -21,9 +21,7 @@ const Section: React.FC<SectionProps> = (props) => {
         [styles[`section${capitalize(appearance)}` as 'sectionLight' | 'sectionDark']]: appearance,
       })}
       {...otherProps}
-    >
-      {children}
-    </section>
+    />
   );
 };
 

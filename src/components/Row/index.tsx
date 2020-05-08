@@ -8,13 +8,9 @@ export interface RowProps extends AlignmentProps {
 }
 
 const Row: React.FC<RowProps> = (props) => {
-  const { children, className, ...otherProps } = props;
+  const { className, ...otherProps } = props;
 
-  return (
-    <Alignment className={classNames(className, styles.row)} {...otherProps}>
-      {children}
-    </Alignment>
-  );
+  return <Alignment className={classNames(className, styles.row)} {...otherProps} />;
 };
 
 export default Row;

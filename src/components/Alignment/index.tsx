@@ -20,7 +20,7 @@ export interface AlignmentProps {
 }
 
 const Alignment: React.FC<AlignmentProps> = (props) => {
-  const { align, className, children, justify } = props;
+  const { align, className, justify, ...otherProps } = props;
 
   return (
     <div
@@ -29,9 +29,8 @@ const Alignment: React.FC<AlignmentProps> = (props) => {
         [styles[camelCase(`alignmentAlign${capitalize(align)}`) as AlignClass]]: align,
         [styles[camelCase(`alignmentJustify${capitalize(justify)}`) as JustifyClass]]: justify,
       })}
-    >
-      {children}
-    </div>
+      {...otherProps}
+    />
   );
 };
 

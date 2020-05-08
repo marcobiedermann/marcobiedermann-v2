@@ -7,13 +7,9 @@ export interface MainProps {
 }
 
 const Main: React.FC<MainProps> = (props) => {
-  const { children, className, ...otherProps } = props;
+  const { className, ...otherProps } = props;
 
-  return (
-    <main className={classNames(className, styles.main)} {...otherProps}>
-      {children}
-    </main>
-  );
+  return <main className={classNames(className, styles.main)} {...otherProps} />;
 };
 
 export default Main;

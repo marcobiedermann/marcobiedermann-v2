@@ -8,13 +8,9 @@ export interface GridProps extends AlignmentProps {
 }
 
 const Grid: React.FC<GridProps> = (props) => {
-  const { children, className, ...otherProps } = props;
+  const { className, ...otherProps } = props;
 
-  return (
-    <Alignment className={classNames(className, styles.grid)} {...otherProps}>
-      {children}
-    </Alignment>
-  );
+  return <Alignment className={classNames(className, styles.grid)} {...otherProps} />;
 };
 
 export default Grid;
