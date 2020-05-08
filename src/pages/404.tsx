@@ -7,7 +7,7 @@ import SEO from '../components/SEO';
 
 const NotFoundPage: React.FC<PageProps> = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <SEO title="404: Not found" description="Error 404 - Page not found" />
     <Section>
       <Grid>
         <h1>NOT FOUND</h1>

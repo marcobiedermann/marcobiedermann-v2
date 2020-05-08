@@ -9,10 +9,10 @@ export type Meta = {
 };
 
 export interface SEOProps {
-  description: string;
-  lang: Lang;
-  meta: Meta[];
-  title: string;
+  description?: string;
+  lang?: Lang;
+  meta?: Meta[];
+  title?: string;
 }
 
 const SEO: React.FC<SEOProps> = (props) => {

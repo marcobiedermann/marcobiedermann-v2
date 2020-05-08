@@ -59,7 +59,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <Layout>
-      <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
+      <SEO />
 
       <Section appearance="dark" isFull>
         <Grid align="center" justify="center">
