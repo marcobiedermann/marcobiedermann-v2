@@ -1,7 +1,6 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, Document, Node } from '@contentful/rich-text-types';
-import { WindowLocation } from '@reach/router';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Grid from '../../components/Grid';
@@ -36,7 +35,7 @@ const options = {
   },
 };
 
-export interface ProjectDefaultTemplateProps {
+export interface ProjectDefaultTemplateProps extends PageProps {
   data: {
     contentfulProject: {
       body: {
@@ -50,7 +49,6 @@ export interface ProjectDefaultTemplateProps {
       };
     };
   };
-  location: WindowLocation;
   pageContext: {
     previous: {
       slug: string;

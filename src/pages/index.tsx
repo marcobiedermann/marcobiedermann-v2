@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, PageProps, useStaticQuery } from 'gatsby';
 import { FluidObject } from 'gatsby-image';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -33,7 +33,7 @@ interface IndexPageQuery {
   };
 }
 
-const IndexPage: React.FC = () => {
+const IndexPage: React.FC<PageProps> = () => {
   const { allContentfulProject }: IndexPageQuery = useStaticQuery(
     graphql`
       query {

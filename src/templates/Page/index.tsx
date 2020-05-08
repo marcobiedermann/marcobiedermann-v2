@@ -1,6 +1,6 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, Document, Node } from '@contentful/rich-text-types';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import React from 'react';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
@@ -33,7 +33,7 @@ const options = {
   },
 };
 
-export interface PageTemplateProps {
+export interface PageTemplateProps extends PageProps {
   data: {
     contentfulPage: {
       body: {

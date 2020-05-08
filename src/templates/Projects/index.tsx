@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Grid from '../../components/Grid';
@@ -8,7 +8,7 @@ import { ProjectProps } from '../../components/Project';
 import Projects from '../../components/Projects';
 import Section from '../../components/Section';
 
-export interface ProjectsTemplate {
+export interface ProjectsTemplateProps extends PageProps {
   data: {
     allContentfulProject: {
       edges: [
@@ -34,7 +34,7 @@ export interface ProjectsTemplate {
   };
 }
 
-const ProjectsTemplate: React.FC<ProjectsTemplate> = (props) => {
+const ProjectsTemplate: React.FC<ProjectsTemplateProps> = (props) => {
   const {
     data: { allContentfulProject },
   } = props;

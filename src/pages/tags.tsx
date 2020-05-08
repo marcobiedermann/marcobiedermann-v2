@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, PageProps, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Grid from '../components/Grid';
@@ -17,7 +17,7 @@ interface TagsPageQuery {
   };
 }
 
-const TagsPage: React.FC = () => {
+const TagsPage: React.FC<PageProps> = () => {
   const {
     allContentfulProject: { tags },
   }: TagsPageQuery = useStaticQuery(

@@ -1,5 +1,4 @@
-import { WindowLocation } from '@reach/router';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import Img, { FixedObject } from 'gatsby-image';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -14,7 +13,7 @@ import Row from '../../components/Row';
 import Section from '../../components/Section';
 import Typography from '../../components/Typography';
 
-export interface ProjectWebsiteTemplate {
+export interface ProjectWebsiteTemplateProps extends PageProps {
   data: {
     allContentfulProject: {
       edges: [
@@ -60,7 +59,6 @@ export interface ProjectWebsiteTemplate {
       };
     };
   };
-  location: WindowLocation;
   pageContext: {
     previous: {
       slug: string;
@@ -71,7 +69,7 @@ export interface ProjectWebsiteTemplate {
   };
 }
 
-const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplate> = (props) => {
+const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) => {
   const {
     data: {
       allContentfulProject: { edges },

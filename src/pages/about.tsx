@@ -1,6 +1,6 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Document } from '@contentful/rich-text-types';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, PageProps, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Experiences from '../components/Experiences';
@@ -50,7 +50,7 @@ interface AboutPageQuery {
   };
 }
 
-const AboutPage: React.FC = () => {
+const AboutPage: React.FC<PageProps> = () => {
   const { allContentfulExperience, contentfulSkills, contentfulPage }: AboutPageQuery = useStaticQuery(
     graphql`
       query {
