@@ -33,7 +33,6 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
-    "react-hotkeys": "^2.0.0",
     "react-i18next": "^11.4.0",
     "react-instantsearch-dom": "^6.4.0",
     "react-share": "^4.1.0",

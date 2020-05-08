@@ -3,10 +3,10 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
+import Pagination from '../../components/Pagination';
 import { ProjectProps } from '../../components/Project';
 import Projects from '../../components/Projects';
 import Section from '../../components/Section';
-import Pagination from '../../containers/Pagination';
 
 export interface ProjectsTemplate {
   data: {

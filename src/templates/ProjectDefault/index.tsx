@@ -6,9 +6,9 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
+import Pagination from '../../components/Pagination';
 import Section from '../../components/Section';
 import Share from '../../components/Share';
-import Pagination from '../../containers/Pagination';
 
 const options = {
   renderNode: {

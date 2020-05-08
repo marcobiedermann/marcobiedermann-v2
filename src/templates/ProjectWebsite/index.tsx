@@ -9,11 +9,11 @@ import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
 import { LogoProps } from '../../components/Logo';
 import Logos from '../../components/Logos';
+import Pagination from '../../components/Pagination';
 import Row from '../../components/Row';
 import Section from '../../components/Section';
 import Share from '../../components/Share';
 import Typography from '../../components/Typography';
-import Pagination from '../../containers/Pagination';
 
 export interface ProjectWebsiteTemplate {
   data: {
