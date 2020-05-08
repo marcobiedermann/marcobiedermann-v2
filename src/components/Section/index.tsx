@@ -5,24 +5,20 @@ import styles from './style.module.css';
 
 type Appearance = 'dark' | 'light';
 
-export interface SectionProps {
+export interface SectionProps extends React.HTMLAttributes<HTMLDivElement> {
   appearance?: Appearance;
-  className?: string;
   isFull?: boolean;
 }
 
 const Section: React.FC<SectionProps> = (props) => {
   const { appearance, className, isFull, ...otherProps } = props;
 
-  return (
-    <section
-      className={classNames(className, styles.section, {
-        [styles.sectionFull]: isFull,
-        [styles[`section${capitalize(appearance)}` as 'sectionLight' | 'sectionDark']]: appearance,
-      })}
-      {...otherProps}
-    />
-  );
+  const classes = classNames(className, styles.section, {
+    [styles.sectionFull]: isFull,
+    [styles[`section${capitalize(appearance)}` as 'sectionLight' | 'sectionDark']]: appearance,
+  });
+
+  return <section className={classes} {...otherProps} />;
 };
 
 export default Section;

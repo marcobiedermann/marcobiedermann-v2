@@ -37,9 +37,7 @@ export interface ProjectWebsiteTemplateProps extends PageProps {
       mobile: {
         fixed: FixedObject;
       };
-      primaryColor: {
-        fixed: FixedObject;
-      };
+      primaryColor: string;
       tablet: {
         fixed: FixedObject;
       };
