@@ -63,11 +63,7 @@ const ProjectDefaultTemplate: React.FC<ProjectDefaultTemplateProps> = (props) =>
   const {
     data: {
       contentfulProject: { body, title },
-      site: {
-        siteMetadata: { author },
-      },
     },
-    location,
     pageContext: { previous, next },
   } = props;
   const { t } = useTranslation();

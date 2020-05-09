@@ -85,11 +85,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
         typography,
         url,
       },
-      site: {
-        siteMetadata: { author },
-      },
     },
-    location,
     pageContext: { previous, next },
   } = props;
   const { t } = useTranslation();
