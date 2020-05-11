@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import HitProject, { HitProjectProps } from '../HitProject';
 
 export interface HitProps {
@@ -7,7 +7,7 @@ export interface HitProps {
   };
 }
 
-const Hit: React.FC<HitProps> = (props) => {
+export const Hit: FC<HitProps> = (props) => {
   const { hit, ...otherProps } = props;
 
   return (

@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Tag, { TagProps } from '../Tag';
 
 export interface TagsProps {
   tags: TagProps[];
 }
 
-const Tags: React.FC<TagsProps> = (props) => {
+export const Tags: FC<TagsProps> = (props) => {
   const { tags } = props;
 
   return (

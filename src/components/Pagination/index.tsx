@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { FC } from 'react';
 import Route, { RouteProps } from '../Route';
 import styles from './style.module.css';
 
@@ -10,7 +10,7 @@ export interface PaginationProps {
   routes: RouteProps[];
 }
 
-const Pagination: React.FC<PaginationProps> = (props) => {
+export const Pagination: FC<PaginationProps> = (props) => {
   const { className, next, previous, routes, ...otherProps } = props;
 
   return (

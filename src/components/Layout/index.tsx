@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { format } from 'date-fns';
 import { graphql, useStaticQuery } from 'gatsby';
-import React from 'react';
+import React, { FC } from 'react';
 import { DATE_NOW } from '../../constants/date';
 import '../../i18n';
 import Footer from '../Footer';
@@ -34,7 +34,7 @@ export interface LayoutProps {
   className?: string;
 }
 
-const Layout: React.FC<LayoutProps> = (props) => {
+export const Layout: FC<LayoutProps> = (props) => {
   const { children, className, ...otherProps } = props;
   const { allContentfulMenu }: LayoutQuery = useStaticQuery(
     graphql`

@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { FC } from 'react';
 
 export interface HitProjectProps {
   slug: {
@@ -10,7 +10,7 @@ export interface HitProjectProps {
   };
 }
 
-const HitProject: React.FC<HitProjectProps> = (props) => {
+export const HitProject: FC<HitProjectProps> = (props) => {
   const { slug, title } = props;
 
   return (

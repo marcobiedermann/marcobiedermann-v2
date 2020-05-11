@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import camelCase from 'lodash/camelCase';
 import capitalize from 'lodash/capitalize';
-import React from 'react';
+import React, { FC } from 'react';
 import styles from './style.module.css';
 
 type Align = 'center' | 'end' | 'start';
@@ -19,7 +19,7 @@ export interface AlignmentProps {
   justify?: Justify;
 }
 
-const Alignment: React.FC<AlignmentProps> = (props) => {
+export const Alignment: FC<AlignmentProps> = (props) => {
   const { align, className, justify, ...otherProps } = props;
 
   return (

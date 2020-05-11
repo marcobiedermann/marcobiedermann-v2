@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { FC } from 'react';
 import Skill, { SkillProps } from '../Skill';
 import styles from './style.module.css';
 
@@ -8,7 +8,7 @@ export interface SkillsProps {
   skills: SkillProps[];
 }
 
-const Skills: React.FC<SkillsProps> = (props) => {
+export const Skills: FC<SkillsProps> = (props) => {
   const { className, skills } = props;
 
   return (

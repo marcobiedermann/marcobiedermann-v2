@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { FC } from 'react';
 import Route, { RouteProps } from '../Route';
 import styles from './style.module.css';
 
@@ -8,7 +8,7 @@ export interface NavigationProps {
   routes: RouteProps[];
 }
 
-const Navigation: React.FC<NavigationProps> = (props) => {
+export const Navigation: FC<NavigationProps> = (props) => {
   const { className, routes, ...otherProps } = props;
 
   return (

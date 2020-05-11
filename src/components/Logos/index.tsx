@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { FC } from 'react';
 import Logo, { LogoProps } from '../Logo';
 import styles from './style.module.css';
 
@@ -8,7 +8,7 @@ export interface LogosProps {
   logos: LogoProps[];
 }
 
-const Logos: React.FC<LogosProps> = (props) => {
+export const Logos: FC<LogosProps> = (props) => {
   const { className, logos, ...otherProps } = props;
 
   return (

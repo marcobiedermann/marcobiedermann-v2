@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import camelCase from 'lodash/camelCase';
 import capitalize from 'lodash/capitalize';
-import React from 'react';
+import React, { FC } from 'react';
 import styles from './style.module.css';
 
 type Component = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
@@ -13,7 +13,7 @@ export interface TypographyProps {
   textAlign?: TextAlign;
 }
 
-const Typography: React.FC<TypographyProps> = (props) => {
+export const Typography: FC<TypographyProps> = (props) => {
   const { className, textAlign, ...otherProps } = props;
 
   return (

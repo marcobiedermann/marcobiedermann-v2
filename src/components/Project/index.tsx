@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
-import React from 'react';
+import React, { FC } from 'react';
 import styles from './style.module.css';
 
 export interface ProjectProps {
@@ -12,7 +12,7 @@ export interface ProjectProps {
   title: string;
 }
 
-const Project: React.FC<ProjectProps> = (props) => {
+export const Project: FC<ProjectProps> = (props) => {
   const { slug, thumbnail, title, ...otherProps } = props;
 
   return (

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { FC } from 'react';
 import Experience, { ExperienceProps } from '../Experience';
 import styles from './style.module.css';
 
@@ -8,7 +8,7 @@ export interface ExperiencesProps {
   experiences: ExperienceProps[];
 }
 
-const Experiences: React.FC<ExperiencesProps> = (props) => {
+export const Experiences: FC<ExperiencesProps> = (props) => {
   const { className, experiences } = props;
 
   return (

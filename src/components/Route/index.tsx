@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { FC } from 'react';
 
 export interface RouteProps {
   activeClassName?: string;
@@ -10,7 +10,7 @@ export interface RouteProps {
   rel?: string;
 }
 
-const Route: React.FC<RouteProps> = (props) => {
+export const Route: FC<RouteProps> = (props) => {
   const { activeClassName, className, name, path, rel, ...otherProps } = props;
 
   return (

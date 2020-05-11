@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import React from 'react';
+import React, { FC } from 'react';
 import { Helmet } from 'react-helmet';
 
 export type Lang = 'en';
@@ -15,7 +15,7 @@ export interface SEOProps {
   title?: string;
 }
 
-const SEO: React.FC<SEOProps> = (props) => {
+export const SEO: FC<SEOProps> = (props) => {
   const { description, lang = 'en', meta = [], title, ...otherProps } = props;
   const { site } = useStaticQuery(
     graphql`

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { FC } from 'react';
 import Project, { ProjectProps } from '../Project';
 import styles from './style.module.css';
 
@@ -8,7 +8,7 @@ export interface ProjectsProps {
   projects: ProjectProps[];
 }
 
-const Projects: React.FC<ProjectsProps> = (props) => {
+export const Projects: FC<ProjectsProps> = (props) => {
   const { className, projects, ...otherProps } = props;
 
   return (

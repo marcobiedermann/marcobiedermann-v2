@@ -1,6 +1,6 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Document } from '@contentful/rich-text-types';
-import React from 'react';
+import React, { FC } from 'react';
 
 export interface SkillProps {
   description?: {
@@ -10,7 +10,7 @@ export interface SkillProps {
   title: string;
 }
 
-const Skill: React.FC<SkillProps> = (props) => {
+export const Skill: FC<SkillProps> = (props) => {
   const { description, title } = props;
 
   return (

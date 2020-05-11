@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { FC } from 'react';
 import Alignment, { AlignmentProps } from '../Alignment';
 import styles from './style.module.css';
 
@@ -7,7 +7,7 @@ export interface RowProps extends AlignmentProps {
   className?: string;
 }
 
-const Row: React.FC<RowProps> = (props) => {
+export const Row: FC<RowProps> = (props) => {
   const { className, ...otherProps } = props;
 
   return <Alignment className={classNames(className, styles.row)} {...otherProps} />;

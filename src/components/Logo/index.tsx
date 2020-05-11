@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { FC } from 'react';
 import styles from './style.module.css';
 
 export interface LogoProps {
@@ -15,7 +15,7 @@ export interface LogoProps {
   slug?: string;
 }
 
-const Logo: React.FC<LogoProps> = (props) => {
+export const Logo: FC<LogoProps> = (props) => {
   const { className, logo, slug } = props;
 
   return (

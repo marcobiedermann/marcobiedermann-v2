@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { FC } from 'react';
 import styles from './style.module.css';
 
 export interface ButtonProps {
@@ -9,7 +9,7 @@ export interface ButtonProps {
   to?: string;
 }
 
-const Button: React.FC<ButtonProps> = (prop) => {
+export const Button: FC<ButtonProps> = (prop) => {
   const { children, className, href, to } = prop;
   const classes = classNames(className, styles.button);
 

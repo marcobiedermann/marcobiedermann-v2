@@ -1,7 +1,7 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Document } from '@contentful/rich-text-types';
 import { format, formatDistanceStrict } from 'date-fns';
-import React from 'react';
+import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { DATE_NOW } from '../../constants/date';
 
@@ -18,7 +18,7 @@ export interface ExperienceProps {
   url: string;
 }
 
-const Experience: React.FC<ExperienceProps> = (props) => {
+export const Experience: FC<ExperienceProps> = (props) => {
   const { company, description, location, endDate, startDate, title, url } = props;
   const { t } = useTranslation();
 

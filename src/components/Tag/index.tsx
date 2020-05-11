@@ -1,12 +1,12 @@
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { FC } from 'react';
 
 export interface TagProps {
   fieldValue: string;
   totalCount: number;
 }
 
-const Tag: React.FC<TagProps> = (props) => {
+export const Tag: FC<TagProps> = (props) => {
   const { fieldValue, totalCount } = props;
 
   return (
