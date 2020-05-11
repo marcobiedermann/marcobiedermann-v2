@@ -13,7 +13,7 @@ const options = {
     [BLOCKS.EMBEDDED_ASSET]: (node: Node): React.ReactElement => {
       const { description, file } = node.data.target.fields;
       const { contentType, details, url } = file['en-US'];
-      const mineGroup = contentType.split('/')[0];
+      const [mineGroup] = contentType.split('/');
 
       switch (mineGroup) {
         case 'image':
