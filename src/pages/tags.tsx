@@ -1,38 +1,17 @@
-import { graphql, PageProps, useStaticQuery } from 'gatsby';
+import { PageProps } from 'gatsby';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Grid from '../components/Grid';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import Tags from '../components/Tags';
-
-interface TagsPageQuery {
-  allContentfulProject: {
-    tags: [
-      {
-        fieldValue: string;
-        totalCount: number;
-      },
-    ];
-  };
-}
+import { useTagsPage } from '../hooks/tags';
 
 const TagsPage: React.FC<PageProps> = () => {
-  const {
-    allContentfulProject: { tags },
-  }: TagsPageQuery = useStaticQuery(
-    graphql`
-      query {
-        allContentfulProject {
-          tags: group(field: tags) {
-            fieldValue
-            totalCount
-          }
-        }
-      }
-    `,
-  );
+  const { allContentfulProject } = useTagsPage();
   const { t } = useTranslation();
+
+  const { tags } = allContentfulProject;
 
   return (
     <Layout>

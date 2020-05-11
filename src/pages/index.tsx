@@ -1,5 +1,4 @@
-import { graphql, PageProps, useStaticQuery } from 'gatsby';
-import { FluidObject } from 'gatsby-image';
+import { PageProps } from 'gatsby';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Button from '../components/Button';
@@ -11,49 +10,14 @@ import Row from '../components/Row';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import Typography from '../components/Typography';
+import { useIndexPage } from '../hooks';
 import behanceIcon from '../images/icons/behance.svg';
 import dribbbleIcon from '../images/icons/dribbble.svg';
 import githubIcon from '../images/icons/github.svg';
 import twitterIcon from '../images/icons/twitter.svg';
 
-interface IndexPageQuery {
-  allContentfulProject: {
-    edges: [
-      {
-        node: {
-          id: string;
-          slug: string;
-          title: string;
-          thumbnail: {
-            fluid: FluidObject;
-          };
-        };
-      },
-    ];
-  };
-}
-
 const IndexPage: React.FC<PageProps> = () => {
-  const { allContentfulProject }: IndexPageQuery = useStaticQuery(
-    graphql`
-      query {
-        allContentfulProject(sort: { fields: [createdAt], order: DESC }, limit: 8) {
-          edges {
-            node {
-              id
-              slug
-              title
-              thumbnail {
-                fluid {
-                  ...GatsbyContentfulFluid_withWebp_noBase64
-                }
-              }
-            }
-          }
-        }
-      }
-    `,
-  );
+  const { allContentfulProject } = useIndexPage();
   const { t } = useTranslation();
   const { edges: projects } = allContentfulProject;
 

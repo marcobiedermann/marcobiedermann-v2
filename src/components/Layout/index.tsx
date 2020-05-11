@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import { format } from 'date-fns';
-import { graphql, useStaticQuery } from 'gatsby';
 import React, { FC } from 'react';
 import { DATE_NOW } from '../../constants/date';
+import { useLayout } from '../../hooks/layout';
 import '../../i18n';
 import Footer from '../Footer';
 import Grid from '../Grid';
@@ -11,49 +11,13 @@ import Main from '../Main';
 import Navigation from '../Navigation';
 import styles from './style.module.css';
 
-interface LayoutQuery {
-  allContentfulMenu: {
-    edges: [
-      {
-        node: {
-          slug: string;
-          routes: [
-            {
-              id: string;
-              name: string;
-              path: string;
-            },
-          ];
-        };
-      },
-    ];
-  };
-}
-
 export interface LayoutProps {
   className?: string;
 }
 
 export const Layout: FC<LayoutProps> = (props) => {
   const { children, className, ...otherProps } = props;
-  const { allContentfulMenu }: LayoutQuery = useStaticQuery(
-    graphql`
-      query {
-        allContentfulMenu {
-          edges {
-            node {
-              slug
-              routes {
-                id
-                name
-                path
-              }
-            }
-          }
-        }
-      }
-    `,
-  );
+  const { allContentfulMenu } = useLayout();
 
   const { edges: menues } = allContentfulMenu;
 
