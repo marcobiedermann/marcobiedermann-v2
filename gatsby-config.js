@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/no-var-requires */
+/* eslint-disable camelcase, @typescript-eslint/explicit-function-return-type, @typescript-eslint/no-var-requires */
 
 const dotenv = require('dotenv');
 
@@ -24,7 +24,6 @@ module.exports = {
         trackingId: 'UA-46884111-4',
       },
     },
-    /* eslint-disable @typescript-eslint/camelcase */
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -37,7 +36,6 @@ module.exports = {
         icon: 'src/images/favicon.png',
       },
     },
-    /* eslint-enable @typescript-eslint/camelcase */
     {
       resolve: 'gatsby-plugin-netlify',
       options: {
