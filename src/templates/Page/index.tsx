@@ -55,7 +55,7 @@ const PageTemplate: React.FC<PageTemplateProps> = (props) => {
       <Section>
         <Grid>
           <h1>{title}</h1>
-          {documentToReactComponents(body.json, options)}
+          {body && documentToReactComponents(body.json, options)}
         </Grid>
       </Section>
     </Layout>

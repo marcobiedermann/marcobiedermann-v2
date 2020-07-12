@@ -22,7 +22,7 @@ const AboutPage: React.FC<PageProps> = () => {
       <Section>
         <Grid>
           <h1>{title}</h1>
-          {documentToReactComponents(body.json)}
+          {body && documentToReactComponents(body.json)}
         </Grid>
       </Section>
       <Section>

@@ -73,7 +73,7 @@ const ProjectDefaultTemplate: React.FC<ProjectDefaultTemplateProps> = (props) =>
       <Section>
         <Grid justify="center">
           <h1>{title}</h1>
-          {documentToReactComponents(body.json, options)}
+          {body && documentToReactComponents(body.json, options)}
         </Grid>
       </Section>
 
