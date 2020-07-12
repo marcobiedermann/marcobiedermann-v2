@@ -51,7 +51,7 @@ exports[`Experience component should render without \`endDate\` correctly 1`] = 
      – 
     present
      (
-    20 years
+    21 years
     )
   </div>
   <div />
