@@ -8,6 +8,7 @@ i18n.use(initReactI18next).init({
   defaultNS: 'common',
   debug: true,
   fallbackLng: 'en',
+  lng: 'en',
   ns: ['about', 'common', 'project'],
   resources: {
     en: {
@@ -15,9 +16,6 @@ i18n.use(initReactI18next).init({
       common,
       project,
     },
-  },
-  interpolation: {
-    escapeValue: false,
   },
 });
 
