@@ -1,13 +1,16 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
+interface Tag {
+  fieldValue: string;
+  totalCount: number;
+}
+
 export interface TagsPageQuery {
+  allContentfulPost: {
+    postTags: Tag[];
+  };
   allContentfulProject: {
-    tags: [
-      {
-        fieldValue: string;
-        totalCount: number;
-      },
-    ];
+    projectTags: Tag[];
   };
 }
 
@@ -15,8 +18,14 @@ export const useTagsPage = (): TagsPageQuery => {
   return useStaticQuery<TagsPageQuery>(
     graphql`
       query {
+        allContentfulPost {
+          postTags: group(field: tags) {
+            fieldValue
+            totalCount
+          }
+        }
         allContentfulProject {
-          tags: group(field: tags) {
+          projectTags: group(field: tags) {
             fieldValue
             totalCount
           }

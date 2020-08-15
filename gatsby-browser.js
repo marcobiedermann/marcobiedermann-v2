@@ -1,3 +1,5 @@
+import 'katex/dist/katex.min.css';
+import 'prism-theme-night-owl';
 import 'typeface-montserrat';
 import './src/styles/all.css';
 import './src/styles/anchor.css';

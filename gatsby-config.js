@@ -70,7 +70,28 @@ module.exports = {
       },
     },
     'gatsby-transformer-json',
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-autolink-headers',
+          },
+          {
+            resolve: 'gatsby-remark-external-links',
+          },
+          {
+            resolve: 'gatsby-remark-katex',
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+          },
+          {
+            resolve: 'gatsby-remark-responsive-iframe',
+          },
+        ],
+      },
+    },
     'gatsby-transformer-sharp',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

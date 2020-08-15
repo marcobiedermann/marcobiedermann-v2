@@ -1,108 +1,111 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-var-requires */
 
 const path = require('path');
 
-exports.createPages = ({ graphql, actions }) => {
+function getPrevious(edges, index) {
+  return index === edges.length - 1 ? null : edges[index + 1].node;
+}
+
+function getNext(edges, index) {
+  return index === 0 ? null : edges[index - 1].node;
+}
+
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const pageTemplate = path.resolve('./src/templates/Page/index.tsx');
+  const postTemplate = path.resolve('./src/templates/Post/index.tsx');
   const projectDefaultTemplate = path.resolve('./src/templates/ProjectDefault/index.tsx');
   const projectWebsiteTemplate = path.resolve('./src/templates/ProjectWebsite/index.tsx');
-  const projectsTemplate = path.resolve('./src/templates/Projects/index.tsx');
   const tagTemplate = path.resolve('./src/templates/Tag/index.tsx');
 
-  const pagesQuery = graphql(
+  const { data, errors } = await graphql(
     `
       {
         allContentfulPage {
-          edges {
+          pages: edges {
             node {
               slug
             }
           }
         }
-      }
-    `,
-  ).then((result) => {
-    if (result.errors) {
-      throw result.errors;
-    }
-
-    result.data.allContentfulPage.edges.forEach((page) => {
-      createPage({
-        path: page.node.slug,
-        component: pageTemplate,
-        context: {
-          slug: page.node.slug,
-        },
-      });
-    });
-  });
-
-  const projectsQuery = graphql(
-    `
-      {
+        allContentfulPost {
+          posts: edges {
+            node {
+              slug
+            }
+          }
+          postTags: distinct(field: tags)
+        }
         allContentfulProject {
-          edges {
+          projects: edges {
             node {
               slug
               tags
             }
           }
+          projectTags: distinct(field: tags)
         }
       }
     `,
-  ).then((result) => {
-    if (result.errors) {
-      throw result.errors;
-    }
+  );
 
-    const projects = result.data.allContentfulProject.edges;
-    const limit = 13;
-    const total = projects.length;
-    const pages = Math.ceil(total / limit);
-    const tags = [...new Set(projects.flatMap((project) => project.node.tags))];
+  if (errors) {
+    throw errors;
+  }
 
-    Array.from({ length: pages }).forEach((_page, index) => {
-      const page = index + 1;
-      const skip = index * limit;
+  const { allContentfulPage, allContentfulPost, allContentfulProject } = data;
+  const { pages } = allContentfulPage;
+  const { postTags, posts } = allContentfulPost;
+  const { projectTags, projects } = allContentfulProject;
+  const tags = [...new Set([...postTags, ...projectTags])];
 
-      createPage({
-        path: index === 0 ? '/projects' : `/projects/${index + 1}`,
-        component: projectsTemplate,
-        context: {
-          limit,
-          page,
-          pages,
-          skip,
-        },
-      });
-    });
+  pages.forEach((edge) => {
+    const { slug } = edge.node;
 
-    projects.forEach((project, index) => {
-      const previous = index === projects.length - 1 ? null : projects[index + 1].node;
-      const next = index === 0 ? null : projects[index - 1].node;
-
-      createPage({
-        path: `/projects/${project.node.slug}`,
-        component: project.node.tags.includes('website') ? projectWebsiteTemplate : projectDefaultTemplate,
-        context: {
-          slug: project.node.slug,
-          previous,
-          next,
-        },
-      });
-    });
-
-    tags.forEach((tag) => {
-      createPage({
-        component: tagTemplate,
-        path: `/tags/${tag}`,
-        context: {
-          tag,
-        },
-      });
+    createPage({
+      path: slug,
+      component: pageTemplate,
+      context: {
+        slug,
+      },
     });
   });
 
-  return Promise.all([pagesQuery, projectsQuery]);
+  posts.forEach((edge, index) => {
+    const { slug } = edge.node;
+
+    createPage({
+      path: `/blog/${slug}`,
+      component: postTemplate,
+      context: {
+        slug,
+        previous: getPrevious(posts, index),
+        next: getNext(posts, index),
+      },
+    });
+  });
+
+  projects.forEach((edge, index) => {
+    const { slug } = edge.node;
+
+    createPage({
+      path: `/projects/${slug}`,
+      component: edge.node.tags.includes('website') ? projectWebsiteTemplate : projectDefaultTemplate,
+      context: {
+        slug,
+        previous: getPrevious(projects, index),
+        next: getNext(projects, index),
+      },
+    });
+  });
+
+  tags.forEach((tag) => {
+    createPage({
+      component: tagTemplate,
+      path: `/tags/${tag}`,
+      context: {
+        tag,
+      },
+    });
+  });
 };
