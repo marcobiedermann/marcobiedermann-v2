@@ -3,30 +3,11 @@ import React, { FC } from 'react';
 import Grid from '../components/Grid';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
-
-const projects = [
-  'marcobiedermann/codewars',
-  'marcobiedermann/contacts',
-  'marcobiedermann/d3-charts',
-  'marcobiedermann/freeCodeCamp',
-  'marcobiedermann/gatsby-shopify',
-  'marcobiedermann/html-style-guide',
-  'marcobiedermann/image-service',
-  'marcobiedermann/leetcode',
-  'marcobiedermann/marcobiedermann-cli',
-  'marcobiedermann/marcobiedermann-v2',
-  'marcobiedermann/password-generator',
-  'marcobiedermann/pokeapi-graphql',
-  'marcobiedermann/qr-code-generator',
-  'marcobiedermann/react-boilerplate',
-  'marcobiedermann/search-engine-optimization',
-  'marcobiedermann/spotify-clone',
-  'marcobiedermann/ui',
-  'marcobiedermann/user-service',
-  'marcobiedermann/weather-app',
-];
+import { useStatusPage } from '../hooks/status';
 
 const StatusPage: FC<PageProps> = () => {
+  const { github } = useStatusPage();
+
   return (
     <Layout>
       <Section>
@@ -35,38 +16,68 @@ const StatusPage: FC<PageProps> = () => {
           <p>Showing the statuses of my project deploys and CI tests.</p>
 
           <ul>
-            {projects.map((project) => (
-              <li key={project}>
+            {github.search.edges.map(({ node }) => (
+              <li key={node.id}>
                 <div>
                   <h3>
-                    <a href={`https://github.com/${project}`} target="_blank" rel="noopener noreferrer">
-                      {project}
+                    <a
+                      href={`https://github.com/marcobiedermann/${node.name}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      marcobiedermann/{node.name}
                     </a>
                   </h3>
+                  <p>{node.description}</p>
 
                   <ul>
                     <li>
-                      <a href={`https://github.com/${project}`} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={`https://github.com/marcobiedermann/${node.name}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <img
-                          src={`https://img.shields.io/github/stars/${project}?style=social`}
-                          alt={`Star ${project} on GitHub`}
+                          src={`https://img.shields.io/github/stars/marcobiedermann/${node.name}?style=social`}
+                          alt={`Star marcobiedermann/${node.name} on GitHub`}
                         />
                       </a>
                     </li>
 
                     <li>
-                      <a href={`https://travis-ci.com/${project}`} target="_blank" rel="noopener noreferrer">
-                        <img src={`https://img.shields.io/travis/com/${project}`} alt="Build Status" />
+                      <a
+                        href={`https://travis-ci.com/marcobiedermann/${node.name}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={`https://img.shields.io/travis/com/marcobiedermann/${node.name}`}
+                          alt="Build Status"
+                        />
                       </a>
                     </li>
                     <li>
-                      <a href={`https://david-dm.org/${project}`} target="_blank" rel="noopener noreferrer">
-                        <img src={`https://img.shields.io/david/${project}`} alt="dependencies Status" />
+                      <a
+                        href={`https://david-dm.org/marcobiedermann/${node.name}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={`https://img.shields.io/david/marcobiedermann/${node.name}`}
+                          alt="dependencies Status"
+                        />
                       </a>
                     </li>
                     <li>
-                      <a href={`https://david-dm.org/${project}?type=dev`} target="_blank" rel="noopener noreferrer">
-                        <img src={`https://img.shields.io/david/dev/${project}`} alt="devDependencies Status" />
+                      <a
+                        href={`https://david-dm.org/marcobiedermann/${node.name}?type=dev`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={`https://img.shields.io/david/dev/marcobiedermann/${node.name}`}
+                          alt="devDependencies Status"
+                        />
                       </a>
                     </li>
                   </ul>
