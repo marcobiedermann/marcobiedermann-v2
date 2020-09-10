@@ -1,0 +1,9 @@
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  list-style-type: none;
+  margin-bottom: 1.5em;
+  margin-top: 0.5em;
+  padding: 0;
+}

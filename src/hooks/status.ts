@@ -1,19 +1,21 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
 interface Repository {
-  description: string;
+  descriptionHTML: string;
   id: string;
   name: string;
+  nameWithOwner: string;
+  url: string;
 }
 
-interface Edge {
+interface RepositoryEdge {
   node: Repository;
 }
 
 export interface StatusPageQuery {
   github: {
     search: {
-      edges: Edge[];
+      edges: RepositoryEdge[];
     };
   };
 }
@@ -27,9 +29,11 @@ export const useStatusPage = (): StatusPageQuery => {
             edges {
               node {
                 ... on GitHub_Repository {
-                  description
+                  descriptionHTML
                   id
                   name
+                  nameWithOwner
+                  url
                 }
               }
             }
