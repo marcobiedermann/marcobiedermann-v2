@@ -92,9 +92,6 @@ module.exports = {
             resolve: 'gatsby-remark-external-links',
           },
           {
-            resolve: 'gatsby-remark-katex',
-          },
-          {
             resolve: 'gatsby-remark-prismjs',
           },
           {
