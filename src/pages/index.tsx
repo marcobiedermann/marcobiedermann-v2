@@ -1,6 +1,5 @@
 import { PageProps } from 'gatsby';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import Button from '../components/Button';
 import Column from '../components/Column';
 import Grid from '../components/Grid';
@@ -18,7 +17,6 @@ import twitterIcon from '../images/icons/twitter.svg';
 
 const IndexPage: React.FC<PageProps> = () => {
   const { allContentfulProject } = useIndexPage();
-  const { t } = useTranslation();
   const { edges: projects } = allContentfulProject;
 
   return (
@@ -80,7 +78,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <p>Take a look at some of my projects I’ve been working on.</p>
             <Projects projects={projects.map((project) => project.node)} />
             <p>
-              <Button to="/projects">{t('project:more work')}</Button>
+              <Button to="/projects">See more Work</Button>
             </p>
           </Typography>
         </Grid>

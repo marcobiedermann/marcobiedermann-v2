@@ -1,7 +1,6 @@
 import { graphql, PageProps } from 'gatsby';
 import Img, { FixedObject } from 'gatsby-image';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import Button from '../../components/Button';
 import Column from '../../components/Column';
 import Grid from '../../components/Grid';
@@ -88,7 +87,6 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
     },
     pageContext: { previous, next },
   } = props;
-  const { t } = useTranslation();
 
   return (
     <Layout>
@@ -108,19 +106,19 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
             <ul>
               {client && (
                 <li>
-                  <strong>{t('project:client')}:</strong> {client}
+                  <strong>Client:</strong> {client}
                 </li>
               )}
 
               {agency && (
                 <li>
-                  <strong>{t('project:agency')}:</strong> {agency}
+                  <strong>Agency:</strong> {agency}
                 </li>
               )}
 
               {role && (
                 <li>
-                  <strong>{t('project:role')}:</strong> {role}
+                  <strong>Role:</strong> {role}
                 </li>
               )}
             </ul>
@@ -132,7 +130,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
         <Section appearance="light">
           <Grid justify="center">
             <Typography textAlign="center">
-              <h2>{t('project:colors.title')}</h2>
+              <h2>Colors</h2>
             </Typography>
             <Img fixed={colors.fixed} />
           </Grid>
@@ -143,7 +141,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
         <Section>
           <Grid justify="center">
             <Typography textAlign="center">
-              <h2>{t('project:typography.title')}</h2>
+              <h2>Typography</h2>
             </Typography>
             <Row>
               {typography.map((font) => (
@@ -160,7 +158,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
         <Section appearance="light">
           <Grid justify="center">
             <Typography textAlign="center">
-              <h2>{t('project:homepage.title')}</h2>
+              <h2>Homepage</h2>
             </Typography>
             <Img fixed={homepage.fixed} />
           </Grid>
@@ -174,8 +172,8 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
         }}
       >
         <Grid justify="center">
-          <h2>{t('project:responsive.title')}</h2>
-          <p>{t('project:responsive.description')}</p>
+          <h2>Responsive Design</h2>
+          <p>A website that displays nicely on desktop and on your phone and tablet</p>
           <img src="/images/apple-devices.svg" alt="" />
         </Grid>
       </Section>
@@ -184,7 +182,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
         <Section appearance="light">
           <Grid justify="center">
             <Typography textAlign="center">
-              <h2>{t('project:tablet.title')}</h2>
+              <h2>Tablet View</h2>
             </Typography>
             <Img fixed={tablet.fixed} />
           </Grid>
@@ -195,8 +193,8 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
         <Section>
           <Grid justify="center">
             <Typography textAlign="center">
-              <h2>{t('project:mobile.title')}</h2>
-              <p>{t('project:mobile.description')}</p>
+              <h2>Mobile View</h2>
+              <p>With a small display comes great responsibilities</p>
             </Typography>
             <Img fixed={mobile.fixed} />
           </Grid>
@@ -205,13 +203,13 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
 
       <Section appearance="light">
         <Grid justify="center">
-          <Button href={url}>{t('project:website')}</Button>
+          <Button href={url}>Visit Website</Button>
           <Pagination
             {...(next && {
-              next: { id: 'next', name: t('pagination.next'), path: `/projects/${next.slug}` },
+              next: { id: 'next', name: 'Next', path: `/projects/${next.slug}` },
             })}
             {...(previous && {
-              previous: { id: 'previous', name: t('pagination.previous'), path: `/projects/${previous.slug}` },
+              previous: { id: 'previous', name: 'Previous', path: `/projects/${previous.slug}` },
             })}
             routes={[]}
           />

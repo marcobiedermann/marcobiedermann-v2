@@ -1,6 +1,5 @@
 import { PageProps } from 'gatsby';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import Grid from '../components/Grid';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
@@ -12,7 +11,6 @@ const TagsPage: React.FC<PageProps> = () => {
     allContentfulPost: { postTags },
     allContentfulProject: { projectTags },
   } = useTagsPage();
-  const { t } = useTranslation();
 
   const tags = [...postTags, ...projectTags].sort((a, b) => a.fieldValue.localeCompare(b.fieldValue));
 
@@ -20,7 +18,7 @@ const TagsPage: React.FC<PageProps> = () => {
     <Layout>
       <Section>
         <Grid>
-          <h1>{t('tags')}</h1>
+          <h1>Tags</h1>
           {tags && <Tags tags={tags} />}
         </Grid>
       </Section>

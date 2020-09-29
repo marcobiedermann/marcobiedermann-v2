@@ -1,7 +1,6 @@
 import { format } from 'date-fns';
 import { graphql, Link, PageProps } from 'gatsby';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
 import Pagination from '../../components/Pagination';
@@ -44,7 +43,6 @@ const PostTemplate: React.FC<PostTemplateProps> = (props) => {
     },
     pageContext: { previous, next },
   } = props;
-  const { t } = useTranslation();
 
   return (
     <Layout>
@@ -71,10 +69,10 @@ const PostTemplate: React.FC<PostTemplateProps> = (props) => {
         <Grid justify="center">
           <Pagination
             {...(next && {
-              next: { id: 'next', name: t('pagination.next'), path: `/blog/${next.slug}` },
+              next: { id: 'next', name: 'Next', path: `/blog/${next.slug}` },
             })}
             {...(previous && {
-              previous: { id: 'previous', name: t('pagination.previous'), path: `/blog/${previous.slug}` },
+              previous: { id: 'previous', name: 'Previous', path: `/blog/${previous.slug}` },
             })}
             routes={[]}
           />

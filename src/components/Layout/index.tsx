@@ -3,7 +3,6 @@ import { format } from 'date-fns';
 import React, { FC } from 'react';
 import { DATE_NOW } from '../../constants/date';
 import { useLayout } from '../../hooks/layout';
-import '../../i18n';
 import Footer from '../Footer';
 import Grid from '../Grid';
 import Header from '../Header';
