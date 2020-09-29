@@ -42,9 +42,6 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@storybook/addon-essentials": "^6.0.21",
-    "@storybook/react": "^6.0.21",
     "@types/classnames": "^2.2.10",
     "@types/dotenv": "^8.2.0",
     "@types/jest": "^26.0.13",
@@ -55,11 +52,8 @@
     "@types/react-helmet": "^6.1.0",
     "@types/react-instantsearch-dom": "^6.3.0",
     "@types/react-test-renderer": "^16.9.3",
-    "@types/storybook__react": "^5.2.1",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
-    "babel-jest": "^26.3.0",
-    "babel-loader": "^8.1.0",
     "codecov": "^3.7.2",
     "eslint": "^7.9.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -86,7 +80,6 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build:storybook": "build-storybook -o public/storybook",
     "build": "gatsby build",
     "check": "tsc",
     "clean": "gatsby clean",
@@ -100,7 +93,6 @@
     "lint": "npm run lint:css && npm run lint:js",
     "prebuild": "npm run clean",
     "start": "gatsby serve",
-    "storybook": "start-storybook -p 6006",
     "test:ci": "npm run test -- --maxWorkers=2 && codecov",
     "test": "jest"
   },
