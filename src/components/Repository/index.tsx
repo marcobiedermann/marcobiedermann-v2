@@ -6,11 +6,14 @@ export interface RepositoryProps {
   id: string;
   name: string;
   nameWithOwner: string;
+  primaryLanguage?: {
+    name: string;
+  };
   url: string;
 }
 
 const Repository: FC<RepositoryProps> = (props) => {
-  const { descriptionHTML, name, nameWithOwner, url, ...otherProps } = props;
+  const { descriptionHTML, name, nameWithOwner, primaryLanguage, url, ...otherProps } = props;
 
   return (
     <div {...otherProps}>
@@ -21,14 +24,14 @@ const Repository: FC<RepositoryProps> = (props) => {
       </h3>
       <Badges
         badges={[
-          {
-            id: 'github',
-            image: {
-              src: `https://img.shields.io/github/stars/${nameWithOwner}?style=social`,
-              alt: `Star ${nameWithOwner} on GitHub`,
-            },
-            url: `https://github.com/${nameWithOwner}`,
-          },
+          // {
+          //   id: 'github',
+          //   image: {
+          //     src: `https://img.shields.io/github/stars/${nameWithOwner}?style=social`,
+          //     alt: `Star ${nameWithOwner} on GitHub`,
+          //   },
+          //   url: `https://github.com/${nameWithOwner}`,
+          // },
           {
             id: 'build',
             image: {

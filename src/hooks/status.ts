@@ -5,6 +5,9 @@ interface Repository {
   id: string;
   name: string;
   nameWithOwner: string;
+  primaryLanguage?: {
+    name: string;
+  };
   url: string;
 }
 
@@ -25,7 +28,11 @@ export const useStatusPage = (): StatusPageQuery => {
     graphql`
       query {
         github {
-          search(query: "archived:false user:marcobiedermann", type: REPOSITORY, first: 100) {
+          search(
+            query: "archived:false language:javascript language:typescript user:marcobiedermann"
+            type: REPOSITORY
+            first: 100
+          ) {
             edges {
               node {
                 ... on GitHub_Repository {
@@ -33,6 +40,9 @@ export const useStatusPage = (): StatusPageQuery => {
                   id
                   name
                   nameWithOwner
+                  primaryLanguage {
+                    name
+                  }
                   url
                 }
               }
