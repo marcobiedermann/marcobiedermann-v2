@@ -1,5 +1,5 @@
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { PageProps } from 'gatsby';
+import { renderRichText } from 'gatsby-source-contentful/rich-text';
 import React from 'react';
 import Experiences from '../components/Experiences';
 import Grid from '../components/Grid';
@@ -20,7 +20,7 @@ const AboutPage: React.FC<PageProps> = () => {
       <Section>
         <Grid>
           <h1>{title}</h1>
-          {body && documentToReactComponents(body.json)}
+          {body && renderRichText(body)}
         </Grid>
       </Section>
       <Section>
