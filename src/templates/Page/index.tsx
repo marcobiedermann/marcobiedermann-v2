@@ -13,26 +13,21 @@ import Section from '../../components/Section';
 const options = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node: Node): React.ReactElement => {
-      const { description, file } = node.data.target.fields;
-      const { contentType, details, url } = file['en-US'];
-      const [mineGroup] = contentType.split('/');
+      const {
+        description,
+        file: {
+          url,
+          details: {
+            image: { width, height },
+          },
+        },
+      } = node.data.target;
 
-      switch (mineGroup) {
-        case 'image':
-          return (
-            <p>
-              <img
-                alt={description ? description['en-US'] : null}
-                src={url}
-                width={details.image.width}
-                height={details.image.height}
-              />
-            </p>
-          );
-
-        default:
-          return <span>{contentType} embedded asset</span>;
-      }
+      return (
+        <figure>
+          <img alt={description} src={url} width={width} height={height} />
+        </figure>
+      );
     },
   },
 };
@@ -69,6 +64,22 @@ export const pageQuery = graphql`
     contentfulPage(slug: { eq: $slug }) {
       body {
         raw
+        references {
+          ... on ContentfulAsset {
+            __typename
+            contentful_id
+            description
+            file {
+              url
+              details {
+                image {
+                  width
+                  height
+                }
+              }
+            }
+          }
+        }
       }
       id
       slug
