@@ -14,8 +14,8 @@ export interface TagsPageQuery {
   };
 }
 
-export const useTagsPage = (): TagsPageQuery => {
-  return useStaticQuery<TagsPageQuery>(
+export const useTagsPage = (): TagsPageQuery =>
+  useStaticQuery<TagsPageQuery>(
     graphql`
       query {
         allContentfulPost {
@@ -33,4 +33,3 @@ export const useTagsPage = (): TagsPageQuery => {
       }
     `,
   );
-};

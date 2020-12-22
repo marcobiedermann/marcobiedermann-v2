@@ -1,14 +1,12 @@
-import { Document } from '@contentful/rich-text-types';
 import { graphql, useStaticQuery } from 'gatsby';
+import { ContentfulRichTextGatsbyReference, RenderRichTextData } from 'gatsby-source-contentful/rich-text';
 
 export interface AboutPageQuery {
   allContentfulExperience: {
     edges: [
       {
         node: {
-          description: {
-            json: Document;
-          };
+          description: RenderRichTextData<ContentfulRichTextGatsbyReference>;
           company: string;
           endDate: Date;
           location: string;
@@ -23,9 +21,7 @@ export interface AboutPageQuery {
   contentfulSkills: {
     skills: [
       {
-        description: {
-          json: Document;
-        };
+        description: RenderRichTextData<ContentfulRichTextGatsbyReference>;
         id: string;
         slug: string;
         title: string;
@@ -33,17 +29,15 @@ export interface AboutPageQuery {
     ];
   };
   contentfulPage: {
-    body: {
-      json: Document;
-    };
+    body: RenderRichTextData<ContentfulRichTextGatsbyReference>;
     id: string;
     slug: string;
     title: string;
   };
 }
 
-export const useAboutPage = (): AboutPageQuery => {
-  return useStaticQuery<AboutPageQuery>(
+export const useAboutPage = (): AboutPageQuery =>
+  useStaticQuery<AboutPageQuery>(
     graphql`
       query {
         allContentfulExperience(sort: { fields: endDate, order: DESC }) {
@@ -51,7 +45,7 @@ export const useAboutPage = (): AboutPageQuery => {
             node {
               company
               description {
-                json
+                raw
               }
               endDate
               location
@@ -66,7 +60,7 @@ export const useAboutPage = (): AboutPageQuery => {
           id
           skills {
             description {
-              json
+              raw
             }
             id
             title
@@ -74,7 +68,7 @@ export const useAboutPage = (): AboutPageQuery => {
         }
         contentfulPage(slug: { eq: "about" }) {
           body {
-            json
+            raw
           }
           id
           slug
@@ -83,4 +77,3 @@ export const useAboutPage = (): AboutPageQuery => {
       }
     `,
   );
-};

@@ -24,8 +24,8 @@ export interface PostsPageQuery {
   };
 }
 
-export const usePostsPage = (): PostsPageQuery => {
-  return useStaticQuery<PostsPageQuery>(
+export const usePostsPage = (): PostsPageQuery =>
+  useStaticQuery<PostsPageQuery>(
     graphql`
       query {
         allContentfulPost(sort: { fields: [date], order: DESC }) {
@@ -54,4 +54,3 @@ export const usePostsPage = (): PostsPageQuery => {
       }
     `,
   );
-};

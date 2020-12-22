@@ -18,8 +18,8 @@ export interface IndexPageQuery {
   };
 }
 
-export const useIndexPage = (): IndexPageQuery => {
-  return useStaticQuery<IndexPageQuery>(graphql`
+export const useIndexPage = (): IndexPageQuery =>
+  useStaticQuery<IndexPageQuery>(graphql`
     query {
       allContentfulProject(sort: { fields: [createdAt], order: DESC }, limit: 8) {
         edges {
@@ -37,4 +37,3 @@ export const useIndexPage = (): IndexPageQuery => {
       }
     }
   `);
-};

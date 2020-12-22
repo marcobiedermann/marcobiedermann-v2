@@ -23,8 +23,8 @@ export interface StatusPageQuery {
   };
 }
 
-export const useStatusPage = (): StatusPageQuery => {
-  return useStaticQuery<StatusPageQuery>(
+export const useStatusPage = (): StatusPageQuery =>
+  useStaticQuery<StatusPageQuery>(
     graphql`
       query {
         github {
@@ -53,4 +53,3 @@ export const useStatusPage = (): StatusPageQuery => {
       }
     `,
   );
-};

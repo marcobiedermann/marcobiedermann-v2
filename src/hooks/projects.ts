@@ -25,8 +25,8 @@ export interface ProjectsPageQuery {
   };
 }
 
-export const useProjectsPage = (): ProjectsPageQuery => {
-  return useStaticQuery<ProjectsPageQuery>(
+export const useProjectsPage = (): ProjectsPageQuery =>
+  useStaticQuery<ProjectsPageQuery>(
     graphql`
       query {
         allContentfulProject(sort: { fields: [date], order: DESC }) {
@@ -54,4 +54,3 @@ export const useProjectsPage = (): ProjectsPageQuery => {
       }
     `,
   );
-};

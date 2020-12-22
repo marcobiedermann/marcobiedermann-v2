@@ -1,6 +1,10 @@
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, Document, Node } from '@contentful/rich-text-types';
+import { BLOCKS, Node } from '@contentful/rich-text-types';
 import { graphql, PageProps } from 'gatsby';
+import {
+  ContentfulRichTextGatsbyReference,
+  renderRichText,
+  RenderRichTextData,
+} from 'gatsby-source-contentful/rich-text';
 import React from 'react';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
@@ -37,9 +41,7 @@ const options = {
 export interface ProjectDefaultTemplateProps extends PageProps {
   data: {
     contentfulProject: {
-      body: {
-        json: Document;
-      };
+      body: RenderRichTextData<ContentfulRichTextGatsbyReference>;
       title: string;
     };
     site: {
@@ -71,7 +73,7 @@ const ProjectDefaultTemplate: React.FC<ProjectDefaultTemplateProps> = (props) =>
       <Section>
         <Grid justify="center">
           <h1>{title}</h1>
-          {body && documentToReactComponents(body.json, options)}
+          {body && renderRichText(body, options)}
         </Grid>
       </Section>
 
@@ -96,7 +98,7 @@ export const pageQuery = graphql`
   query ProjectDefaultBySlug($slug: String!) {
     contentfulProject(slug: { eq: $slug }) {
       body {
-        json
+        raw
       }
       id
       slug

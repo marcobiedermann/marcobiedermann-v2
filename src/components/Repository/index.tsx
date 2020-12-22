@@ -13,7 +13,7 @@ export interface RepositoryProps {
 }
 
 const Repository: FC<RepositoryProps> = (props) => {
-  const { descriptionHTML, name, nameWithOwner, primaryLanguage, url, ...otherProps } = props;
+  const { descriptionHTML, name, nameWithOwner, url, ...otherProps } = props;
 
   return (
     <div {...otherProps}>

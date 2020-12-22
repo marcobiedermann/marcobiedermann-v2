@@ -10,8 +10,8 @@ export interface SEOQuery {
   };
 }
 
-export const useSEO = (): SEOQuery => {
-  return useStaticQuery<SEOQuery>(
+export const useSEO = (): SEOQuery =>
+  useStaticQuery<SEOQuery>(
     graphql`
       query {
         site {
@@ -24,4 +24,3 @@ export const useSEO = (): SEOQuery => {
       }
     `,
   );
-};

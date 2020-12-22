@@ -19,8 +19,8 @@ export interface LayoutQuery {
   };
 }
 
-export const useLayout = (): LayoutQuery => {
-  return useStaticQuery<LayoutQuery>(graphql`
+export const useLayout = (): LayoutQuery =>
+  useStaticQuery<LayoutQuery>(graphql`
     query {
       allContentfulMenu {
         edges {
@@ -36,4 +36,3 @@ export const useLayout = (): LayoutQuery => {
       }
     }
   `);
-};

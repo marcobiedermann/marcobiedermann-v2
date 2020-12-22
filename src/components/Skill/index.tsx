@@ -1,11 +1,12 @@
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { Document } from '@contentful/rich-text-types';
+import {
+  ContentfulRichTextGatsbyReference,
+  renderRichText,
+  RenderRichTextData,
+} from 'gatsby-source-contentful/rich-text';
 import React, { FC } from 'react';
 
 export interface SkillProps {
-  description?: {
-    json: Document;
-  };
+  description?: RenderRichTextData<ContentfulRichTextGatsbyReference>;
   id: string;
   title: string;
 }
@@ -16,7 +17,7 @@ export const Skill: FC<SkillProps> = (props) => {
   return (
     <div>
       <h3>{title}</h3>
-      <div>{description && documentToReactComponents(description.json)}</div>
+      <div>{description && renderRichText(description)}</div>
     </div>
   );
 };

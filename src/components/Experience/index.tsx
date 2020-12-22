@@ -1,14 +1,15 @@
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { Document } from '@contentful/rich-text-types';
 import { format, formatDistanceStrict } from 'date-fns';
+import {
+  ContentfulRichTextGatsbyReference,
+  renderRichText,
+  RenderRichTextData,
+} from 'gatsby-source-contentful/rich-text';
 import React, { FC } from 'react';
 import { DATE_NOW } from '../../constants/date';
 
 export interface ExperienceProps {
   company: string;
-  description?: {
-    json: Document;
-  };
+  description?: RenderRichTextData<ContentfulRichTextGatsbyReference>;
   endDate?: Date;
   location: string;
   id: string;
@@ -34,7 +35,7 @@ export const Experience: FC<ExperienceProps> = (props) => {
         {format(new Date(startDate), 'MMM yyyy')} – {endDate ? format(new Date(endDate), 'MMM yyyy') : 'Present'} (
         {formatDistanceStrict(new Date(startDate), endDate ? new Date(endDate) : DATE_NOW)})
       </div>
-      <div>{description && documentToReactComponents(description.json)}</div>
+      <div>{description && renderRichText(description)}</div>
     </div>
   );
 };
