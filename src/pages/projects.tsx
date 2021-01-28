@@ -13,6 +13,11 @@ const BlogPage: React.FC<PageProps> = () => {
 
   return (
     <Layout>
+      <Section appearance="dark">
+        <Grid>
+          <h1>Projects</h1>
+        </Grid>
+      </Section>
       <Section>
         <Grid>
           <Projects projects={projects.map((project) => project.node)} />

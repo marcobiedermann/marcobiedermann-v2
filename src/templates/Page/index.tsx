@@ -49,11 +49,13 @@ const PageTemplate: React.FC<PageTemplateProps> = (props) => {
   } = props;
   return (
     <Layout>
-      <Section>
+      <Section appearance="dark">
         <Grid>
           <h1>{title}</h1>
-          {body && renderRichText(body, options)}
         </Grid>
+      </Section>
+      <Section>
+        <Grid>{body && renderRichText(body, options)}</Grid>
       </Section>
     </Layout>
   );

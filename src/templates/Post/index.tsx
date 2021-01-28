@@ -47,7 +47,7 @@ const PostTemplate: React.FC<PostTemplateProps> = (props) => {
   return (
     <Layout>
       <Section>
-        <Grid justify="center">
+        <Grid>
           <h1>{title}</h1>
           <div>
             {format(new Date(date), DATE_FORMAT)} · {body.childMarkdownRemark.timeToRead} min read

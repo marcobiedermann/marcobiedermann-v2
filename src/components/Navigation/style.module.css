@@ -1,17 +1,27 @@
 .navigation {
-  text-transform: uppercase;
+  font-weight: 600;
+  text-transform: lowercase;
 }
 
 .navigation__list {
+  column-gap: 4em;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.navigation__list--inline {
+  display: flex;
 }
 
 .navigation__link {
   text-decoration: none;
 }
 
+.navigation__link::after {
+  content: '.';
+}
+
 .navigation__link--active {
-  font-weight: bold;
+  font-weight: 900;
 }

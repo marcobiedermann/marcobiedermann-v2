@@ -17,7 +17,7 @@ const AboutPage: React.FC<PageProps> = () => {
 
   return (
     <Layout>
-      <Section>
+      <Section appearance="dark">
         <Grid>
           <h1>{title}</h1>
           {body && renderRichText(body)}

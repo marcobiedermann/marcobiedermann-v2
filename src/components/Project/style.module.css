@@ -6,6 +6,7 @@
   left: 0;
   opacity: 0;
   overflow: hidden;
+  padding: 1.5em;
   place-items: center;
   position: absolute;
   right: 0;

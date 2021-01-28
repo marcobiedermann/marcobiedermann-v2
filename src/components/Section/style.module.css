@@ -1,12 +1,13 @@
 .section {
   align-items: center;
   display: flex;
-  padding-bottom: 6em;
-  padding-top: 6em;
+  padding-bottom: 10em;
+  padding-top: 10em;
 }
 
 .section--dark {
-  background-color: #0a0a0a;
+  /* background-color: #0a0a0a; */
+  background-image: radial-gradient(#24252e, #1a1c21);
   color: #f8f9fb;
 }
 
