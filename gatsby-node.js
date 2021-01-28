@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-const path = require('path');
+const { resolve } = require('path');
 
 function getPrevious(edges, index) {
   return index === edges.length - 1 ? null : edges[index + 1].node;
@@ -10,13 +10,13 @@ function getNext(edges, index) {
   return index === 0 ? null : edges[index - 1].node;
 }
 
-exports.createPages = async ({ graphql, actions }) => {
+async function createPages({ graphql, actions }) {
   const { createPage } = actions;
-  const pageTemplate = path.resolve('./src/templates/Page/index.tsx');
-  const postTemplate = path.resolve('./src/templates/Post/index.tsx');
-  const projectDefaultTemplate = path.resolve('./src/templates/ProjectDefault/index.tsx');
-  const projectWebsiteTemplate = path.resolve('./src/templates/ProjectWebsite/index.tsx');
-  const tagTemplate = path.resolve('./src/templates/Tag/index.tsx');
+  const pageTemplate = resolve('./src/templates/Page/index.tsx');
+  const postTemplate = resolve('./src/templates/Post/index.tsx');
+  const projectDefaultTemplate = resolve('./src/templates/ProjectDefault/index.tsx');
+  const projectWebsiteTemplate = resolve('./src/templates/ProjectWebsite/index.tsx');
+  const tagTemplate = resolve('./src/templates/Tag/index.tsx');
 
   const { data, errors } = await graphql(
     `
@@ -110,4 +110,8 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
+}
+
+module.exports = {
+  createPages,
 };
