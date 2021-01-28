@@ -2,6 +2,6 @@
 
 exports[`Column component should render correctly 1`] = `
 <div
-  className="column"
+  className="column columnSpan12"
 />
 `;

@@ -7,27 +7,33 @@ exports[`Layout component should render correctly 1`] = `
   <header
     className="header"
   >
-    <div
-      className="grid"
+    <a
+      href="/"
+      style={
+        Object {
+          "textDecoration": "none",
+        }
+      }
     >
-      <nav
-        className="navigation"
+      marcobiedermann
+    </a>
+    <nav
+      className="navigation"
+    >
+      <ul
+        className="navigation__list navigation__listInline"
       >
-        <ul
-          className="navigation__list"
-        >
-          <li>
-            <a
-              className="navigation__link"
-              href="/path/to/page"
-              id="b6c3ceb6-d89f-4a03-9e96-77768f278909"
-            >
-              Page name
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+        <li>
+          <a
+            className="navigation__link"
+            href="/path/to/page"
+            id="b6c3ceb6-d89f-4a03-9e96-77768f278909"
+          >
+            Page name
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main
     className="main"
@@ -36,20 +42,16 @@ exports[`Layout component should render correctly 1`] = `
     className="footer"
   >
     <div
-      className="grid"
+      className="grid alignment alignmentJustifySpaceBetween"
     >
       <p>
         Handcrafted with love in Germany
-      </p>
-      <p>
-        Happy 
-        Saturday
       </p>
       <nav
         className="navigation"
       >
         <ul
-          className="navigation__list"
+          className="navigation__list navigation__listInline"
         >
           <li>
             <a
