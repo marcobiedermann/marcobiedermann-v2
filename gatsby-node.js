@@ -90,7 +90,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: `/projects/${slug}`,
-      component: edge.node.tags.includes('website') ? projectWebsiteTemplate : projectDefaultTemplate,
+      component: edge.node.tags.map((tag) => tag.toLowerCase()).includes('website')
+        ? projectWebsiteTemplate
+        : projectDefaultTemplate,
       context: {
         slug,
         previous: getPrevious(projects, index),
