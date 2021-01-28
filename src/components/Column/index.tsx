@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import { camelCase, capitalize } from 'lodash';
+import camelCase from 'lodash/camelCase';
+import capitalize from 'lodash/capitalize';
 import React, { FC } from 'react';
 import Alignment, { AlignmentProps } from '../Alignment';
 import styles from './style.module.css';
