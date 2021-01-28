@@ -1,13 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Main from '..';
 
 describe('Main component', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<Main />).toJSON();
+    const { asFragment } = render(<Main />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

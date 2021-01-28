@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
+import { render } from '@testing-library/react';
 import { useStaticQuery } from 'gatsby';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import SEO from '..';
 import seo from '../__fixtures__';
 
@@ -21,8 +21,8 @@ describe('SEO component', () => {
   });
 
   it('should render correctly', () => {
-    const tree = renderer.create(<SEO {...seo} />).toJSON();
+    const { asFragment } = render(<SEO {...seo} />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

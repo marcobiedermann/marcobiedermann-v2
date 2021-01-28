@@ -1,43 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pagination component should render correctly 1`] = `
-<ul
-  className="pagination"
-/>
+<DocumentFragment>
+  <ul
+    class="pagination"
+  />
+</DocumentFragment>
 `;
 
 exports[`Pagination component should render routes correctly 1`] = `
-<ul
-  className="pagination"
->
-  <li>
-    <a
-      className="pagination__link"
-      href="/previous"
-      id="previous"
-      rel="previous"
-    >
-      Previous
-    </a>
-  </li>
-  <li>
-    <a
-      className="pagination__link"
-      href="/path/to/page"
-      id="b6c3ceb6-d89f-4a03-9e96-77768f278909"
-    >
-      Page name
-    </a>
-  </li>
-  <li>
-    <a
-      className="pagination__link"
-      href="/next"
-      id="next"
-      rel="next"
-    >
-      Next
-    </a>
-  </li>
-</ul>
+<DocumentFragment>
+  <ul
+    class="pagination"
+  >
+    <li>
+      <a
+        class="pagination__link"
+        href="/previous"
+        id="previous"
+        rel="previous"
+      >
+        Previous
+      </a>
+    </li>
+    <li>
+      <a
+        class="pagination__link"
+        href="/path/to/page"
+        id="b6c3ceb6-d89f-4a03-9e96-77768f278909"
+      >
+        Page name
+      </a>
+    </li>
+    <li>
+      <a
+        class="pagination__link"
+        href="/next"
+        id="next"
+        rel="next"
+      >
+        Next
+      </a>
+    </li>
+  </ul>
+</DocumentFragment>
 `;

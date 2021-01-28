@@ -1,13 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Footer from '..';
 
 describe('Footer component', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<Footer />).toJSON();
+    const { asFragment } = render(<Footer />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

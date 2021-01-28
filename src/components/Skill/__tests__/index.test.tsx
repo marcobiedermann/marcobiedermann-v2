@@ -1,14 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies, @typescript-eslint/no-unused-vars */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Skill from '..';
 import skill from '../__fixtures__';
 
 describe('Skill component', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<Skill {...skill} />).toJSON();
+    const { asFragment } = render(<Skill {...skill} />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

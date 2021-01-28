@@ -1,14 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Route from '..';
 import route from '../__fixtures__';
 
 describe('Route component', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<Route {...route} />).toJSON();
+    const { asFragment } = render(<Route {...route} />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

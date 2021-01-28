@@ -1,14 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Logo from '..';
 import project from '../__fixtures__';
 
 describe('Logo component', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<Logo {...project} />).toJSON();
+    const { asFragment } = render(<Logo {...project} />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

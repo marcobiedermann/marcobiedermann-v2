@@ -1,14 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Experiences from '..';
 import experiences from '../__fixtures__';
 
 describe('Experiences component', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<Experiences experiences={experiences} />).toJSON();
+    const { asFragment } = render(<Experiences experiences={experiences} />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

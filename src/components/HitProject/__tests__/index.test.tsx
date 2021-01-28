@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import HitProject from '..';
 
 describe('HitProject component', () => {
@@ -14,8 +14,8 @@ describe('HitProject component', () => {
         'en-US': 'Demo Project',
       },
     };
-    const tree = renderer.create(<HitProject {...project} />).toJSON();
+    const { asFragment } = render(<HitProject {...project} />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

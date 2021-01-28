@@ -1,16 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Skills component should render correctly 1`] = `
-<ul
-  className="skills"
->
-  <li>
-    <div>
-      <h3>
-        JavaScript
-      </h3>
-      <div />
-    </div>
-  </li>
-</ul>
+<DocumentFragment>
+  <ul
+    class="skills"
+  >
+    <li>
+      <div>
+        <h3>
+          JavaScript
+        </h3>
+        <div />
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
 `;

@@ -1,57 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alignment component should render align \`center\` correctly 1`] = `
-<div
-  className="alignment alignmentAlignCenter"
-/>
+<DocumentFragment>
+  <div
+    class="alignment alignmentAlignCenter"
+  />
+</DocumentFragment>
 `;
 
 exports[`Alignment component should render align \`end\` correctly 1`] = `
-<div
-  className="alignment alignmentAlignEnd"
-/>
+<DocumentFragment>
+  <div
+    class="alignment alignmentAlignEnd"
+  />
+</DocumentFragment>
 `;
 
 exports[`Alignment component should render align \`start\` correctly 1`] = `
-<div
-  className="alignment alignmentAlignStart"
-/>
+<DocumentFragment>
+  <div
+    class="alignment alignmentAlignStart"
+  />
+</DocumentFragment>
 `;
 
 exports[`Alignment component should render content correctly 1`] = `
-<div
-  className=""
->
-  Content
-</div>
+<DocumentFragment>
+  <div
+    class=""
+  >
+    Content
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Alignment component should render correctly 1`] = `
-<div
-  className=""
-/>
+<DocumentFragment>
+  <div
+    class=""
+  />
+</DocumentFragment>
 `;
 
 exports[`Alignment component should render justify \`center\` correctly 1`] = `
-<div
-  className="alignment alignmentJustifyCenter"
-/>
+<DocumentFragment>
+  <div
+    class="alignment alignmentJustifyCenter"
+  />
+</DocumentFragment>
 `;
 
 exports[`Alignment component should render justify \`end\` correctly 1`] = `
-<div
-  className="alignment alignmentJustifyEnd"
-/>
+<DocumentFragment>
+  <div
+    class="alignment alignmentJustifyEnd"
+  />
+</DocumentFragment>
 `;
 
 exports[`Alignment component should render justify \`space-between\` correctly 1`] = `
-<div
-  className="alignment alignmentJustifySpaceBetween"
-/>
+<DocumentFragment>
+  <div
+    class="alignment alignmentJustifySpaceBetween"
+  />
+</DocumentFragment>
 `;
 
 exports[`Alignment component should render justify \`start\` correctly 1`] = `
-<div
-  className="alignment alignmentJustifyStart"
-/>
+<DocumentFragment>
+  <div
+    class="alignment alignmentJustifyStart"
+  />
+</DocumentFragment>
 `;

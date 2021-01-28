@@ -1,25 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Section component should render correctly 1`] = `
-<section
-  className="section"
-/>
+<DocumentFragment>
+  <section
+    class="section"
+  />
+</DocumentFragment>
 `;
 
 exports[`Section component should render dark appearance correctly 1`] = `
-<section
-  className="section sectionDark"
-/>
+<DocumentFragment>
+  <section
+    class="section sectionDark"
+  />
+</DocumentFragment>
 `;
 
 exports[`Section component should render full mode correctly 1`] = `
-<section
-  className="section sectionFull"
-/>
+<DocumentFragment>
+  <section
+    class="section sectionFull"
+  />
+</DocumentFragment>
 `;
 
 exports[`Section component should render light appearance correctly 1`] = `
-<section
-  className="section sectionLight"
-/>
+<DocumentFragment>
+  <section
+    class="section sectionLight"
+  />
+</DocumentFragment>
 `;

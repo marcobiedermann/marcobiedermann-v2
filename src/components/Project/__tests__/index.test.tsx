@@ -1,14 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Project from '..';
 import project from '../__fixtures__';
 
 describe('Project component', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<Project {...project} />).toJSON();
+    const { asFragment } = render(<Project {...project} />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

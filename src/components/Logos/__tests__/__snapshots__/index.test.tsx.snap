@@ -1,19 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Logos component should render correctly 1`] = `
-<ul
-  className="logos"
->
-  <li>
-    <a
-      className="logo"
-      href="/projects/undefined"
-    >
-      <img
-        alt="Logo Title"
-        src="https://via.placeholder.com/150x50"
-      />
-    </a>
-  </li>
-</ul>
+<DocumentFragment>
+  <ul
+    class="logos"
+  >
+    <li>
+      <a
+        class="logo"
+        href="/projects/undefined"
+      >
+        <img
+          alt="Logo Title"
+          src="https://via.placeholder.com/150x50"
+        />
+      </a>
+    </li>
+  </ul>
+</DocumentFragment>
 `;

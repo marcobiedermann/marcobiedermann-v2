@@ -1,61 +1,61 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Alignment from '..';
 
 describe('Alignment component', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<Alignment />).toJSON();
+    const { asFragment } = render(<Alignment />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render content correctly', () => {
-    const tree = renderer.create(<Alignment>Content</Alignment>).toJSON();
+    const { asFragment } = render(<Alignment>Content</Alignment>);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render align `center` correctly', () => {
-    const tree = renderer.create(<Alignment align="center" />).toJSON();
+    const { asFragment } = render(<Alignment align="center" />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render align `end` correctly', () => {
-    const tree = renderer.create(<Alignment align="end" />).toJSON();
+    const { asFragment } = render(<Alignment align="end" />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render align `start` correctly', () => {
-    const tree = renderer.create(<Alignment align="start" />).toJSON();
+    const { asFragment } = render(<Alignment align="start" />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render justify `center` correctly', () => {
-    const tree = renderer.create(<Alignment justify="center" />).toJSON();
+    const { asFragment } = render(<Alignment justify="center" />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render justify `end` correctly', () => {
-    const tree = renderer.create(<Alignment justify="end" />).toJSON();
+    const { asFragment } = render(<Alignment justify="end" />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render justify `space-between` correctly', () => {
-    const tree = renderer.create(<Alignment justify="space-between" />).toJSON();
+    const { asFragment } = render(<Alignment justify="space-between" />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render justify `start` correctly', () => {
-    const tree = renderer.create(<Alignment justify="start" />).toJSON();
+    const { asFragment } = render(<Alignment justify="start" />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

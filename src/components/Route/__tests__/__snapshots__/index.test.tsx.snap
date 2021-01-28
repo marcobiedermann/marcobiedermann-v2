@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Route component should render correctly 1`] = `
-<a
-  href="/path/to/page"
-  id="b6c3ceb6-d89f-4a03-9e96-77768f278909"
->
-  Page name
-</a>
+<DocumentFragment>
+  <a
+    href="/path/to/page"
+    id="b6c3ceb6-d89f-4a03-9e96-77768f278909"
+  >
+    Page name
+  </a>
+</DocumentFragment>
 `;

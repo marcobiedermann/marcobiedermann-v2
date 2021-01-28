@@ -1,25 +1,25 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Button from '..';
 
 describe('Button component', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<Button />).toJSON();
+    const { asFragment } = render(<Button />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render link using `href`', () => {
-    const tree = renderer.create(<Button href="#" />).toJSON();
+    const { asFragment } = render(<Button href="#" />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render link using `to`', () => {
-    const tree = renderer.create(<Button to="#" />).toJSON();
+    const { asFragment } = render(<Button to="#" />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

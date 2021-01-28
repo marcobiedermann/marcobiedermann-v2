@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
+import { render } from '@testing-library/react';
 import { useStaticQuery } from 'gatsby';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Layout from '..';
 import route from '../../Route/__fixtures__';
 
@@ -35,8 +35,8 @@ describe('Layout component', () => {
   });
 
   it('should render correctly', () => {
-    const tree = renderer.create(<Layout />).toJSON();
+    const { asFragment } = render(<Layout />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

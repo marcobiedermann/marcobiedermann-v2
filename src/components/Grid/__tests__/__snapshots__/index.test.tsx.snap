@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Grid component should render correctly 1`] = `
-<div
-  className="grid"
-/>
+<DocumentFragment>
+  <div
+    class="grid"
+  />
+</DocumentFragment>
 `;

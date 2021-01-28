@@ -1,17 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HitProject component should render correctly 1`] = `
-<div>
-  <figure>
-    <figcaption>
-      <h3>
-        <a
-          href="/projects/demo-project"
-        >
-          Demo Project
-        </a>
-      </h3>
-    </figcaption>
-  </figure>
-</div>
+<DocumentFragment>
+  <div>
+    <figure>
+      <figcaption>
+        <h3>
+          <a
+            href="/projects/demo-project"
+          >
+            Demo Project
+          </a>
+        </h3>
+      </figcaption>
+    </figure>
+  </div>
+</DocumentFragment>
 `;

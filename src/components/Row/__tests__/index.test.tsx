@@ -1,13 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Row from '..';
 
 describe('Row component', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<Row />).toJSON();
+    const { asFragment } = render(<Row />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,61 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Layout component should render correctly 1`] = `
-<div
-  className="layout"
->
-  <header
-    className="header"
+<DocumentFragment>
+  <div
+    class="layout"
   >
-    <a
-      href="/"
-      style={
-        Object {
-          "textDecoration": "none",
-        }
-      }
+    <header
+      class="header"
     >
-      marcobiedermann
-    </a>
-    <nav
-      className="navigation"
-    >
-      <ul
-        className="navigation__list navigation__listInline"
+      <a
+        href="/"
+        style="text-decoration: none;"
       >
-        <li>
-          <a
-            className="navigation__link"
-            href="/path/to/page"
-            id="b6c3ceb6-d89f-4a03-9e96-77768f278909"
-          >
-            Page name
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main
-    className="main"
-  />
-  <footer
-    className="footer"
-  >
-    <div
-      className="grid alignment alignmentJustifySpaceBetween"
-    >
-      <p>
-        Handcrafted with love in Germany
-      </p>
+        marcobiedermann
+      </a>
       <nav
-        className="navigation"
+        class="navigation"
       >
         <ul
-          className="navigation__list navigation__listInline"
+          class="navigation__list navigation__listInline"
         >
           <li>
             <a
-              className="navigation__link"
+              class="navigation__link"
               href="/path/to/page"
               id="b6c3ceb6-d89f-4a03-9e96-77768f278909"
             >
@@ -64,7 +31,38 @@ exports[`Layout component should render correctly 1`] = `
           </li>
         </ul>
       </nav>
-    </div>
-  </footer>
-</div>
+    </header>
+    <main
+      class="main"
+    />
+    <footer
+      class="footer"
+    >
+      <div
+        class="grid alignment alignmentJustifySpaceBetween"
+      >
+        <p>
+          Handcrafted with love in Germany
+        </p>
+        <nav
+          class="navigation"
+        >
+          <ul
+            class="navigation__list navigation__listInline"
+          >
+            <li>
+              <a
+                class="navigation__link"
+                href="/path/to/page"
+                id="b6c3ceb6-d89f-4a03-9e96-77768f278909"
+              >
+                Page name
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </div>
+</DocumentFragment>
 `;

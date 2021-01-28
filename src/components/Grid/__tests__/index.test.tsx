@@ -1,13 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Grid from '..';
 
 describe('Grid component', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<Grid />).toJSON();
+    const { asFragment } = render(<Grid />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

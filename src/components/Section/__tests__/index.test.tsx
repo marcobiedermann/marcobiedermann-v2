@@ -1,31 +1,31 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Section from '..';
 
 describe('Section component', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<Section />).toJSON();
+    const { asFragment } = render(<Section />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render dark appearance correctly', () => {
-    const tree = renderer.create(<Section appearance="dark" />).toJSON();
+    const { asFragment } = render(<Section appearance="dark" />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render light appearance correctly', () => {
-    const tree = renderer.create(<Section appearance="light" />).toJSON();
+    const { asFragment } = render(<Section appearance="light" />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render full mode correctly', () => {
-    const tree = renderer.create(<Section isFull />).toJSON();
+    const { asFragment } = render(<Section isFull />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
