@@ -4,7 +4,6 @@ import React, { FC } from 'react';
 export interface RouteProps {
   activeClassName?: string;
   className?: string;
-  id: string;
   name: string;
   path: string;
   rel?: string;

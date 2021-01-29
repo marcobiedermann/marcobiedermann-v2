@@ -20,7 +20,7 @@ export const Navigation: FC<NavigationProps> = (props) => {
         })}
       >
         {routes.map((route) => (
-          <li key={route.id}>
+          <li key={route.path}>
             <Route activeClassName={styles.navigation__linkActive} className={styles.navigation__link} {...route} />
           </li>
         ))}

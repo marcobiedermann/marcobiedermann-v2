@@ -11,9 +11,13 @@ const StatusPage: FC<PageProps> = () => {
 
   return (
     <Layout>
-      <Section>
+      <Section appearance="dark">
         <Grid>
           <h1>Status Dashboard</h1>
+        </Grid>
+      </Section>
+      <Section>
+        <Grid>
           <p>Showing the statuses of my project deploys and CI tests.</p>
           <Repositories repositories={github.search.edges.map((edge) => edge.node)} />
         </Grid>
