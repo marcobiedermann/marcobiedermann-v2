@@ -10,11 +10,8 @@ import Row from '../components/Row';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import Typography from '../components/Typography';
+import { GITHUB, INSTAGRAM, LINKED_IN, TWITTER } from '../constants/social';
 import { useIndexPage } from '../hooks';
-import githubIcon from '../images/icons/github.svg';
-import instagramIcon from '../images/icons/instagram.svg';
-import linkedinIcon from '../images/icons/linkedin.svg';
-import twitterIcon from '../images/icons/twitter.svg';
 
 const IndexPage: React.FC<PageProps> = () => {
   const { allContentfulProject } = useIndexPage();
@@ -93,32 +90,11 @@ const IndexPage: React.FC<PageProps> = () => {
           <h2>Want to create something?</h2>
           <p>Or just have a chat? Get in touch with me.</p>
           <Icons
-            icons={[
-              {
-                alt: 'GitHub',
-                id: 'github',
-                src: githubIcon,
-                url: 'https://github.com/marcobiedermann',
-              },
-              {
-                alt: 'Twitter',
-                id: 'twitter',
-                src: twitterIcon,
-                url: 'https://twitter.com/BiedermannMarco',
-              },
-              {
-                alt: 'LinkedIn',
-                id: 'linkedin',
-                src: linkedinIcon,
-                url: 'https://www.linkedin.com/in/biedermannmarco/',
-              },
-              {
-                alt: 'Instagram',
-                id: 'instagram',
-                src: instagramIcon,
-                url: 'https://www.instagram.com/marcobiedermann/',
-              },
-            ]}
+            icons={[GITHUB, TWITTER, LINKED_IN, INSTAGRAM].map((platform) => ({
+              ...platform,
+              alt: platform.title,
+              src: platform.icon.src,
+            }))}
           />
         </Grid>
       </Section>
