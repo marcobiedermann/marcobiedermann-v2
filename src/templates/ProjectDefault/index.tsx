@@ -67,8 +67,10 @@ const ProjectDefaultTemplate: React.FC<ProjectDefaultTemplateProps> = (props) =>
     <Layout>
       <Section>
         <Grid justify="center">
-          <h1>{title}</h1>
-          {body && renderRichText(body, options)}
+          <div>
+            <h1>{title}</h1>
+            {body && renderRichText(body, options)}
+          </div>
         </Grid>
       </Section>
 

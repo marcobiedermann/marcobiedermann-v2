@@ -129,10 +129,12 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
       {colors && (
         <Section appearance="light">
           <Grid justify="center">
-            <Typography textAlign="center">
-              <h2>Colors</h2>
-            </Typography>
-            <Img fixed={colors.fixed} />
+            <div>
+              <Typography textAlign="center">
+                <h2>Colors</h2>
+              </Typography>
+              <Img fixed={colors.fixed} />
+            </div>
           </Grid>
         </Section>
       )}
@@ -140,16 +142,18 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
       {typography && (
         <Section>
           <Grid justify="center">
-            <Typography textAlign="center">
-              <h2>Typography</h2>
-            </Typography>
-            <Row>
-              {typography.map((font) => (
-                <Column key={font.title}>
-                  <Img fixed={font.fixed} />
-                </Column>
-              ))}
-            </Row>
+            <div>
+              <Typography textAlign="center">
+                <h2>Typography</h2>
+              </Typography>
+              <Row>
+                {typography.map((font) => (
+                  <Column key={font.title}>
+                    <Img fixed={font.fixed} />
+                  </Column>
+                ))}
+              </Row>
+            </div>
           </Grid>
         </Section>
       )}
@@ -157,10 +161,12 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
       {homepage && (
         <Section appearance="light">
           <Grid justify="center">
-            <Typography textAlign="center">
-              <h2>Homepage</h2>
-            </Typography>
-            <Img fixed={homepage.fixed} />
+            <div>
+              <Typography textAlign="center">
+                <h2>Homepage</h2>
+              </Typography>
+              <Img fixed={homepage.fixed} />
+            </div>
           </Grid>
         </Section>
       )}
@@ -172,19 +178,23 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
         }}
       >
         <Grid justify="center">
-          <h2>Responsive Design</h2>
-          <p>A website that displays nicely on desktop and on your phone and tablet</p>
-          <img src="/images/apple-devices.svg" alt="" />
+          <div>
+            <h2>Responsive Design</h2>
+            <p>A website that displays nicely on desktop and on your phone and tablet</p>
+            <img src="/images/apple-devices.svg" alt="" />
+          </div>
         </Grid>
       </Section>
 
       {tablet && (
         <Section appearance="light">
           <Grid justify="center">
-            <Typography textAlign="center">
-              <h2>Tablet View</h2>
-            </Typography>
-            <Img fixed={tablet.fixed} />
+            <div>
+              <Typography textAlign="center">
+                <h2>Tablet View</h2>
+              </Typography>
+              <Img fixed={tablet.fixed} />
+            </div>
           </Grid>
         </Section>
       )}
@@ -192,27 +202,31 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
       {mobile && (
         <Section>
           <Grid justify="center">
-            <Typography textAlign="center">
-              <h2>Mobile View</h2>
-              <p>With a small display comes great responsibilities</p>
-            </Typography>
-            <Img fixed={mobile.fixed} />
+            <div>
+              <Typography textAlign="center">
+                <h2>Mobile View</h2>
+                <p>With a small display comes great responsibilities</p>
+              </Typography>
+              <Img fixed={mobile.fixed} />
+            </div>
           </Grid>
         </Section>
       )}
 
       <Section appearance="light">
         <Grid justify="center">
-          <Button href={url}>Visit Website</Button>
-          <Pagination
-            {...(next && {
-              next: { id: 'next', name: 'Next', path: `/projects/${next.slug}` },
-            })}
-            {...(previous && {
-              previous: { id: 'previous', name: 'Previous', path: `/projects/${previous.slug}` },
-            })}
-            routes={[]}
-          />
+          <div>
+            <Button href={url}>Visit Website</Button>
+            <Pagination
+              {...(next && {
+                next: { id: 'next', name: 'Next', path: `/projects/${next.slug}` },
+              })}
+              {...(previous && {
+                previous: { id: 'previous', name: 'Previous', path: `/projects/${previous.slug}` },
+              })}
+              routes={[]}
+            />
+          </div>
         </Grid>
       </Section>
 
