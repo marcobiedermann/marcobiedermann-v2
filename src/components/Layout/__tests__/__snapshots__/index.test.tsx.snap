@@ -23,10 +23,33 @@ exports[`Layout component should render correctly 1`] = `
           <li>
             <a
               class="navigation__link"
-              href="/path/to/page"
-              id="b6c3ceb6-d89f-4a03-9e96-77768f278909"
+              href="/about"
             >
-              Page name
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              class="navigation__link"
+              href="/blog"
+            >
+              Blog
+            </a>
+          </li>
+          <li>
+            <a
+              class="navigation__link"
+              href="/projects"
+            >
+              Projects
+            </a>
+          </li>
+          <li>
+            <a
+              class="navigation__link"
+              href="/contact"
+            >
+              Contact
             </a>
           </li>
         </ul>
@@ -53,10 +76,25 @@ exports[`Layout component should render correctly 1`] = `
             <li>
               <a
                 class="navigation__link"
-                href="/path/to/page"
-                id="b6c3ceb6-d89f-4a03-9e96-77768f278909"
+                href="/status"
               >
-                Page name
+                Status
+              </a>
+            </li>
+            <li>
+              <a
+                class="navigation__link"
+                href="/imprint"
+              >
+                Imprint
+              </a>
+            </li>
+            <li>
+              <a
+                class="navigation__link"
+                href="/privacy-policy"
+              >
+                Privacy Policy
               </a>
             </li>
           </ul>
