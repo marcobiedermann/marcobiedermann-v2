@@ -54,6 +54,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-twitter',
     {
       resolve: 'gatsby-source-contentful',
       options: {
@@ -94,6 +95,9 @@ module.exports = {
         plugins: [
           {
             resolve: 'gatsby-remark-autolink-headers',
+          },
+          {
+            resolve: 'gatsby-remark-embedder',
           },
           {
             resolve: 'gatsby-remark-external-links',
