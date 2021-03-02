@@ -26,7 +26,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <Typography textAlign="center">
             <h1
               style={{
-                fontSize: '20vmin',
+                fontSize: '23vmin',
               }}
             >
               Hello.
