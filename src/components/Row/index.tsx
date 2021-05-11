@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { FC } from 'react';
 import Alignment, { AlignmentProps } from '../Alignment';
-import styles from './style.module.css';
+import * as styles from './style.module.css';
 
 export interface RowProps extends AlignmentProps {
   className?: string;

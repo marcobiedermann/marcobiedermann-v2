@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { FC } from 'react';
 import Badge, { BadgeProps } from '../Badge';
-import styles from './style.module.css';
+import * as styles from './style.module.css';
 
 export interface BadgesProps {
   badges: BadgeProps[];

@@ -3,7 +3,7 @@ import camelCase from 'lodash/camelCase';
 import capitalize from 'lodash/capitalize';
 import React, { FC } from 'react';
 import Alignment, { AlignmentProps } from '../Alignment';
-import styles from './style.module.css';
+import * as styles from './style.module.css';
 
 type ColumnClass = 'columnSpan6';
 
@@ -17,7 +17,7 @@ export const Column: FC<ColumnProps> = (props) => {
 
   return (
     <Alignment
-      className={classNames(className, styles.column, {
+      className={classNames(className, {
         [styles[camelCase(`columnSpan${capitalize(span.toString())}`) as ColumnClass]]: span,
       })}
       {...otherProps}

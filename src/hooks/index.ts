@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import { FluidObject } from 'gatsby-image';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 export interface IndexPageQuery {
   allContentfulProject: {
@@ -10,7 +10,7 @@ export interface IndexPageQuery {
           slug: string;
           title: string;
           thumbnail: {
-            fluid: FluidObject;
+            gatsbyImageData: IGatsbyImageData;
           };
         };
       },
@@ -28,9 +28,7 @@ export const useIndexPage = (): IndexPageQuery =>
             slug
             title
             thumbnail {
-              fluid {
-                ...GatsbyContentfulFluid_withWebp_noBase64
-              }
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
         }

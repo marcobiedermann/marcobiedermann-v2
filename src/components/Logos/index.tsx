@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { FC } from 'react';
 import Logo, { LogoProps } from '../Logo';
-import styles from './style.module.css';
+import * as styles from './style.module.css';
 
 export interface LogosProps {
   className?: string;

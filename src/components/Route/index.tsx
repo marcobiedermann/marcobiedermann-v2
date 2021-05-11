@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import React, { FC } from 'react';
 
 export interface RouteProps {
+  id: string;
   activeClassName?: string;
   className?: string;
   name: string;

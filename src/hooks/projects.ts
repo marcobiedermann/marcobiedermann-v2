@@ -40,9 +40,7 @@ export const useProjectsPage = (): ProjectsPageQuery =>
               slug
               title
               thumbnail {
-                fluid {
-                  ...GatsbyContentfulFluid_withWebp_noBase64
-                }
+                gatsbyImageData(layout: FULL_WIDTH)
               }
             }
             previous {

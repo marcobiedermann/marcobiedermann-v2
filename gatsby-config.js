@@ -22,6 +22,7 @@ module.exports = {
         sampleRate: 0.7,
       },
     },
+    'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {

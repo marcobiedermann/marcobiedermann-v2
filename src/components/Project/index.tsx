@@ -1,13 +1,13 @@
 import { Link } from 'gatsby';
-import Img, { FluidObject } from 'gatsby-image';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import React, { FC } from 'react';
-import styles from './style.module.css';
+import * as styles from './style.module.css';
 
 export interface ProjectProps {
   id: string;
   slug: string;
   thumbnail: {
-    fluid: FluidObject;
+    gatsbyImageData: IGatsbyImageData;
   };
   title: string;
 }
@@ -19,7 +19,7 @@ export const Project: FC<ProjectProps> = (props) => {
     <div {...otherProps}>
       <figure className={styles.project__figure}>
         <Link className={styles.project__link} to={`/projects/${slug}`}>
-          {thumbnail && <Img fluid={thumbnail.fluid} />}
+          {thumbnail && <GatsbyImage image={thumbnail.gatsbyImageData} alt={title} />}
           <figcaption className={styles.project__caption}>
             <div className={styles.project__title}>
               <h3>{title}</h3>

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { FC } from 'react';
 import Skill, { SkillProps } from '../Skill';
-import styles from './style.module.css';
+import * as styles from './style.module.css';
 
 export interface SkillsProps {
   className?: string;

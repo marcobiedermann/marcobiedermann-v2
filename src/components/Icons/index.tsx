@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import Icon, { IconProps } from '../Icon';
-import styles from './style.module.css';
+import * as styles from './style.module.css';
 
 export interface IconsProps {
   icons: IconProps[];

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { FC } from 'react';
 import Project, { ProjectProps } from '../Project';
-import styles from './style.module.css';
+import * as styles from './style.module.css';
 
 export interface ProjectsProps {
   className?: string;

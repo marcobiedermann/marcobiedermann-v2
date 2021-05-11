@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { FC } from 'react';
 import Experience, { ExperienceProps } from '../Experience';
-import styles from './style.module.css';
+import * as styles from './style.module.css';
 
 export interface ExperiencesProps {
   className?: string;

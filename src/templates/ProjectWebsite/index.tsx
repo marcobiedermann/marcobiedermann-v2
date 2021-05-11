@@ -1,5 +1,5 @@
 import { graphql, PageProps } from 'gatsby';
-import Img, { FixedObject } from 'gatsby-image';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import React from 'react';
 import Button from '../../components/Button';
 import Column from '../../components/Column';
@@ -25,27 +25,27 @@ export interface ProjectWebsiteTemplateProps extends PageProps {
       agency: string;
       client: string;
       colors: {
-        fixed: FixedObject;
+        gatsbyImageData: IGatsbyImageData;
       };
       desktop: {
-        fixed: FixedObject;
+        gatsbyImageData: IGatsbyImageData;
       };
       homepage: {
-        fixed: FixedObject;
+        gatsbyImageData: IGatsbyImageData;
       };
       mobile: {
-        fixed: FixedObject;
+        gatsbyImageData: IGatsbyImageData;
       };
       primaryColor: string;
       tablet: {
-        fixed: FixedObject;
+        gatsbyImageData: IGatsbyImageData;
       };
       role: string;
       title: string;
       typography: [
         {
+          gatsbyImageData: IGatsbyImageData;
           title: string;
-          fixed: FixedObject;
         },
       ];
       url: string;
@@ -93,7 +93,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
       {desktop && (
         <Section appearance="light" isFull>
           <Grid justify="center">
-            <Img fixed={desktop.fixed} />
+            <GatsbyImage image={desktop.gatsbyImageData} alt="Desktop" />
           </Grid>
         </Section>
       )}
@@ -133,7 +133,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
               <Typography textAlign="center">
                 <h2>Colors</h2>
               </Typography>
-              <Img fixed={colors.fixed} />
+              <GatsbyImage image={colors.gatsbyImageData} alt="Color" />
             </div>
           </Grid>
         </Section>
@@ -149,7 +149,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
               <Row>
                 {typography.map((font) => (
                   <Column key={font.title}>
-                    <Img fixed={font.fixed} />
+                    <GatsbyImage image={font.gatsbyImageData} alt={font.title} />
                   </Column>
                 ))}
               </Row>
@@ -165,7 +165,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
               <Typography textAlign="center">
                 <h2>Homepage</h2>
               </Typography>
-              <Img fixed={homepage.fixed} />
+              <GatsbyImage image={homepage.gatsbyImageData} alt="Homepage" />
             </div>
           </Grid>
         </Section>
@@ -193,7 +193,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
               <Typography textAlign="center">
                 <h2>Tablet View</h2>
               </Typography>
-              <Img fixed={tablet.fixed} />
+              <GatsbyImage image={tablet.gatsbyImageData} alt="Tablet" />
             </div>
           </Grid>
         </Section>
@@ -207,7 +207,7 @@ const ProjectWebsiteTemplate: React.FC<ProjectWebsiteTemplateProps> = (props) =>
                 <h2>Mobile View</h2>
                 <p>With a small display comes great responsibilities</p>
               </Typography>
-              <Img fixed={mobile.fixed} />
+              <GatsbyImage image={mobile.gatsbyImageData} alt="Mobile" />
             </div>
           </Grid>
         </Section>
@@ -259,40 +259,28 @@ export const pageQuery = graphql`
       agency
       client
       colors {
-        fixed(height: 212) {
-          ...GatsbyContentfulFixed_withWebp_noBase64
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
       desktop {
-        fixed(width: 832) {
-          ...GatsbyContentfulFixed_withWebp_noBase64
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
       homepage {
-        fixed(width: 1120) {
-          ...GatsbyContentfulFixed_withWebp_noBase64
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
       id
       mobile {
-        fixed(width: 500) {
-          ...GatsbyContentfulFixed_withWebp_noBase64
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
       primaryColor
       role
       slug
       tablet {
-        fixed(width: 800) {
-          ...GatsbyContentfulFixed_withWebp_noBase64
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
       tags
       title
       typography {
-        fixed(width: 730) {
-          ...GatsbyContentfulFixed_withWebp_noBase64
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
         title
       }
       url

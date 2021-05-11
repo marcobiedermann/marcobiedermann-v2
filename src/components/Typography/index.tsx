@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import camelCase from 'lodash/camelCase';
 import capitalize from 'lodash/capitalize';
 import React, { FC } from 'react';
-import styles from './style.module.css';
+import * as styles from './style.module.css';
 
 type Component = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
 type TextAlign = 'center' | 'left' | 'right';
