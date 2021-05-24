@@ -1,0 +1,14 @@
+pre[class*='language-'] {
+  border-radius: 0.5em;
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+}
+
+.gatsby-highlight {
+  margin-bottom: 3em;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+}

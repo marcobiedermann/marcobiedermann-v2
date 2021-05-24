@@ -7,7 +7,7 @@ export interface PaginationProps {
   className?: string;
   next?: RouteProps;
   previous?: RouteProps;
-  routes: RouteProps[];
+  routes?: RouteProps[];
 }
 
 export const Pagination: FC<PaginationProps> = (props) => {
@@ -20,11 +20,12 @@ export const Pagination: FC<PaginationProps> = (props) => {
           <Route className={styles.pagination__link} {...previous} rel="previous" />
         </li>
       )}
-      {routes.map((route) => (
-        <li key={route.id}>
-          <Route className={styles.pagination__link} {...route} />
-        </li>
-      ))}
+      {routes &&
+        routes.map((route) => (
+          <li key={route.id}>
+            <Route className={styles.pagination__link} {...route} />
+          </li>
+        ))}
       {next && (
         <li>
           <Route className={styles.pagination__link} {...next} rel="next" />

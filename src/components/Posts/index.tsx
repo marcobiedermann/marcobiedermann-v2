@@ -1,11 +1,11 @@
 import classNames from 'classnames';
 import React, { FC } from 'react';
-import Post, { PostProps } from '../Post';
+import PostPreview, { PostPreviewProps } from '../PostPreview';
 import * as styles from './style.module.css';
 
 export interface PostsProps {
   className?: string;
-  posts: PostProps[];
+  posts: PostPreviewProps[];
 }
 
 export const Posts: FC<PostsProps> = (props) => {
@@ -15,7 +15,7 @@ export const Posts: FC<PostsProps> = (props) => {
     <ol className={classNames(className, styles.posts)} {...otherProps}>
       {posts.map((post) => (
         <li key={post.id}>
-          <Post {...post} />
+          <PostPreview {...post} />
         </li>
       ))}
     </ol>

@@ -1,11 +1,10 @@
-import { format } from 'date-fns';
-import { graphql, Link, PageProps } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import React from 'react';
 import Grid from '../../components/Grid';
 import Layout from '../../components/Layout';
 import Pagination from '../../components/Pagination';
+import Post from '../../components/Post';
 import Section from '../../components/Section';
-import { DATE_FORMAT } from '../../constants/date';
 
 export interface PostTemplateProps extends PageProps {
   data: {
@@ -38,30 +37,15 @@ export interface PostTemplateProps extends PageProps {
 
 const PostTemplate: React.FC<PostTemplateProps> = (props) => {
   const {
-    data: {
-      contentfulPost: { body, date, tags, title },
-    },
+    data: { contentfulPost },
     pageContext: { previous, next },
   } = props;
 
   return (
     <Layout>
       <Section>
-        <Grid>
-          <h1>{title}</h1>
-          <div>
-            {format(new Date(date), DATE_FORMAT)} · {body.childMarkdownRemark.timeToRead} min read
-          </div>
-          <div dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.html }} />
-          {tags && (
-            <ul>
-              {tags.map((tag) => (
-                <li key={tag}>
-                  <Link to={`/tags/${tag}`}>{tag}</Link>
-                </li>
-              ))}
-            </ul>
-          )}
+        <Grid size="small">
+          <Post {...contentfulPost} />
         </Grid>
       </Section>
 
@@ -69,10 +53,18 @@ const PostTemplate: React.FC<PostTemplateProps> = (props) => {
         <Grid justify="center">
           <Pagination
             {...(next && {
-              next: { id: 'next', name: 'Next', path: `/blog/${next.slug}` },
+              next: {
+                id: 'next',
+                name: 'Next',
+                path: `/blog/${next.slug}`,
+              },
             })}
             {...(previous && {
-              previous: { id: 'previous', name: 'Previous', path: `/blog/${previous.slug}` },
+              previous: {
+                id: 'previous',
+                name: 'Previous',
+                path: `/blog/${previous.slug}`,
+              },
             })}
             routes={[]}
           />

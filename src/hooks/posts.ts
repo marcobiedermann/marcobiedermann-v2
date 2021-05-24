@@ -37,12 +37,17 @@ export const usePostsPage = (): PostsPageQuery =>
             node {
               body {
                 childMarkdownRemark {
+                  excerpt
                   timeToRead
                 }
               }
               date
               id
               slug
+              thumbnail {
+                description
+                gatsbyImageData(aspectRatio: 2.4, width: 1080)
+              }
               title
             }
             previous {

@@ -27,7 +27,7 @@ export const Layout: FC<LayoutProps> = (props) => {
       <Main>{children}</Main>
       <Footer>
         <Grid justify="space-between">
-          <p>Handcrafted with love in Germany</p>
+          <p>Handcrafted with ❤️ in Germany</p>
           {/* <p>Happy {format(DATE_NOW, 'iiii')}</p> */}
           <Navigation inline routes={FOOTER} />
         </Grid>

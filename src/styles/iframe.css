@@ -1,0 +1,25 @@
+iframe {
+  border: 0;
+  height: auto;
+  vertical-align: middle;
+}
+
+iframe[src*='codepen'],
+iframe[src*='youtube'] {
+  aspect-ratio: 16 / 9;
+  border-radius: 0.5em;
+  height: auto !important;
+  margin-left: -3em;
+  margin-right: -3em;
+  width: calc(100% + 6em) !important;
+}
+
+iframe[src*='codepen'] + p,
+iframe[src*='youtube'] + p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.twitter-tweet {
+  margin: 0.5em auto 1.5em !important;
+}

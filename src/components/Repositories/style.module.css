@@ -1,9 +1,10 @@
 .repositories {
+  column-gap: 3em;
   display: grid;
-  gap: 1.5em;
   grid-template-columns: repeat(auto-fill, minmax(24em, 1fr));
   list-style-type: none;
   margin-bottom: 1.5em;
   margin-top: 0.5em;
   padding: 0;
+  row-gap: 6em;
 }

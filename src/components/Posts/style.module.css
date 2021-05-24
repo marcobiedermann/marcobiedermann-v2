@@ -1,5 +1,21 @@
 .posts {
+  column-gap: 3em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
   list-style: none;
   margin: 0;
   padding: 0;
+  row-gap: 6em;
+}
+
+.posts li:first-child {
+  grid-column-end: span 2;
+}
+
+.posts li :first-child {
+  margin-top: 0;
+}
+
+.posts li :last-child {
+  margin-bottom: 0;
 }

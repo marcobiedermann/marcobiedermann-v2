@@ -4,3 +4,7 @@
   max-width: 1440px;
   width: 90%;
 }
+
+.grid--small {
+  max-width: 72ch;
+}
