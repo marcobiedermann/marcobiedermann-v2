@@ -15,14 +15,18 @@ const options = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node: Node): React.ReactElement => {
       const {
-        description,
-        file: {
-          url,
-          details: {
-            image: { width, height },
+        data: {
+          target: {
+            description,
+            file: {
+              url,
+              details: {
+                image: { width, height },
+              },
+            },
           },
         },
-      } = node.data.target;
+      } = node;
 
       return (
         <figure>
