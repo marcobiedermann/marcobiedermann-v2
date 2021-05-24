@@ -3,7 +3,7 @@
 exports[`Pagination component should render correctly 1`] = `
 <DocumentFragment>
   <ul
-    class="pagination"
+    class=""
   />
 </DocumentFragment>
 `;
@@ -11,11 +11,10 @@ exports[`Pagination component should render correctly 1`] = `
 exports[`Pagination component should render routes correctly 1`] = `
 <DocumentFragment>
   <ul
-    class="pagination"
+    class=""
   >
     <li>
       <a
-        class="pagination__link"
         href="/previous"
         id="previous"
         rel="previous"
@@ -25,7 +24,6 @@ exports[`Pagination component should render routes correctly 1`] = `
     </li>
     <li>
       <a
-        class="pagination__link"
         href="/path/to/page"
         id="b6c3ceb6-d89f-4a03-9e96-77768f278909"
       >
@@ -34,7 +32,6 @@ exports[`Pagination component should render routes correctly 1`] = `
     </li>
     <li>
       <a
-        class="pagination__link"
         href="/next"
         id="next"
         rel="next"

@@ -3,7 +3,7 @@
 exports[`Footer component should render correctly 1`] = `
 <DocumentFragment>
   <footer
-    class="footer"
+    class=""
   />
 </DocumentFragment>
 `;

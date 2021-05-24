@@ -3,10 +3,10 @@
 exports[`Layout component should render correctly 1`] = `
 <DocumentFragment>
   <div
-    class="layout"
+    class=""
   >
     <header
-      class="header"
+      class=""
     >
       <a
         href="/"
@@ -15,14 +15,13 @@ exports[`Layout component should render correctly 1`] = `
         marcobiedermann
       </a>
       <nav
-        class="navigation"
+        class=""
       >
         <ul
-          class="navigation__list navigation__listInline"
+          class="undefined"
         >
           <li>
             <a
-              class="navigation__link"
               href="/about"
             >
               About
@@ -30,7 +29,6 @@ exports[`Layout component should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="navigation__link"
               href="/blog"
             >
               Blog
@@ -38,7 +36,6 @@ exports[`Layout component should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="navigation__link"
               href="/projects"
             >
               Projects
@@ -46,7 +43,6 @@ exports[`Layout component should render correctly 1`] = `
           </li>
           <li>
             <a
-              class="navigation__link"
               href="/contact"
             >
               Contact
@@ -56,26 +52,25 @@ exports[`Layout component should render correctly 1`] = `
       </nav>
     </header>
     <main
-      class="main"
+      class=""
     />
     <footer
-      class="footer"
+      class=""
     >
       <div
-        class="grid alignment alignmentJustifySpaceBetween"
+        class="undefined"
       >
         <p>
-          Handcrafted with love in Germany
+          Handcrafted with ❤️ in Germany
         </p>
         <nav
-          class="navigation"
+          class=""
         >
           <ul
-            class="navigation__list navigation__listInline"
+            class="undefined"
           >
             <li>
               <a
-                class="navigation__link"
                 href="/status"
               >
                 Status
@@ -83,7 +78,6 @@ exports[`Layout component should render correctly 1`] = `
             </li>
             <li>
               <a
-                class="navigation__link"
                 href="/imprint"
               >
                 Imprint
@@ -91,7 +85,6 @@ exports[`Layout component should render correctly 1`] = `
             </li>
             <li>
               <a
-                class="navigation__link"
                 href="/privacy-policy"
               >
                 Privacy Policy

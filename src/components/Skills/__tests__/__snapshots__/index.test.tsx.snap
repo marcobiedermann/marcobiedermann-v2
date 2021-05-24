@@ -3,7 +3,7 @@
 exports[`Skills component should render correctly 1`] = `
 <DocumentFragment>
   <ul
-    class="skills"
+    class=""
   >
     <li>
       <div>

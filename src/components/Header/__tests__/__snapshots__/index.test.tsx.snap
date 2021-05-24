@@ -3,7 +3,7 @@
 exports[`Header component should render correctly 1`] = `
 <DocumentFragment>
   <header
-    class="header"
+    class=""
   />
 </DocumentFragment>
 `;

@@ -3,7 +3,7 @@
 exports[`Typography component should align text to center 1`] = `
 <DocumentFragment>
   <div
-    class="typographyTextAlignCenter"
+    class="undefined"
   >
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita soluta quis, eveniet, fuga iusto similique ut est, molestiae velit illum. Commodi ab obcaecati consectetur eos molestiae assumenda earum magni.
@@ -15,7 +15,7 @@ exports[`Typography component should align text to center 1`] = `
 exports[`Typography component should align text to left 1`] = `
 <DocumentFragment>
   <div
-    class="typographyTextAlignLeft"
+    class="undefined"
   >
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita soluta quis, eveniet, fuga iusto similique ut est, molestiae velit illum. Commodi ab obcaecati consectetur eos molestiae assumenda earum magni.
@@ -27,7 +27,7 @@ exports[`Typography component should align text to left 1`] = `
 exports[`Typography component should align text to right 1`] = `
 <DocumentFragment>
   <div
-    class="typographyTextAlignRight"
+    class="undefined"
   >
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita soluta quis, eveniet, fuga iusto similique ut est, molestiae velit illum. Commodi ab obcaecati consectetur eos molestiae assumenda earum magni.

@@ -3,7 +3,7 @@
 exports[`Section component should render correctly 1`] = `
 <DocumentFragment>
   <section
-    class="section"
+    class=""
   />
 </DocumentFragment>
 `;
@@ -11,7 +11,7 @@ exports[`Section component should render correctly 1`] = `
 exports[`Section component should render dark appearance correctly 1`] = `
 <DocumentFragment>
   <section
-    class="section sectionDark"
+    class="undefined"
   />
 </DocumentFragment>
 `;
@@ -19,7 +19,7 @@ exports[`Section component should render dark appearance correctly 1`] = `
 exports[`Section component should render full mode correctly 1`] = `
 <DocumentFragment>
   <section
-    class="section sectionFull"
+    class=""
   />
 </DocumentFragment>
 `;
@@ -27,7 +27,7 @@ exports[`Section component should render full mode correctly 1`] = `
 exports[`Section component should render light appearance correctly 1`] = `
 <DocumentFragment>
   <section
-    class="section sectionLight"
+    class="undefined"
   />
 </DocumentFragment>
 `;

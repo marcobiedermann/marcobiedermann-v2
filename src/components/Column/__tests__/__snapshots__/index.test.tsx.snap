@@ -3,7 +3,7 @@
 exports[`Column component should render correctly 1`] = `
 <DocumentFragment>
   <div
-    class="column columnSpan12"
+    class="undefined"
   />
 </DocumentFragment>
 `;

@@ -3,7 +3,7 @@
 exports[`Alignment component should render align \`center\` correctly 1`] = `
 <DocumentFragment>
   <div
-    class="alignment alignmentAlignCenter"
+    class=""
   />
 </DocumentFragment>
 `;
@@ -11,7 +11,7 @@ exports[`Alignment component should render align \`center\` correctly 1`] = `
 exports[`Alignment component should render align \`end\` correctly 1`] = `
 <DocumentFragment>
   <div
-    class="alignment alignmentAlignEnd"
+    class=""
   />
 </DocumentFragment>
 `;
@@ -19,7 +19,7 @@ exports[`Alignment component should render align \`end\` correctly 1`] = `
 exports[`Alignment component should render align \`start\` correctly 1`] = `
 <DocumentFragment>
   <div
-    class="alignment alignmentAlignStart"
+    class=""
   />
 </DocumentFragment>
 `;
@@ -45,7 +45,7 @@ exports[`Alignment component should render correctly 1`] = `
 exports[`Alignment component should render justify \`center\` correctly 1`] = `
 <DocumentFragment>
   <div
-    class="alignment alignmentJustifyCenter"
+    class="undefined"
   />
 </DocumentFragment>
 `;
@@ -53,7 +53,7 @@ exports[`Alignment component should render justify \`center\` correctly 1`] = `
 exports[`Alignment component should render justify \`end\` correctly 1`] = `
 <DocumentFragment>
   <div
-    class="alignment alignmentJustifyEnd"
+    class="undefined"
   />
 </DocumentFragment>
 `;
@@ -61,7 +61,7 @@ exports[`Alignment component should render justify \`end\` correctly 1`] = `
 exports[`Alignment component should render justify \`space-between\` correctly 1`] = `
 <DocumentFragment>
   <div
-    class="alignment alignmentJustifySpaceBetween"
+    class="undefined"
   />
 </DocumentFragment>
 `;
@@ -69,7 +69,7 @@ exports[`Alignment component should render justify \`space-between\` correctly 1
 exports[`Alignment component should render justify \`start\` correctly 1`] = `
 <DocumentFragment>
   <div
-    class="alignment alignmentJustifyStart"
+    class="undefined"
   />
 </DocumentFragment>
 `;

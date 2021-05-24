@@ -3,51 +3,18 @@
 exports[`Projects component should render correctly 1`] = `
 <DocumentFragment>
   <ol
-    class="projects"
+    class=""
   >
     <li>
       <div
         id="6c5a5baa-8c8b-5580-8061-b1cad23712cc"
       >
-        <figure
-          class="project__figure"
-        >
+        <figure>
           <a
-            class="project__link"
             href="/projects/demo-project"
           >
-            <div
-              class=" gatsby-image-wrapper"
-              style="position: relative; overflow: hidden;"
-            >
-              <div
-                aria-hidden="true"
-                style="width: 100%; padding-bottom: 75.00000001875%;"
-              />
-              <picture>
-                <source
-                  sizes="(max-width: 800px) 100vw, 800px"
-                  srcset="https://via.placeholder.com/800x600"
-                />
-                <img
-                  alt=""
-                  loading="lazy"
-                  sizes="(max-width: 800px) 100vw, 800px"
-                  src="https://via.placeholder.com/800x600"
-                  srcset="https://via.placeholder.com/800x600"
-                  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 500ms;"
-                />
-              </picture>
-              <noscript>
-                &lt;picture&gt;&lt;source srcset="https://via.placeholder.com/800x600" sizes="(max-width: 800px) 100vw, 800px" /&gt;&lt;img loading="lazy" sizes="(max-width: 800px) 100vw, 800px" srcset="https://via.placeholder.com/800x600" src="https://via.placeholder.com/800x600" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
-              </noscript>
-            </div>
-            <figcaption
-              class="project__caption"
-            >
-              <div
-                class="project__title"
-              >
+            <figcaption>
+              <div>
                 <h3>
                   Demo Project
                 </h3>
@@ -64,7 +31,7 @@ exports[`Projects component should render correctly 1`] = `
 exports[`Projects component should render empty projects correctly 1`] = `
 <DocumentFragment>
   <ol
-    class="projects"
+    class=""
   />
 </DocumentFragment>
 `;

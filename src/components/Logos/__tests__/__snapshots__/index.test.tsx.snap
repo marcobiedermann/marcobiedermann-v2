@@ -3,11 +3,11 @@
 exports[`Logos component should render correctly 1`] = `
 <DocumentFragment>
   <ul
-    class="logos"
+    class=""
   >
     <li>
       <a
-        class="logo"
+        class=""
         href="/projects/undefined"
       >
         <img

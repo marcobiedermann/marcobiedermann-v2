@@ -3,10 +3,10 @@
 exports[`Navigation component should render correctly 1`] = `
 <DocumentFragment>
   <nav
-    class="navigation"
+    class=""
   >
     <ul
-      class="navigation__list"
+      class=""
     />
   </nav>
 </DocumentFragment>
